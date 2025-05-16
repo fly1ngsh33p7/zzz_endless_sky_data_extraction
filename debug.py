@@ -63,7 +63,15 @@ while i < len(block_lines):
             except ValueError:
                 pass
 
-        fields[key] = value
+        # Handle duplicate keys
+        if key in fields:
+            if isinstance(fields[key], str):
+                fields[key] += "\n\n" + str(value)
+            else:
+                raise ValueError(f"Duplicate key '{key}' with non-string value: {fields[key]}")
+        else:
+            fields[key] = value
+
         i += 1
         continue
 
@@ -100,14 +108,14 @@ while i < len(block_lines):
                     i += 1
                 elif next_indent == current_indent:  # Stop if indentation matches the current level
                     break
-                else:  # Skip block_lines with unexpected indentation
+                else:  # Skip lines with unexpected indentation
                     i += 1
             # Add either a dictionary or a list based on the content
             fields[key] = sub_dict if sub_dict else values
             continue
 
     # If no match, treat as a standalone key
-    fields[stripped_line.replace('"', '').strip()] = True
+    fields[stripped_line.replace('"', '').replace('`', '').strip()] = True
     i += 1
 
 # Print the fieldsing dictionary
