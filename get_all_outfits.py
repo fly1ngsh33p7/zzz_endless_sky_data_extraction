@@ -94,7 +94,7 @@ def parse_indented_block(lines, start_idx, indent):  # rekursiver Unterblock-Par
                 items.append({key: convert_value(raw)})  # simples KV  
                 i += 1  # nächstes  
         else:  
-            items.append(stripped)  # reine Werte  
+            items.append(stripped.strip('"`'))  # reine Werte  
             i += 1  # nächstes  
     return items, i  # Einträge und neuer Index
 
