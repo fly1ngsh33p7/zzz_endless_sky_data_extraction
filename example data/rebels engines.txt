@@ -23,34 +23,6 @@ effect "nitrogen afterburner"
 	"random velocity" 1.
 	"velocity scale" 1
 
-outfit "W-120 Nitrogen Thruster"
-	cost 19500
-	category "Engines"
-	thumbnail "outfit/small rebels thruster"
-	"mass" 25
-	"outfit space" -15
-	"engine capacity" -25
-	"thrust" 17.8
-	"thrusting energy" 3.8
-	"thrusting heat" 4.2
-	"flare sprite" "effect/nitrogen flare/small"
-		"frame rate" 11
-	"flare sound" "atomic small"
-
-outfit "W-120 Nitrogen Steering"
-	cost 19500
-	category "Engines"
-	thumbnail "outfit/small rebels steering"
-	"mass" 25
-	"outfit space" -15
-	"engine capacity" -25
-	"turn" 675
-	"turning energy" 3.8
-	"turning heat" 4.2
-	"steering flare sprite" "effect/nitrogen flare/small"
-		"frame rate" 11
-	"steering flare sound" "atomic small"
-
 outfit "W-160 Nitrogen Thruster"
 	cost 35400
 	category "Engines"
@@ -65,44 +37,34 @@ outfit "W-160 Nitrogen Thruster"
 		"frame rate" 11
 	"flare sound" "atomic medium"
 
-outfit "W-160 Nitrogen Steering"
-	cost 35400
-	category "Engines"
-	thumbnail "outfit/medium rebels steering"
-	"mass" 35
-	"outfit space" -20
-	"engine capacity" -35
-	"turn" 1208
-	"turning energy" 6.4
-	"turning heat" 6.4
-	"steering flare sprite" "effect/nitrogen flare/medium"
-		"frame rate" 11
-	"steering flare sound" "atomic medium"
-
-outfit "W-180 Nitrogen Thruster"
-	cost 68500
-	category "Engines"
-	thumbnail "outfit/large rebels thruster"
-	"mass" 45
-	"outfit space" -30
-	"engine capacity" -45
-	"thrust" 39.6
-	"thrusting energy" 8.3
-	"thrusting heat" 8.3
-	"flare sprite" "effect/nitrogen flare/large"
-		"frame rate" 11
-	"flare sound" "atomic large"
-
-outfit "W-180 Nitrogen Steering"
-	cost 68500
-	category "Engines"
-	thumbnail "outfit/large rebels steering"
-	"mass" 45
-	"outfit space" -30
-	"engine capacity" -45
-	"turn" 1820
-	"turning energy" 8.3
-	"turning heat" 8.3
-	"steering flare sprite" "effect/nitrogen flare/large"
-		"frame rate" 11
-	"steering flare sound" "atomic large"
+outfit "Inhibitor Cannon"
+	category "Guns"
+	licenses
+		Remnant
+		Test1
+		Test2
+	cost 471000
+	thumbnail "outfit/inhibitor cannon"
+	"mass" 16
+	"outfit space" -16
+	"weapon capacity" -16
+	"gun ports" -1
+	weapon
+		sprite "projectile/inhibitor"
+			"frame rate" 10
+			"no repeat"
+		sound "inhibitor"
+		"hit effect" "inhibitor impact" 3
+		"inaccuracy" .5
+		"velocity" 36
+		"random velocity" .5
+		"lifetime" 24
+		"reload" 13
+		"cluster"
+		"firing energy" 26
+		"firing heat" 45.5
+		"firing force" 13
+		"shield damage" 26
+		"hull damage" 19.5
+		"hit force" 39
+		"slowing damage" .5
