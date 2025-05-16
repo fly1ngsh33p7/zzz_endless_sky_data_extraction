@@ -6,6 +6,8 @@ import json
 from pathlib import Path
 
 
+regex = r"^([\s\w]+|\s*\"[^\"]+\")\s+([\w\d\.\-]+|\"[^\"]+\"|\`[^\`]+\`)$"
+
 def remove_comments_from_lines(lines):
     """Remove comments (everything after '#') from all lines."""
     cleaned_lines = []
@@ -47,81 +49,105 @@ def parse_outfits(file_path):
     return outfits_by_category
 
 
+def parse_key_value(line):  # Key-Value-Paar extrahieren  
+    match = re.match(regex, line)  # Regex-Match durchführen  
+    if not match:  
+        return None  # kein Key-Value  
+    key = match.group(1).strip().strip('"`')  # Key säubern  
+    raw = match.group(2).strip().strip('"`')  # rohen Wert säubern  
+    return key, raw  # Tuple zurückgeben  
+
+def convert_value(raw):  # Wert in int/float oder Bool konvertieren  
+    if raw is None:  
+        return True  # nur Key → True  
+    if raw.isdigit():  
+        return int(raw)  # int  
+    try:  
+        return float(raw)  # float  
+    except ValueError:  
+        return raw  # String
+
+def parse_indented_block(lines, start_idx, indent):  # rekursiver Unterblock-Parser  
+    items = []  # Liste der Einträge  
+    i = start_idx  # Startindex  
+    while i < len(lines):  
+        line = lines[i]  # aktuelle Zeile  
+        curr_indent = len(line) - len(line.lstrip())  # Einrückung berechnen  
+        if curr_indent <= indent:  
+            break  # Ende des Blocks  
+        stripped = line.strip()  # Inhalt ohne Leerzeichen  
+        kv = parse_key_value(stripped)  # Key-Value prüfen  
+        if kv:  
+            key, raw = kv  # entpacken  
+            # weiterer Unterblock?  
+            if i + 1 < len(lines) and (len(lines[i+1]) - len(lines[i+1].lstrip())) > curr_indent:  
+                nested, new_i = parse_indented_block(lines, i+1, curr_indent)  # rekursiv  
+                sub = {"name": convert_value(raw)}  # Basis-Dict  
+                for entry in nested:  
+                    if isinstance(entry, dict):  
+                        sub.update(entry)  # zusammenführen  
+                    else:  
+                        sub[entry] = True  # reine Keys als Flag  
+                items.append({key: [sub]})  # Liste mit einem Dict  
+                i = new_i  # Index setzen  
+            else:  
+                items.append({key: convert_value(raw)})  # simples KV  
+                i += 1  # nächstes  
+        else:  
+            items.append(stripped)  # reine Werte  
+            i += 1  # nächstes  
+    return items, i  # Einträge und neuer Index
+
 def parse_outfit_fields(block_lines):
-    """Parse the fields of an outfit block into a dictionary."""
-    regex = r"^([\s\w]+|\s*\"[^\"]+\")\s+([\w\d\.\-]+|\"[^\"]+\"|\`[^\`]+\`)$"
-    
-    fields = {}
-    i = 0
-    while i < len(block_lines):
-        line = block_lines[i]
-        stripped_line = line.strip()
-        if not stripped_line:
-            i += 1
-            continue
+    fields = {}  # Ergebnis-Dict  
+    i = 0  # Startindex  
+    while i < len(block_lines):  
+        line = block_lines[i]  # aktuelle Zeile  
+        stripped = line.strip()  # getrimmter Inhalt  
+        if not stripped:  
+            i += 1; continue  # leere Zeilen überspringen  
+        curr_indent = len(line) - len(line.lstrip())  # aktuelle Einrückung  
+        next_indent = (len(block_lines[i+1]) - len(block_lines[i+1].lstrip())  
+                       if i+1 < len(block_lines) else None)  # nächste Einrückung  
+        kv = parse_key_value(stripped)  # Key-Value prüfen  
 
-        # Match key-value pairs
-        match = re.match(regex, stripped_line)
-        if match:
-            key = match.group(1).strip().replace('"', '').replace('`', '')
-            value = match.group(2).strip().replace('"', '').replace('`', '')
+        if kv and (next_indent is None or next_indent <= curr_indent):  # einfaches KV  
+            key, raw = kv  # entpacken  
+            value = convert_value(raw)  # konvertieren  
+            if key in fields and isinstance(fields[key], str):  
+                fields[key] += "\n\n" + str(value)  # String-Duplikat zusammenführen  
+            elif key in fields:  
+                raise ValueError(f"Duplicate key '{key}' mit nicht-string Wert")  # Fehler  
+            else:  
+                fields[key] = value  # speichern  
+            i += 1  # nächstes  
 
-            # Convert numeric values to int or float
-            if value.isdigit():
-                value = int(value)
-            else:
-                try:
-                    value = float(value)
-                except ValueError:
-                    pass
+        elif next_indent is not None and next_indent > curr_indent:  # verschachtelter Block  
+            key = stripped.strip().strip('"`')  # Block-Key  
+            items, new_i = parse_indented_block(block_lines, i+1, curr_indent)  # Unterblock parsen  
+            # Flatten: Strings bleiben Liste, Dict-Listen auflösen  
+            if items and all(isinstance(it, str) for it in items):  
+                fields[key] = items  # Liste von Strings  
+            else:  
+                sub = {}  # flaches Dict  
+                for entry in items:  
+                    if isinstance(entry, dict):  
+                        for k, v in entry.items():  
+                            # ein-Element-Listen von Dicts auspacken  
+                            if isinstance(v, list) and len(v) == 1 and isinstance(v[0], dict):  
+                                sub[k] = v[0]  
+                            else:  
+                                sub[k] = v  
+                    else:  
+                        sub[entry] = True  # reine Keys  
+                fields[key] = sub  # speichern  
+            i = new_i  # Index setzen  
 
-            fields[key] = value
-            i += 1
-            continue
+        else:  
+            fields[stripped.strip().strip('"`')] = True  # nur Key → True  
+            i += 1  # nächstes  
 
-        # Handle standalone keys followed by indented values
-        current_indent = len(line) - len(line.lstrip())
-        if i + 1 < len(block_lines):
-            next_line = block_lines[i + 1]
-            next_indent = len(next_line) - len(next_line.lstrip())
-            if next_indent > current_indent:  # Check if the next line is more indented
-                key = stripped_line.replace('"', '').strip()
-                sub_dict = {}
-                values = []
-                i += 1
-                while i < len(block_lines):
-                    next_line = block_lines[i]
-                    next_indent = len(next_line) - len(next_line.lstrip())
-                    if next_indent == current_indent + 1:  # Collect values with one more indentation
-                        # Check if the line matches a key-value pair
-                        sub_match = re.match(regex, next_line.strip())
-                        if sub_match:
-                            sub_key = sub_match.group(1).strip().replace('"', '')
-                            sub_value = sub_match.group(2).strip().replace('"', '')
-                            # Convert numeric values to int or float
-                            if sub_value.isdigit():
-                                sub_value = int(sub_value)
-                            else:
-                                try:
-                                    sub_value = float(sub_value)
-                                except ValueError:
-                                    pass
-                            sub_dict[sub_key] = sub_value
-                        else:
-                            values.append(next_line.strip().replace('"', ''))
-                        i += 1
-                    elif next_indent == current_indent:  # Stop if indentation matches the current level
-                        break
-                    else:  # Skip block_lines with unexpected indentation
-                        i += 1
-                # Add either a dictionary or a list based on the content
-                fields[key] = sub_dict if sub_dict else values
-                continue
-
-        # If no match, treat as a standalone key
-        fields[stripped_line.replace('"', '').strip()] = True
-        i += 1
-    return fields
+    return fields  # gefülltes Dict zurückgeben
 
 def extract_category_data(block_lines):
     # Filter block_lines to include only lines indented with at most one tab character
