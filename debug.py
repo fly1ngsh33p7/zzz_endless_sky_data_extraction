@@ -54,13 +54,14 @@ result = {}
 i = 0
 
 while i < len(lines):
-    line = lines[i].strip()
-    if not line:
+    line = lines[i]
+    stripped_line = line.strip()
+    if not stripped_line:
         i += 1
         continue
 
     # Match key-value pairs
-    match = re.match(regex, line)
+    match = re.match(regex, stripped_line)
     if match:
         key = match.group(1).strip().replace('"', '')  # Normalize the key
         value = match.group(2).strip().replace('"', '')  # Remove quotes from the value
@@ -79,17 +80,30 @@ while i < len(lines):
         continue
 
     # Handle standalone keys followed by indented values
-    if i + 1 < len(lines) and lines[i + 1].startswith('\t'):
-        key = line.replace('"', '').strip()
-        values = []
-        i += 1
-        while i < len(lines) and lines[i].startswith('\t'):
-            values.append(lines[i].strip().replace('"', ''))
+    current_indent = len(line) - len(line.lstrip())
+    if i + 1 < len(lines):
+        next_line = lines[i + 1]
+        next_indent = len(next_line) - len(next_line.lstrip())
+        if next_indent > current_indent:  # Check if the next line is more indented
+            key = stripped_line.replace('"', '').strip()
+            values = []
             i += 1
-        result[key] = values
-    else:
-        result[line.replace('"', '').strip()] = True
-        i += 1
+            while i < len(lines):
+                next_line = lines[i]
+                next_indent = len(next_line) - len(next_line.lstrip())
+                if next_indent == current_indent + 1:  # Collect values with one more indentation
+                    values.append(next_line.strip().replace('"', ''))
+                    i += 1
+                elif next_indent == current_indent:  # Stop if indentation matches the current level
+                    break
+                else:  # Skip lines with unexpected indentation
+                    i += 1
+            result[key] = values
+            continue
+
+    # If no match, treat as a standalone key
+    result[stripped_line.replace('"', '').strip()] = True
+    i += 1
 
 # Print the resulting dictionary
 print(result)
