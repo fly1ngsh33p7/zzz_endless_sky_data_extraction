@@ -1,6 +1,6 @@
 import re
 
-regex = r"^(\s+[\w]+|\s*\"[^\"]+\")\s+([\w\d\.\-]+|\"[^\"]+\")$"
+regex = r"^([\w\s]+|\s*\"[^\"]+\")\s+([\w\d\.\-]+|\"[^\"]+\")$"
 
 # test_str = ("""
 # 	cost 19500
@@ -49,25 +49,47 @@ test_str = ("""
 		"slowing damage" .5
 """)
 
-matches = re.finditer(regex, test_str, re.MULTILINE)
-
-# Create a dictionary to store the key-value pairs
+lines = test_str.splitlines()
 result = {}
+i = 0
 
-for match in matches:
-    key = match.group(1).strip().replace('"', '')#.replace(" ", "_")  # Normalize the key
-    value = match.group(2).strip().replace('"', '')  # Remove quotes from the value
-    
-    # Convert numeric values to int or float
-    if value.isdigit():
-        value = int(value)
+while i < len(lines):
+    line = lines[i].strip()
+    if not line:
+        i += 1
+        continue
+
+    # Match key-value pairs
+    match = re.match(regex, line)
+    if match:
+        key = match.group(1).strip().replace('"', '')  # Normalize the key
+        value = match.group(2).strip().replace('"', '')  # Remove quotes from the value
+
+        # Convert numeric values to int or float
+        if value.isdigit():
+            value = int(value)
+        else:
+            try:
+                value = float(value)
+            except ValueError:
+                pass
+
+        result[key] = value
+        i += 1
+        continue
+
+    # Handle standalone keys followed by indented values
+    if i + 1 < len(lines) and lines[i + 1].startswith('\t'):
+        key = line.replace('"', '').strip()
+        values = []
+        i += 1
+        while i < len(lines) and lines[i].startswith('\t'):
+            values.append(lines[i].strip().replace('"', ''))
+            i += 1
+        result[key] = values
     else:
-        try:
-            value = float(value)
-        except ValueError:
-            pass
-    
-    result[key] = value
+        result[line.replace('"', '').strip()] = True
+        i += 1
 
 # Print the resulting dictionary
 print(result)
