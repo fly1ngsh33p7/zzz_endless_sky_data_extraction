@@ -1,0 +1,126 @@
+#!/usr/bin/env python3
+import argparse
+import os
+import re
+import json
+from pathlib import Path
+
+
+def parse_outfits(file_path):
+    outfits_by_category = {}
+    lines = file_path.read_text(encoding='utf-8').splitlines()
+    i = 0
+    while i < len(lines):
+        line = lines[i]
+        match = re.match(r'^\s*outfit\s+"([^"]+)"', line)
+        if match:
+            name = match.group(1)
+            block = []
+            i += 1
+            # Capture indented block lines
+            while i < len(lines) and re.match(r'^\s', lines[i]):
+                block.append(lines[i])
+                i += 1
+            
+            # Extract category and store the outfit
+            category = extract_category_data(block)
+            if category is not None:
+                if category not in outfits_by_category:
+                    outfits_by_category[category] = []
+                outfit_data = parse_outfit_fields(block)
+                outfit_data["name"] = name
+                outfits_by_category[category].append(outfit_data)
+        else:
+            i += 1
+    return outfits_by_category
+
+
+def parse_outfit_fields(block_lines):
+    """Parse the fields of an outfit block into a dictionary."""
+    fields = {}
+    for line in block_lines:
+        line = line.strip()
+        # Skip empty lines
+        if not line:
+            continue
+        # Skip lines starting with "description"
+        if line.startswith("description"):
+            continue
+        # Match key-value pairs like: "key" value or key "value" or key value
+        match = re.match(r'^"([\w\s]+)"\s+([\w\d\.\-]+)$', line) or \
+                re.match(r'^([\w\s]+)\s+"([^"]+)"$', line) or \
+                re.match(r'^([\w\s]+)\s+([\w\d\.\-]+)$', line)
+        if match:
+            key = match.group(1).strip().replace(" ", "_").replace('"', '')  # Replace spaces with underscores and remove quotes
+            value = match.group(2).strip()
+            # Convert numeric values to int or float
+            if value.isdigit():
+                value = int(value)
+            else:
+                try:
+                    value = float(value)
+                except ValueError:
+                    pass
+            fields[key] = value
+        else:
+            # Handle standalone keywords (e.g., "weapon")
+            fields[line.replace('"', '').strip()] = True
+    return fields
+
+def extract_category_data(block_lines):
+    # Filter block_lines to include only lines indented with at most one tab character
+    filtered_lines = [line.lstrip('\t') for line in block_lines if line.startswith('\t') and not line.startswith('\t\t')]
+    
+    # Check category
+    for line in filtered_lines:
+        match = re.match(r'^category\s+"([^"]+)"', line)
+        if match:
+            return match.group(1)
+    return None
+
+
+def collect_outfits(directories):
+    all_outfits = {}
+    for d in directories:
+        path = Path(d)
+        for file in path.rglob('*.txt'):
+            try:
+                outfits_by_category = parse_outfits(file)
+                for category, outfits in outfits_by_category.items():
+                    if category not in all_outfits:
+                        all_outfits[category] = []
+                    all_outfits[category].extend(outfits)
+            except Exception as e:
+                print(f"Failed to parse {file}: {e}")
+                continue
+    return all_outfits
+
+
+def main():
+    parser = argparse.ArgumentParser(
+        description="Extract all outfits from .txt files and organize them by category"
+    )
+    parser.add_argument(
+        "folders", nargs="+",
+        help="One or more folders to scan recursively for .txt files"
+    )
+    parser.add_argument(
+        "--output", "-O", default="outfits.json",
+        help="Where to write the JSON output"
+    )
+    args = parser.parse_args()
+    
+    print(args.folders)
+    
+    # Gather all outfits organized by category
+    all_outfits = collect_outfits(args.folders)
+    
+    # Write JSON
+    with open(args.output, "w", encoding="utf-8") as f:
+        json.dump(all_outfits, f, indent=2, ensure_ascii=False)
+    
+    total_outfits = sum(len(outfits) for outfits in all_outfits.values())
+    print(f"Wrote {args.output} ({len(all_outfits)} categories, {total_outfits} outfits)")
+
+if __name__ == "__main__":
+    main()
