@@ -1,21 +1,7 @@
 import re
 
-regex = r"^([\s\w]+|\s*\"[^\"]+\")\s+([\w\d\.\-]+|(\"|\`)[^\"]+(\"|\`))$"
+regex = r"^([\s\w]+|\s*\"[^\"]+\")\s+([\w\d\.\-]+|\"[^\"]+\"|\`[^\`]+\`)$"
 
-# test_str = ("""
-# 	cost 19500
-# 	category "Engines"
-# 	thumbnail "outfit/small rebels thruster"
-# 	"mass" 25
-# 	"outfit space" -15
-# 	"engine capacity" -25
-# 	"thrust" 17.8
-# 	"thrusting energy" 3.8
-# 	"thrusting heat" 4.2
-# 	"flare sprite" "effect/nitrogen flare/small"
-# 		"frame rate" 11
-# 	"flare sound" "atomic small"
-# """)
 test_str = ("""
 	category "Guns"
 	licenses
@@ -47,14 +33,16 @@ test_str = ("""
 		"hull damage" 19.5
 		"hit force" 39
 		"slowing damage" .5
+	description `Celebration Modules have long since become associated with the Coalition's great sporting events; trained Heliarch fightercraft engage in "spectral dogfights," where the bright swathes of colour put on a great spectacle for the crowds during the downtime between athletic competitions.`
+	description "	To reduce potential complications with starlets colliding with ships, the rockets contain a small proximity sensor that forces them to explode a distance away from potential victims."
 """)
 
-lines = test_str.splitlines()
-result = {}
+block_lines = test_str.splitlines()
+fields = {}
 i = 0
 
-while i < len(lines):
-    line = lines[i]
+while i < len(block_lines):
+    line = block_lines[i]
     stripped_line = line.strip()
     if not stripped_line:
         i += 1
@@ -63,8 +51,8 @@ while i < len(lines):
     # Match key-value pairs
     match = re.match(regex, stripped_line)
     if match:
-        key = match.group(1).strip().replace('"', '').replace('`', '')  # Normalize the key
-        value = match.group(2).strip().replace('"', '').replace('`', '')  # Remove quotes from the value
+        key = match.group(1).strip().replace('"', '').replace('`', '')
+        value = match.group(2).strip().replace('"', '').replace('`', '')
 
         # Convert numeric values to int or float
         if value.isdigit():
@@ -75,35 +63,52 @@ while i < len(lines):
             except ValueError:
                 pass
 
-        result[key] = value
+        fields[key] = value
         i += 1
         continue
 
     # Handle standalone keys followed by indented values
     current_indent = len(line) - len(line.lstrip())
-    if i + 1 < len(lines):
-        next_line = lines[i + 1]
+    if i + 1 < len(block_lines):
+        next_line = block_lines[i + 1]
         next_indent = len(next_line) - len(next_line.lstrip())
         if next_indent > current_indent:  # Check if the next line is more indented
             key = stripped_line.replace('"', '').strip()
+            sub_dict = {}
             values = []
             i += 1
-            while i < len(lines):
-                next_line = lines[i]
+            while i < len(block_lines):
+                next_line = block_lines[i]
                 next_indent = len(next_line) - len(next_line.lstrip())
                 if next_indent == current_indent + 1:  # Collect values with one more indentation
-                    values.append(next_line.strip().replace('"', ''))
+                    # Check if the line matches a key-value pair
+                    sub_match = re.match(regex, next_line.strip())
+                    if sub_match:
+                        sub_key = sub_match.group(1).strip().replace('"', '')
+                        sub_value = sub_match.group(2).strip().replace('"', '')
+                        # Convert numeric values to int or float
+                        if sub_value.isdigit():
+                            sub_value = int(sub_value)
+                        else:
+                            try:
+                                sub_value = float(sub_value)
+                            except ValueError:
+                                pass
+                        sub_dict[sub_key] = sub_value
+                    else:
+                        values.append(next_line.strip().replace('"', ''))
                     i += 1
                 elif next_indent == current_indent:  # Stop if indentation matches the current level
                     break
-                else:  # Skip lines with unexpected indentation
+                else:  # Skip block_lines with unexpected indentation
                     i += 1
-            result[key] = values
+            # Add either a dictionary or a list based on the content
+            fields[key] = sub_dict if sub_dict else values
             continue
 
     # If no match, treat as a standalone key
-    result[stripped_line.replace('"', '').strip()] = True
+    fields[stripped_line.replace('"', '').strip()] = True
     i += 1
 
-# Print the resulting dictionary
-print(result)
+# Print the fieldsing dictionary
+print(fields)

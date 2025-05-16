@@ -49,7 +49,7 @@ def parse_outfits(file_path):
 
 def parse_outfit_fields(block_lines):
     """Parse the fields of an outfit block into a dictionary."""
-    regex = r"^([\s\w]+|\s*\"[^\"]+\")\s+([\w\d\.\-]+|(\"|\`)[^\"]+(\"|\`))$"
+    regex = r"^([\s\w]+|\s*\"[^\"]+\")\s+([\w\d\.\-]+|\"[^\"]+\"|\`[^\`]+\`)$"
     
     fields = {}
     i = 0
@@ -63,8 +63,8 @@ def parse_outfit_fields(block_lines):
         # Match key-value pairs
         match = re.match(regex, stripped_line)
         if match:
-            key = match.group(1).strip().replace('"', '').replace('`', '')  # Normalize the key
-            value = match.group(2).strip().replace('"', '').replace('`', '')  # Remove quotes from the value
+            key = match.group(1).strip().replace('"', '').replace('`', '')
+            value = match.group(2).strip().replace('"', '').replace('`', '')
 
             # Convert numeric values to int or float
             if value.isdigit():
@@ -86,19 +86,36 @@ def parse_outfit_fields(block_lines):
             next_indent = len(next_line) - len(next_line.lstrip())
             if next_indent > current_indent:  # Check if the next line is more indented
                 key = stripped_line.replace('"', '').strip()
+                sub_dict = {}
                 values = []
                 i += 1
                 while i < len(block_lines):
                     next_line = block_lines[i]
                     next_indent = len(next_line) - len(next_line.lstrip())
                     if next_indent == current_indent + 1:  # Collect values with one more indentation
-                        values.append(next_line.strip().replace('"', ''))
+                        # Check if the line matches a key-value pair
+                        sub_match = re.match(regex, next_line.strip())
+                        if sub_match:
+                            sub_key = sub_match.group(1).strip().replace('"', '')
+                            sub_value = sub_match.group(2).strip().replace('"', '')
+                            # Convert numeric values to int or float
+                            if sub_value.isdigit():
+                                sub_value = int(sub_value)
+                            else:
+                                try:
+                                    sub_value = float(sub_value)
+                                except ValueError:
+                                    pass
+                            sub_dict[sub_key] = sub_value
+                        else:
+                            values.append(next_line.strip().replace('"', ''))
                         i += 1
                     elif next_indent == current_indent:  # Stop if indentation matches the current level
                         break
-                    else:  # Skip lines with unexpected indentation
+                    else:  # Skip block_lines with unexpected indentation
                         i += 1
-                fields[key] = values
+                # Add either a dictionary or a list based on the content
+                fields[key] = sub_dict if sub_dict else values
                 continue
 
         # If no match, treat as a standalone key

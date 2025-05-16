@@ -68,3 +68,5 @@ outfit "Inhibitor Cannon"
 		"hull damage" 19.5
 		"hit force" 39
 		"slowing damage" .5
+    description `Celebration Modules have long since become associated with the Coalition's great sporting events; trained Heliarch fightercraft engage in "spectral dogfights," where the bright swathes of colour put on a great spectacle for the crowds during the downtime between athletic competitions.`
+	description "	To reduce potential complications with starlets colliding with ships, the rockets contain a small proximity sensor that forces them to explode a distance away from potential victims."

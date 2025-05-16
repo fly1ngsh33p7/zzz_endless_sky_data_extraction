@@ -2,112 +2,65 @@
   "Engines": [
     {
       "cost": 75000,
-      "category": "\"Engines\"",
-      "thumbnail": "\"outfit/nitrogen afterburnner\"",
+      "category": "Engines",
+      "thumbnail": "outfit/nitrogen afterburnner",
       "mass": 15,
-      "outfit_space": -5.0,
-      "engine_capacity": -5.0,
-      "afterburner_thrust": 15.8,
-      "afterburner_fuel": 0.1,
-      "afterburner_heat": 3.2,
-      "afterburner_effect": "\"nitrogen afterburner\"",
+      "outfit space": -5.0,
+      "engine capacity": -5.0,
+      "afterburner thrust": 15.8,
+      "afterburner fuel": 0.1,
+      "afterburner heat": 3.2,
+      "afterburner effect": "nitrogen afterburner",
       "name": "Nitrogen Afterburnner"
     },
     {
-      "cost": 19500,
-      "category": "\"Engines\"",
-      "thumbnail": "\"outfit/small rebels thruster\"",
-      "mass": 25,
-      "outfit_space": -15.0,
-      "engine_capacity": -25.0,
-      "thrust": 17.8,
-      "thrusting_energy": 3.8,
-      "thrusting_heat": 4.2,
-      "flare_sprite": [
-        "\t\t\"frame rate\" 11"
-      ],
-      "flare_sound": "\"atomic small\"",
-      "name": "W-120 Nitrogen Thruster"
-    },
-    {
-      "cost": 19500,
-      "category": "\"Engines\"",
-      "thumbnail": "\"outfit/small rebels steering\"",
-      "mass": 25,
-      "outfit_space": -15.0,
-      "engine_capacity": -25.0,
-      "turn": 675,
-      "turning_energy": 3.8,
-      "turning_heat": 4.2,
-      "steering_flare_sprite": [
-        "\t\t\"frame rate\" 11"
-      ],
-      "steering_flare_sound": "\"atomic small\"",
-      "name": "W-120 Nitrogen Steering"
-    },
-    {
       "cost": 35400,
-      "category": "\"Engines\"",
-      "thumbnail": "\"outfit/medium rebels thruster\"",
+      "category": "Engines",
+      "thumbnail": "outfit/medium rebels thruster",
       "mass": 35,
-      "outfit_space": -20.0,
-      "engine_capacity": -35.0,
+      "outfit space": -20.0,
+      "engine capacity": -35.0,
       "thrust": 25.6,
-      "thrusting_energy": 6.4,
-      "thrusting_heat": 6.4,
-      "flare_sprite": [
-        "\t\t\"frame rate\" 11"
-      ],
-      "flare_sound": "\"atomic medium\"",
+      "thrusting energy": 6.4,
+      "thrusting heat": 6.4,
+      "flare sprite": "effect/nitrogen flare/medium",
+      "frame rate": 11,
+      "flare sound": "atomic medium",
       "name": "W-160 Nitrogen Thruster"
-    },
+    }
+  ],
+  "Guns": [
     {
-      "cost": 35400,
-      "category": "\"Engines\"",
-      "thumbnail": "\"outfit/medium rebels steering\"",
-      "mass": 35,
-      "outfit_space": -20.0,
-      "engine_capacity": -35.0,
-      "turn": 1208,
-      "turning_energy": 6.4,
-      "turning_heat": 6.4,
-      "steering_flare_sprite": [
-        "\t\t\"frame rate\" 11"
+      "category": "Guns",
+      "licenses": [
+        "Remnant",
+        "Test1",
+        "Test2"
       ],
-      "steering_flare_sound": "\"atomic medium\"",
-      "name": "W-160 Nitrogen Steering"
-    },
-    {
-      "cost": 68500,
-      "category": "\"Engines\"",
-      "thumbnail": "\"outfit/large rebels thruster\"",
-      "mass": 45,
-      "outfit_space": -30.0,
-      "engine_capacity": -45.0,
-      "thrust": 39.6,
-      "thrusting_energy": 8.3,
-      "thrusting_heat": 8.3,
-      "flare_sprite": [
-        "\t\t\"frame rate\" 11"
-      ],
-      "flare_sound": "\"atomic large\"",
-      "name": "W-180 Nitrogen Thruster"
-    },
-    {
-      "cost": 68500,
-      "category": "\"Engines\"",
-      "thumbnail": "\"outfit/large rebels steering\"",
-      "mass": 45,
-      "outfit_space": -30.0,
-      "engine_capacity": -45.0,
-      "turn": 1820,
-      "turning_energy": 8.3,
-      "turning_heat": 8.3,
-      "steering_flare_sprite": [
-        "\t\t\"frame rate\" 11"
-      ],
-      "steering_flare_sound": "\"atomic large\"",
-      "name": "W-180 Nitrogen Steering"
+      "cost": 471000,
+      "thumbnail": "outfit/inhibitor cannon",
+      "mass": 16,
+      "outfit space": -16.0,
+      "weapon capacity": -16.0,
+      "gun ports": -1.0,
+      "weapon": {
+        "sprite": "projectile/inhibitor",
+        "sound": "inhibitor",
+        "inaccuracy": 0.5,
+        "velocity": 36,
+        "random velocity": 0.5,
+        "lifetime": 24,
+        "reload": 13,
+        "firing energy": 26,
+        "firing heat": 45.5,
+        "firing force": 13,
+        "shield damage": 26,
+        "hull damage": 19.5,
+        "hit force": 39,
+        "slowing damage": 0.5
+      },
+      "description": "\tTo reduce potential complications with starlets colliding with ships, the rockets contain a small proximity sensor that forces them to explode a distance away from potential victims.",
+      "name": "Inhibitor Cannon"
     }
   ]
 }
