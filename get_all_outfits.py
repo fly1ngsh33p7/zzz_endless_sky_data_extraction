@@ -6,7 +6,7 @@ import json
 from pathlib import Path
 
 
-regex = r"^([\s\w]+|\s*\"[^\"]+\")\s+([\w\d\.\-]+|\"[^\"]+\"|\`[^\`]+\`)$"
+regex = r"^([\s\w]+|\s*\"[^\"]+\")\s+([-+]?(?:\d+\.\d*|\.\d+|\d+)(?:[eE][+-]?\d+)?|\"[^\"]+\"|\`[^\`]+\`)$"
 
 def remove_comments_from_lines(lines):
     """Remove comments (everything after '#') from all lines."""

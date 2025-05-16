@@ -70,3 +70,23 @@ outfit "Inhibitor Cannon"
 		"slowing damage" .5
 	description `Celebration Modules have long since become associated with the Coalition's great sporting events; trained Heliarch fightercraft engage in "spectral dogfights," where the bright swathes of colour put on a great spectacle for the crowds during the downtime between athletic competitions.`
 	description "	To reduce potential complications with starlets colliding with ships, the rockets contain a small proximity sensor that forces them to explode a distance away from potential victims."
+
+outfit "HeVian-9 Engine"
+	category "Engines"
+	"cost" 32648901230
+	thumbnail "outfit/huge korath thruster"
+	"mass" 212e+7
+	"outfit space" -212e+7
+	"engine capacity" -212e+7
+	"thrust" 353.4e+7
+	"thrusting energy" 15.8e+5
+	"thrusting heat" 42.6e+5
+	"flare sprite" "effect/korath flare/huge"
+		"frame rate" 6
+	"flare sound" "plasma huge"
+	"turn" 8665.0e+8
+	"turning energy" 8.2e+5
+	"turning heat" 26.7e+5
+	"steering flare sprite" "effect/korath flare/huge"
+		"frame rate" 6
+	"steering flare sound" "plasma huge"
