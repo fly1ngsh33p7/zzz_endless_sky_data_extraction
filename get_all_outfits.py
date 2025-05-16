@@ -38,14 +38,22 @@ def parse_outfits(file_path):
 def parse_outfit_fields(block_lines):
     """Parse the fields of an outfit block into a dictionary."""
     fields = {}
-    for line in block_lines:
-        line = line.strip()
+    i = 0
+    while i < len(block_lines):
+        line = block_lines[i].strip()
         # Skip empty lines
         if not line:
+            i += 1
             continue
         # Skip lines starting with "description"
         if line.startswith("description"):
+            i += 1
             continue
+        # Skip comments
+        if line.startswith("#"):
+            i += 1
+            continue
+        
         # Match key-value pairs like: "key" value or key "value" or key value
         match = re.match(r'^"([\w\s]+)"\s+([\w\d\.\-]+)$', line) or \
                 re.match(r'^([\w\s]+)\s+"([^"]+)"$', line) or \
@@ -61,10 +69,31 @@ def parse_outfit_fields(block_lines):
                     value = float(value)
                 except ValueError:
                     pass
-            fields[key] = value
+            
+            # Check if the next line has greater indentation (sub-list or sub-dictionary)
+            if i + 1 < len(block_lines) and block_lines[i + 1].startswith("\t" * (block_lines[i].count("\t") + 1)):
+                sub_list = []
+                i += 1
+                while i < len(block_lines) and block_lines[i].startswith("\t" * (block_lines[i - 1].count("\t") + 1)):
+                    sub_list.append(block_lines[i].strip())
+                    i += 1
+                fields[key] = sub_list
+                continue
+            else:
+                fields[key] = value
         else:
             # Handle standalone keywords (e.g., "weapon")
-            fields[line.replace('"', '').strip()] = True
+            if i + 1 < len(block_lines) and block_lines[i + 1].startswith("\t" * (block_lines[i].count("\t") + 1)):
+                sub_list = []
+                i += 1
+                while i < len(block_lines) and block_lines[i].startswith("\t" * (block_lines[i - 1].count("\t") + 1)):
+                    sub_list.append(block_lines[i].strip())
+                    i += 1
+                fields[line.replace('"', '').strip()] = sub_list
+                continue
+            else:
+                fields[line.replace('"', '').strip()] = True
+        i += 1
     return fields
 
 def extract_category_data(block_lines):
