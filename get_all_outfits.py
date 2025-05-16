@@ -6,9 +6,21 @@ import json
 from pathlib import Path
 
 
+def remove_comments_from_lines(lines):
+    """Remove comments (everything after '#') from all lines."""
+    cleaned_lines = []
+    for line in lines:
+        # Split the line at the first '#' and take the part before it
+        line_without_comment = line.split('#', 1)[0].rstrip()
+        # Add the line to the result if it's not empty
+        if line_without_comment:
+            cleaned_lines.append(line_without_comment)
+    return cleaned_lines
+
 def parse_outfits(file_path):
     outfits_by_category = {}
-    lines = file_path.read_text(encoding='utf-8').splitlines()
+    # Read and clean lines (remove comments and empty lines)
+    lines = remove_comments_from_lines(file_path.read_text(encoding='utf-8').splitlines())
     i = 0
     while i < len(lines):
         line = lines[i]
@@ -40,8 +52,8 @@ def parse_outfit_fields(block_lines):
     fields = {}
     i = 0
     while i < len(block_lines):
-        line = block_lines[i].strip()
-        # Skip empty lines
+        line = block_lines[i]
+        # Skip empty lines (already cleaned)
         if not line:
             i += 1
             continue
@@ -49,15 +61,12 @@ def parse_outfit_fields(block_lines):
         if line.startswith("description"):
             i += 1
             continue
-        # Skip comments
-        if line.startswith("#"):
-            i += 1
-            continue
         
         # Match key-value pairs like: "key" value or key "value" or key value
-        match = re.match(r'^"([\w\s]+)"\s+([\w\d\.\-]+)$', line) or \
-                re.match(r'^([\w\s]+)\s+"([^"]+)"$', line) or \
-                re.match(r'^([\w\s]+)\s+([\w\d\.\-]+)$', line)
+        match = re.match(r"^([\w\s]+|\s*\"[^\"]+\")\s+([\w\d\.\-]+|\"[^\"]+\")$", line, re.MULTILINE)
+        
+        print(match)
+        
         if match:
             key = match.group(1).strip().replace(" ", "_").replace('"', '')  # Replace spaces with underscores and remove quotes
             value = match.group(2).strip()
@@ -75,7 +84,7 @@ def parse_outfit_fields(block_lines):
                 sub_list = []
                 i += 1
                 while i < len(block_lines) and block_lines[i].startswith("\t" * (block_lines[i - 1].count("\t") + 1)):
-                    sub_list.append(block_lines[i].strip())
+                    sub_list.append(block_lines[i])
                     i += 1
                 fields[key] = sub_list
                 continue
@@ -87,7 +96,7 @@ def parse_outfit_fields(block_lines):
                 sub_list = []
                 i += 1
                 while i < len(block_lines) and block_lines[i].startswith("\t" * (block_lines[i - 1].count("\t") + 1)):
-                    sub_list.append(block_lines[i].strip())
+                    sub_list.append(block_lines[i])
                     i += 1
                 fields[line.replace('"', '').strip()] = sub_list
                 continue
