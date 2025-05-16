@@ -1,6 +1,6 @@
 import re
 
-regex = r"^([\w\s]+|\s*\"[^\"]+\")\s+([\w\d\.\-]+|\"[^\"]+\")$"
+regex = r"^([\s\w]+|\s*\"[^\"]+\")\s+([\w\d\.\-]+|(\"|\`)[^\"]+(\"|\`))$"
 
 # test_str = ("""
 # 	cost 19500
@@ -63,8 +63,8 @@ while i < len(lines):
     # Match key-value pairs
     match = re.match(regex, stripped_line)
     if match:
-        key = match.group(1).strip().replace('"', '')  # Normalize the key
-        value = match.group(2).strip().replace('"', '')  # Remove quotes from the value
+        key = match.group(1).strip().replace('"', '').replace('`', '')  # Normalize the key
+        value = match.group(2).strip().replace('"', '').replace('`', '')  # Remove quotes from the value
 
         # Convert numeric values to int or float
         if value.isdigit():

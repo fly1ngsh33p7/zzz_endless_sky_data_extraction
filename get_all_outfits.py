@@ -49,27 +49,23 @@ def parse_outfits(file_path):
 
 def parse_outfit_fields(block_lines):
     """Parse the fields of an outfit block into a dictionary."""
+    regex = r"^([\s\w]+|\s*\"[^\"]+\")\s+([\w\d\.\-]+|(\"|\`)[^\"]+(\"|\`))$"
+    
     fields = {}
     i = 0
     while i < len(block_lines):
         line = block_lines[i]
-        # Skip empty lines (already cleaned)
-        if not line:
+        stripped_line = line.strip()
+        if not stripped_line:
             i += 1
             continue
-        # Skip lines starting with "description"
-        if line.startswith("description"):
-            i += 1
-            continue
-        
-        # Match key-value pairs like: "key" value or key "value" or key value
-        match = re.match(r"^([\w\s]+|\s*\"[^\"]+\")\s+([\w\d\.\-]+|\"[^\"]+\")$", line, re.MULTILINE)
-        
-        print(match)
-        
+
+        # Match key-value pairs
+        match = re.match(regex, stripped_line)
         if match:
-            key = match.group(1).strip().replace(" ", "_").replace('"', '')  # Replace spaces with underscores and remove quotes
-            value = match.group(2).strip()
+            key = match.group(1).strip().replace('"', '').replace('`', '')  # Normalize the key
+            value = match.group(2).strip().replace('"', '').replace('`', '')  # Remove quotes from the value
+
             # Convert numeric values to int or float
             if value.isdigit():
                 value = int(value)
@@ -78,30 +74,35 @@ def parse_outfit_fields(block_lines):
                     value = float(value)
                 except ValueError:
                     pass
-            
-            # Check if the next line has greater indentation (sub-list or sub-dictionary)
-            if i + 1 < len(block_lines) and block_lines[i + 1].startswith("\t" * (block_lines[i].count("\t") + 1)):
-                sub_list = []
+
+            fields[key] = value
+            i += 1
+            continue
+
+        # Handle standalone keys followed by indented values
+        current_indent = len(line) - len(line.lstrip())
+        if i + 1 < len(block_lines):
+            next_line = block_lines[i + 1]
+            next_indent = len(next_line) - len(next_line.lstrip())
+            if next_indent > current_indent:  # Check if the next line is more indented
+                key = stripped_line.replace('"', '').strip()
+                values = []
                 i += 1
-                while i < len(block_lines) and block_lines[i].startswith("\t" * (block_lines[i - 1].count("\t") + 1)):
-                    sub_list.append(block_lines[i])
-                    i += 1
-                fields[key] = sub_list
+                while i < len(block_lines):
+                    next_line = block_lines[i]
+                    next_indent = len(next_line) - len(next_line.lstrip())
+                    if next_indent == current_indent + 1:  # Collect values with one more indentation
+                        values.append(next_line.strip().replace('"', ''))
+                        i += 1
+                    elif next_indent == current_indent:  # Stop if indentation matches the current level
+                        break
+                    else:  # Skip lines with unexpected indentation
+                        i += 1
+                fields[key] = values
                 continue
-            else:
-                fields[key] = value
-        else:
-            # Handle standalone keywords (e.g., "weapon")
-            if i + 1 < len(block_lines) and block_lines[i + 1].startswith("\t" * (block_lines[i].count("\t") + 1)):
-                sub_list = []
-                i += 1
-                while i < len(block_lines) and block_lines[i].startswith("\t" * (block_lines[i - 1].count("\t") + 1)):
-                    sub_list.append(block_lines[i])
-                    i += 1
-                fields[line.replace('"', '').strip()] = sub_list
-                continue
-            else:
-                fields[line.replace('"', '').strip()] = True
+
+        # If no match, treat as a standalone key
+        fields[stripped_line.replace('"', '').strip()] = True
         i += 1
     return fields
 
