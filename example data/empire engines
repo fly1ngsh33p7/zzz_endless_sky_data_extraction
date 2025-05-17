@@ -1,0 +1,33 @@
+outfit `RX-200 Reverse Thruster`
+	category "Engines"
+	licenses
+		"Empire Contributor"
+	"cost" 610000
+	thumbnail "outfit/medium atomic reverse empire"
+	"mass" 44
+	"outfit space" -44
+	"weapon capacity" -44
+	"reverse thrust" 77.5
+	"reverse thrusting energy" 4
+	"reverse thrusting heat" 8.2
+	"reverse flare sprite" "effect/empire atomic flare/small"
+		"frame rate" 13
+	"reverse flare sound" "impulse engine"
+	description "With pilots generally preferring to focus on steering when actual agility is needed, these are the largest reverse thrusters the Hai offer. They still boast an impressive amount of power for their size, which allows even the largest Hai ships to quickly come to a stop when needed."
+
+outfit `RC-145 Atomic Steering`
+	licenses
+		"Empire Contributor"
+	category "Engines"
+	"cost" 120000
+	thumbnail "outfit/tiny atomic steering empire"
+	"mass" 12
+	"outfit space" -12
+	"engine capacity" -12
+	"turn" 475
+	"turning energy" .7
+	"turning heat" 1.5
+	"steering flare sprite" "effect/empire atomic flare/tiny"
+		"frame rate" 14
+	"steering flare sound" "impulse engine"
+	description "Hai atomic engines are too expensive to buy for most humans. All but the smallest of the engines are worth more than many of the most common ships flown in human space."

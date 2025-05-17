@@ -26,7 +26,7 @@ def parse_outfits(file_path):
     i = 0
     while i < len(lines):
         line = lines[i]
-        match = re.match(r'^\s*outfit\s+"([^"]+)"', line)
+        match = re.match(r'^\s*outfit\s+("([^"]+)"|`([^`]+)`)', line)
         if match:
             name = match.group(1)
             block = []
