@@ -6,7 +6,7 @@ import json
 from pathlib import Path
 
 
-regex = r"^([\s\w]+|\s*\"[^\"]+\")\s+([-+]?(?:\d+\.\d*|\.\d+|\d+)(?:[eE][+-]?\d+)?|\"[^\"]+\"|\`[^\`]+\`)$"
+regex = r"^([\s\w]+|\s*\"[^\"]+\"|\s*\`[^\`]+\`)\s+([-+]?(?:\d+\.\d*|\.\d+|\d+)(?:[eE][+-]?\d+)?|\"[^\"]+\"|\`[^\`]+\`)$"
 
 def remove_comments_from_lines(lines):
     """Remove comments (everything after '#') from all lines."""
@@ -28,7 +28,7 @@ def parse_outfits(file_path):
         line = lines[i]
         match = re.match(r'^\s*outfit\s+("([^"]+)"|`([^`]+)`)', line)
         if match:
-            name = match.group(1)
+            name = match.group(1).strip().replace('"', '').replace('`', '').replace('\'', '')
             block = []
             i += 1
             # Capture indented block lines
@@ -53,8 +53,8 @@ def parse_key_value(line):  # Key-Value-Paar extrahieren
     match = re.match(regex, line)  # Regex-Match durchführen  
     if not match:  
         return None  # kein Key-Value  
-    key = match.group(1).strip().strip('"`')  # Key säubern  
-    raw = match.group(2).strip().strip('"`')  # rohen Wert säubern  
+    key = match.group(1).strip().replace('"', '').replace('`', '').replace('\'', '')  # Key säubern  
+    raw = match.group(2).strip().replace('"', '').replace('`', '').replace('\'', '')  # rohen Wert säubern  
     return key, raw  # Tuple zurückgeben  
 
 def convert_value(raw):  # Wert in int/float oder Bool konvertieren  
@@ -65,7 +65,7 @@ def convert_value(raw):  # Wert in int/float oder Bool konvertieren
     try:  
         return float(raw)  # float  
     except ValueError:  
-        return raw  # String
+        return raw.replace('"', '').replace('`', '').replace('\'', '')  # String
 
 def parse_indented_block(lines, start_idx, indent):  # rekursiver Unterblock-Parser  
     items = []  # Liste der Einträge  
@@ -94,7 +94,7 @@ def parse_indented_block(lines, start_idx, indent):  # rekursiver Unterblock-Par
                 items.append({key: convert_value(raw)})  # simples KV  
                 i += 1  # nächstes  
         else:  
-            items.append(stripped.strip('"`'))  # reine Werte  
+            items.append(stripped.replace('"', '').replace('`', '').replace('\'', ''))  # reine Werte  
             i += 1  # nächstes  
     return items, i  # Einträge und neuer Index
 
@@ -123,7 +123,7 @@ def parse_outfit_fields(block_lines):
             i += 1  # nächstes  
 
         elif next_indent is not None and next_indent > curr_indent:  # verschachtelter Block  
-            key = stripped.strip().strip('"`')  # Block-Key  
+            key = stripped.strip().replace('"', '').replace('`', '').replace('\'', '')  # Block-Key  
             items, new_i = parse_indented_block(block_lines, i+1, curr_indent)  # Unterblock parsen  
             # Flatten: Strings bleiben Liste, Dict-Listen auflösen  
             if items and all(isinstance(it, str) for it in items):  
@@ -144,7 +144,7 @@ def parse_outfit_fields(block_lines):
             i = new_i  # Index setzen  
 
         else:  
-            fields[stripped.strip().strip('"`')] = True  # nur Key → True  
+            fields[stripped.strip().replace('"', '').replace('`', '').replace('\'', '')] = True  # nur Key → True  
             i += 1  # nächstes  
 
     return fields  # gefülltes Dict zurückgeben

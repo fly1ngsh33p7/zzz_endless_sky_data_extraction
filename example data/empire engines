@@ -13,7 +13,7 @@ outfit `RX-200 Reverse Thruster`
 	"reverse flare sprite" "effect/empire atomic flare/small"
 		"frame rate" 13
 	"reverse flare sound" "impulse engine"
-	description "With pilots generally preferring to focus on steering when actual agility is needed, these are the largest reverse thrusters the Hai offer. They still boast an impressive amount of power for their size, which allows even the largest Hai ships to quickly come to a stop when needed."
+	description "With 'pilots' generally preferring to `focus` on steering when actual agility is needed, these are the largest reverse thrusters the Hai offer. They still boast an impressive amount of power for their size, which allows even the largest Hai ships to quickly come to a stop when needed."
 
 outfit `RC-145 Atomic Steering`
 	licenses
