@@ -16,7 +16,11 @@ from pathlib import Path
 #     re.VERBOSE
 # )
 key_pattern = r"\s*[\w]+|\s*\"[^\"]+\"|\s*\`[^\`]+\`"
-value_pattern = r"[-+]?(?:\d+\.\d*|\.\d+|\d+)(?:[eE][+-]?\d+)?|\"[^\"]+\"|\`[^\`]+\`"
+value_pattern = r"[-+]?(?:\d+\.\d*|\.\d+|\d+)(?:[eE][+-]?\d+)?|\"[^\"]+\"|\`[^\`]+\`" 
+# does NOT properly match 
+#thumbnail outfit/license
+# it's parsed to JSON as "thumbnail outfit/license": true 
+
 regex = re.compile(
     rf"^({key_pattern})\s+({value_pattern})$"
 )
