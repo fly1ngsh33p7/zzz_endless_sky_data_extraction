@@ -135,9 +135,9 @@ def parse_outfit_fields(block_lines):
                 fields[key] += "\n\n" + str(value)  # String-Duplikat zusammenführen  
             elif key in fields:  
                 if value == fields[key]:
-                    print(f"Warning: duplicate key '{key}' with identical not-string Values ({value})!")
+                    print(f"Info: duplicate key '{key}' with identical not-string Values ({value})!")
                 else:
-                    print(f"\nError: Duplicate key '{key}' with different not-string Values ({value} vs {fields[key]}), keeping {value}!\nDetails: {fields}\n")
+                    print(f"\nWarning: Duplicate key '{key}' with different not-string Values ({value} vs {fields[key]}), keeping {value}!\nDetails: {fields}\n")
                     # raise ValueError(f"Duplicate key '{key}' with different not-string Values!\nParsed until error: {fields}\n")  # FIXME: is this a Fatal Error?  
             else:  
                 fields[key] = value  # speichern  
@@ -182,11 +182,15 @@ def extract_category_data(block_lines):
     return None
 
 
-def collect_outfits(directories):
+def collect_outfits(directories, include_deprecated):
     all_outfits = {}
     for d in directories:
         path = Path(d)
         for file in path.rglob('*.txt'):
+            # many mods have 'deprecated' outfits still in their files: ignore those
+            if not include_deprecated and "deprecated" in str(file):
+                print(f"Info: Ignored '{str(file)}' because its path contains 'deprecated'.")
+                continue
             try:
                 outfits_by_category = parse_outfits(file)
                 for category, outfits in outfits_by_category.items():
@@ -211,12 +215,25 @@ def main():
         "--output", "-O", default="outfits.json",
         help="Where to write the JSON output"
     )
+    parser.add_argument(
+        "--include-deprecated",
+        action="store_true",
+        help="Include outfits from files/paths marked as 'deprecated'"
+    )
     args = parser.parse_args()
     
-    print(args.folders)
+    print(args)
+    
+    print(f"Looking in {args.folders}:")
+    
+    if args.include_deprecated:
+        print("Including paths/files that contain 'deprecated'.")
+    else:
+        print("Skipping paths/files that contain 'deprecated'.")
+    print()
     
     # Gather all outfits organized by category
-    all_outfits = collect_outfits(args.folders)
+    all_outfits = collect_outfits(args.folders, args.include_deprecated)
     
     # Merge similarly written categories # THIS COULD BE UNWANTED BEHAVIOUR!!
     if "Special" in all_outfits and "Specials" in all_outfits:
