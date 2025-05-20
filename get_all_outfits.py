@@ -5,8 +5,21 @@ import re
 import json
 from pathlib import Path
 
-
-regex = r"^([\s\w]+|\s*\"[^\"]+\"|\s*\`[^\`]+\`)\s+([-+]?(?:\d+\.\d*|\.\d+|\d+)(?:[eE][+-]?\d+)?|\"[^\"]+\"|\`[^\`]+\`)$"
+# key_pattern = re.compile(
+#     r"""
+#     [\s\w]+
+#     |
+#     \s*\"[^\"]+\"
+#     |
+#     \s*\`[^\`]+\`
+#     """,
+#     re.VERBOSE
+# )
+key_pattern = r"\s*[\w]+|\s*\"[^\"]+\"|\s*\`[^\`]+\`"
+value_pattern = r"[-+]?(?:\d+\.\d*|\.\d+|\d+)(?:[eE][+-]?\d+)?|\"[^\"]+\"|\`[^\`]+\`"
+regex = re.compile(
+    rf"^({key_pattern})\s+({value_pattern})$"
+)
 
 def remove_comments_from_lines(lines):
     """Remove comments (everything after '#') from all lines."""
@@ -117,7 +130,11 @@ def parse_outfit_fields(block_lines):
             if key in fields and isinstance(fields[key], str):  
                 fields[key] += "\n\n" + str(value)  # String-Duplikat zusammenführen  
             elif key in fields:  
-                raise ValueError(f"Duplicate key '{key}' mit nicht-string Wert")  # Fehler  
+                if value == fields[key]:
+                    print(f"Warning: duplicate key '{key}' with identical not-string Values ({value})!")
+                else:
+                    print(f"\nError: Duplicate key '{key}' with different not-string Values ({value} vs {fields[key]}), keeping {value}!\nDetails: {fields}\n")
+                    # raise ValueError(f"Duplicate key '{key}' with different not-string Values!\nParsed until error: {fields}\n")  # FIXME: is this a Fatal Error?  
             else:  
                 fields[key] = value  # speichern  
             i += 1  # nächstes  

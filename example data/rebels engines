@@ -90,3 +90,4 @@ outfit "HeVian-9 Engine"
 	"steering flare sprite" "effect/korath flare/huge"
 		"frame rate" 6
 	"steering flare sound" "plasma huge"
+	thumbnail outfit/license

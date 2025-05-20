@@ -699,7 +699,7 @@
         "lifetime": 1,
         "reload": 160,
         "sound plasma": true,
-        "submunition Shift1": 30,
+        "submunition Shift1 30": true,
         "die effect": "drak bolt impact"
       },
       "description": "A deadly scattershot weapon that excels in crushing groups of enemies, while anything hit by the main pulse is quickly shattered by the immense energies.\n\nWhen the Miltaj first came to this galaxy, these weapons were what they used in their initial battles with the Quarg. While unbelievably powerful, now that contact with their home systems is cut off and they are unable to replicate them these are considered their most prized outfits.",
@@ -2513,7 +2513,7 @@
       "weapon": {
         "sprite": "projectile/arionnapalm",
         "sound": "typhoon",
-        "icon icon": "icon/flamethrower",
+        "icon icon icon/flamethrower": true,
         "ammo": "SMB-1w Scorcher Bomb",
         "fire effect": "typhoon fire",
         "hit effect": "torpedo hit",
@@ -9990,6 +9990,210 @@
     },
     {
       "category": "Secondary Weapons",
+      "cost": 150000,
+      "thumbnail": "outfit/eml",
+      "mass": 60,
+      "outfit space": -60.0,
+      "weapon capacity": -60.0,
+      "gun ports": -1.0,
+      "Zyrc Missile capacity": 3000,
+      "weapon": {
+        "sprite": {
+          "name": "projectile/expmiss",
+          "frame rate": 0.25
+        },
+        "sound": "meteor",
+        "ammo": "Zyrc Missile",
+        "icon": "icon/wep8",
+        "fire effect": "meteor fire",
+        "fire effect emp torpedo fire 2": true,
+        "die effect": "pug medium explosion",
+        "hit effect": "missile hit",
+        "hit effect emp spark 20": true,
+        "fire effect finisher sparks 3": true,
+        "inaccuracy": 0,
+        "velocity": 110,
+        "lifetime": 400,
+        "reload": 5.75,
+        "firing energy": 1,
+        "firing heat": 20,
+        "acceleration": 1,
+        "drag": 0.1,
+        "turn": 1.35,
+        "homing": 1,
+        "infrared tracking": 0.95,
+        "shield damage": 2360,
+        "hull damage": 1960,
+        "hit force": -220.0,
+        "missile strength": 20,
+        "piercing": 0.7
+      },
+      "name": "Zyrc Missile Launcher"
+    },
+    {
+      "category": "Secondary Weapons",
+      "cost": 7200000,
+      "thumbnail": "outfit/eattractor",
+      "mass": 36,
+      "outfit space": -36.0,
+      "weapon capacity": -36.0,
+      "turret mounts": -1.0,
+      "required crew": 1,
+      "weapon": {
+        "fire effect": "distancer flare",
+        "hardpoint sprite": "hardpoint/electron turret",
+        "hardpoint offset": 8.0,
+        "icon": "icon/att",
+        "sound": "electron beam",
+        "hit effect": "electron impact",
+        "phasing": true,
+        "inaccuracy": 0.3,
+        "turret turn": 20.5,
+        "velocity": 8800,
+        "lifetime": 1,
+        "reload": 1,
+        "firing energy": 3.0,
+        "firing heat": 5.2,
+        "hit force": -360.0
+      },
+      "name": "Zyrc Attractor Turret"
+    },
+    {
+      "category": "Secondary Weapons",
+      "cost": 7200000,
+      "thumbnail": "outfit/erepulsor",
+      "mass": 46,
+      "outfit space": -46.0,
+      "weapon capacity": -46.0,
+      "turret mounts": -1.0,
+      "required crew": 1,
+      "weapon": {
+        "fire effect": "distancer flare",
+        "hardpoint sprite": "hardpoint/electron turret",
+        "hardpoint offset": 8.0,
+        "icon": "icon/rep",
+        "sound": "electron beam",
+        "hit effect": "electron impact",
+        "phasing": true,
+        "inaccuracy": 0.3,
+        "turret turn": 20.5,
+        "velocity": 600,
+        "lifetime": 1,
+        "reload": 1,
+        "firing energy": 3.0,
+        "firing heat": 5.2,
+        "hit force": 360
+      },
+      "name": "Zyrc Repulsor Turret"
+    },
+    {
+      "category": "Secondary Weapons",
+      "cost": 2400000,
+      "thumbnail": "outfit/edisabler",
+      "mass": 60,
+      "outfit space": -60.0,
+      "weapon capacity": -23.0,
+      "turret mounts": -1.0,
+      "weapon": {
+        "hardpoint sprite": "hardpoint/pug gridfire turret",
+        "icon": "icon/dis",
+        "fire effect": "gridfire fire",
+        "hit effect gridfire hit 2": true,
+        "hit effect": "gridfire cloud",
+        "phasing": true,
+        "velocity": 450,
+        "lifetime": 1,
+        "reload": 5,
+        "shield damage": 200,
+        "heat damage": 60,
+        "ion damage": 20
+      },
+      "name": "Ixkek Disabler"
+    },
+    {
+      "category": "Secondary Weapons",
+      "cost": 3800000,
+      "thumbnail": "outfit/flameblaster",
+      "mass": 36,
+      "outfit space": -36.0,
+      "weapon capacity": -36.0,
+      "gun ports": -1.0,
+      "weapon": {
+        "sprite": {
+          "name": "effect/tiny",
+          "frame rate": 2.5
+        },
+        "sound": "flamethrower",
+        "icon": "icon/f-b",
+        "velocity": 75,
+        "lifetime": 200,
+        "shield damage": 100,
+        "hull damage": 80,
+        "heat damage": 600,
+        "ion damage": 20,
+        "reload": 5,
+        "burst reload": 2,
+        "burst count": 6,
+        "cluster": true,
+        "firing energy": 0.1,
+        "firing fuel": 0.25,
+        "firing heat": 2,
+        "acceleration": 1.3,
+        "drag": 0.1,
+        "turn": 4,
+        "homing": 100,
+        "infrared tracking": 100,
+        "radar tracking": 100,
+        "optical tracking": 100,
+        "missile strength": 40
+      },
+      "name": "Ixkek Flameblaster"
+    },
+    {
+      "category": "Secondary Weapons",
+      "cost": 1500000000,
+      "thumbnail": "outfit/iwg",
+      "mass": 176,
+      "weapon capacity": -152.0,
+      "outfit space": 250,
+      "gun ports": -1.0,
+      "spinal mount": -1.0,
+      "fuel capacity": 600,
+      "energy capacity": 18000,
+      "weapon": {
+        "sound": "seismic_charge",
+        "icon": "icon/dragonflame",
+        "fire effect": "dragonflame",
+        "hit effect": "bright hit",
+        "hit effect iwg plasma 30": true,
+        "hit effect iwg debris 50": true,
+        "hit effect dragonflame debris 50": true,
+        "hit effect emp ring 30": true,
+        "velocity": 2000,
+        "lifetime": 1,
+        "reload": 380,
+        "burst reload": 35,
+        "burst count": 3,
+        "cluster": true,
+        "firing energy": 16000,
+        "firing fuel": 300,
+        "firing heat": 20000,
+        "firing force": 4200,
+        "hit force": 9000,
+        "relative shield damage": 10,
+        "relative hull damage": 1.434782609,
+        "heat damage": 250000,
+        "disruption damage": 2500,
+        "fuel damage": 200,
+        "piercing": 0.69,
+        "blast radius": 1000,
+        "safe": true
+      },
+      "description": "The Ixkek Wormole Gun is a extremely valuable artifact. It is a mechanism that creates two parallel unstable wormholes, and draws dimensional energy from them. This energy is then stored up in specialized battery banks until it forms dimensional plasma. After that plasma has formed, the gun can fire. When firing, it concentrates all the stored energy into a beam of amazing power. Another thing the gun does is give room for extra storage, as 200 tons of outfits may be stored in the wormhole not being used to fire.",
+      "name": "Ixkek Wormhole Gun"
+    },
+    {
+      "category": "Secondary Weapons",
       "thumbnail": "outfit/unknown",
       "turret mounts": -1.0,
       "unplunderable": 1,
@@ -15867,7 +16071,7 @@
         "range override": 400,
         "submunition": {
           "name": "Elytra Blast",
-          "offset 0": -400.0
+          "offset 0 -400": true
         },
         "reload": 1,
         "firing energy": 4,
@@ -16394,7 +16598,7 @@
         "fire effect": "yamato laser beam",
         "submunition": {
           "name": "MWG-1 Explosion aS",
-          "offset 0": 275
+          "offset 0 275": true
         },
         "trigger radius": 190,
         "inaccuracy": 0.05,
@@ -20886,6 +21090,33 @@
       },
       "description": "The Fractal Beam was a weapon derived from millennia of studying the artificial star of Fen Kedol. It is focused through a lens made from crystalline Adamas flesh.",
       "name": "Fractal Beam"
+    },
+    {
+      "category": "Guns",
+      "cost": 1700000,
+      "thumbnail": "outfit/Zelb",
+      "mass": 9,
+      "outfit space": -9.0,
+      "weapon capacity": -9.0,
+      "gun ports": -1.0,
+      "weapon": {
+        "sprite": {
+          "name": "projectile/Zsunbeam",
+          "frame rate": 1.3,
+          "random start frame": true
+        },
+        "sound": "cyclops",
+        "hit effect": "sunbeam impact",
+        "inaccuracy": 0.2,
+        "velocity": 540,
+        "lifetime": 1,
+        "reload": 1,
+        "firing energy": 1.5,
+        "firing heat": 2.7,
+        "shield damage": 25,
+        "hull damage": 24
+      },
+      "name": "Zyrc Light Laser"
     },
     {
       "category": "Guns",
@@ -28459,7 +28690,7 @@
         "turret turn": 1.65,
         "submunition": {
           "name": "NW40 Hagel Projectile",
-          "offset 5": 0
+          "offset 5 0": true
         },
         "velocity": 1,
         "velocity override": 25,
@@ -28900,7 +29131,7 @@
         "inaccuracy": 0.1,
         "turret turn": 8,
         "submunition Reisen Blaster Beam 2": true,
-        "offset 6": 0,
+        "offset 6 0": true,
         "offset -6 0": true,
         "velocity": 1,
         "velocity override": 15,
@@ -35049,6 +35280,168 @@
         "safe": true
       },
       "name": " Gravitational Proximity Field "
+    },
+    {
+      "category": "Turrets",
+      "cost": 6000000,
+      "thumbnail": "outfit/Zamt",
+      "mass": 1625,
+      "outfit space": -25.0,
+      "weapon capacity": -25.0,
+      "turret mounts": -1.0,
+      "weapon": {
+        "hardpoint sprite": "hardpoint/anti-missile",
+        "hardpoint offset": 4.0,
+        "hit effect": "electric anti-missile",
+        "anti-missile": 17,
+        "velocity": 700,
+        "lifetime": 1,
+        "reload": 1.02,
+        "firing energy": 0.5,
+        "firing heat": 3
+      },
+      "name": "Zyrc Anti-Missile Turret"
+    },
+    {
+      "category": "Turrets",
+      "cost": 6000000,
+      "thumbnail": "outfit/Iamt",
+      "mass": 45,
+      "outfit space": -5.0,
+      "weapon capacity": -35.0,
+      "turret mounts": -1.0,
+      "weapon": {
+        "hardpoint sprite": "hardpoint/anti-missile",
+        "hardpoint offset": 4.0,
+        "hit effect": "electric anti-missile",
+        "anti-missile": 17,
+        "velocity": 700,
+        "lifetime": 1,
+        "reload": 1.02,
+        "firing energy": 5,
+        "firing heat": 3
+      },
+      "name": "Ixkek Anti-Missile Turret"
+    },
+    {
+      "category": "Turrets",
+      "cost": 1700000,
+      "thumbnail": "outfit/Zelb",
+      "mass": 18,
+      "outfit space": -18.0,
+      "weapon capacity": -18.0,
+      "turret mounts": -1.0,
+      "weapon": {
+        "sprite": {
+          "name": "projectile/Zsunbeam",
+          "frame rate": 1.3,
+          "random start frame": true
+        },
+        "sound": "cyclops",
+        "hit effect": "sunbeam impact",
+        "inaccuracy": 0.2,
+        "turret turn": 2.3,
+        "velocity": 540,
+        "lifetime": 1,
+        "reload": 1,
+        "firing energy": 1.5,
+        "firing heat": 2.7,
+        "shield damage": 25,
+        "hull damage": 24
+      },
+      "name": "Zyrc Light Laser Turret"
+    },
+    {
+      "category": "Turrets",
+      "cost": 4100000,
+      "thumbnail": "outfit/Zelbt",
+      "mass": 32,
+      "outfit space": -32.0,
+      "weapon capacity": -32.0,
+      "turret mounts": -1.0,
+      "required crew": 1,
+      "weapon": {
+        "sprite": {
+          "name": "projectile/Z3x sunbeam",
+          "frame rate": 1.3,
+          "random start frame": true
+        },
+        "hardpoint sprite": "hardpoint/dual sunbeam turret",
+        "hardpoint offset": 12.0,
+        "sound": "cyclops",
+        "hit effect": "sunbeam impact",
+        "inaccuracy": 0.2,
+        "turret turn": 1.9,
+        "velocity": 540,
+        "lifetime": 1,
+        "reload": 1,
+        "firing energy": 3.0,
+        "firing heat": 5.4,
+        "shield damage": 75,
+        "hull damage": 72
+      },
+      "name": "Zyrc Heavy Laser Turret"
+    },
+    {
+      "category": "Turrets",
+      "cost": 1700000,
+      "thumbnail": "outfit/Ielb",
+      "mass": 24,
+      "outfit space": -11.0,
+      "weapon capacity": -24.0,
+      "turret mounts": -1.0,
+      "weapon": {
+        "sprite": {
+          "name": "projectile/sunbeam",
+          "frame rate": 1.3,
+          "random start frame": true
+        },
+        "sound": "cyclops",
+        "hit effect": "sunbeam impact",
+        "inaccuracy": 0.2,
+        "turret turn": 2.3,
+        "velocity": 540,
+        "lifetime": 1,
+        "reload": 1,
+        "firing energy": 1.5,
+        "firing heat": 2.7,
+        "shield damage": 23,
+        "hull damage": 32,
+        "piercing": 0.4
+      },
+      "name": "Ixkek Light Laser Turret"
+    },
+    {
+      "category": "Turrets",
+      "cost": 4100000,
+      "thumbnail": "outfit/Ielbt",
+      "mass": 41,
+      "outfit space": -20.0,
+      "weapon capacity": -41.0,
+      "turret mounts": -1.0,
+      "required crew": 1,
+      "weapon": {
+        "sprite": {
+          "name": "projectile/I3x sunbeam",
+          "frame rate": 1.3,
+          "random start frame": true
+        },
+        "hardpoint sprite": "hardpoint/dual sunbeam turret",
+        "hardpoint offset": 12.0,
+        "sound": "cyclops",
+        "hit effect": "sunbeam impact",
+        "inaccuracy": 0.2,
+        "turret turn": 1.9,
+        "velocity": 540,
+        "lifetime": 1,
+        "reload": 1,
+        "firing energy": 3.0,
+        "firing heat": 5.4,
+        "shield damage": 69,
+        "hull damage": 96,
+        "piercing": 0.4
+      },
+      "name": "Ixkek Heavy Laser Turret"
     },
     {
       "category": "Turrets",
@@ -43606,6 +43999,483 @@
     },
     {
       "category": "Systems",
+      "licenses": [
+        "Arion"
+      ],
+      "cost": 1000000,
+      "thumbnail": "outfit/sheragi ews",
+      "mass": 0,
+      "outfit space": -0.0,
+      "radar jamming": 65,
+      "outfit scan power": 175,
+      "cargo scan power": 100,
+      "cargo scan efficiency": 50,
+      "tactical scan power": 180,
+      "scan interference": 180,
+      "energy consumption": 1.5,
+      "description": "Built in Electronic Warfare System in SFF Ships.",
+      "name": "Arion I.E.W.S"
+    },
+    {
+      "category": "Systems",
+      "licenses": [
+        "Arion"
+      ],
+      "cost": 1000000,
+      "thumbnail": "outfit/sheragi ews",
+      "mass": 10,
+      "outfit space": -10.0,
+      "radar jamming": 50,
+      "outfit scan power": 175,
+      "cargo scan power": 100,
+      "cargo scan efficiency": 50,
+      "tactical scan power": 150,
+      "scan interference": 150,
+      "energy consumption": 2,
+      "description": "The Arion Advanced Electronic Warfare System is a standard issue equipment on all Arion government owned ships. While some of its function might not be useful for some missions, its ability to interfere with missile locks and ability to interfere with scans makes it a valuable asset for any ship.",
+      "name": "Arion A.E.W.S"
+    },
+    {
+      "category": "Systems",
+      "licenses": [
+        "Arion"
+      ],
+      "cost": 100000,
+      "thumbnail": "outfit/sheragi ews",
+      "mass": 10,
+      "outfit space": -10.0,
+      "radar jamming": 20,
+      "outfit scan power": 35,
+      "outfit scan efficiency": 25,
+      "cargo scan power": 15,
+      "cargo scan efficiency": 10,
+      "tactical scan power": 25,
+      "scan interference": 25,
+      "energy consumption": 1,
+      "description": "This is the cheaper alternative to the A.E.W.S.",
+      "name": "Arion B.E.W.S"
+    },
+    {
+      "category": "Systems",
+      "licenses": [
+        "Arion"
+      ],
+      "cost": 50000000,
+      "thumbnail": "outfit/interference plating",
+      "mass": 20,
+      "outfit space": -20.0,
+      "cloak": 0.1,
+      "cloaking energy": 6,
+      "cloaking heat": 4.5,
+      "description": "An advanced cloaking device, it is only used when the basic version is not good enough.",
+      "name": "Arion A.C.S"
+    },
+    {
+      "category": "Systems",
+      "licenses": [
+        "Arion"
+      ],
+      "cost": 5000000,
+      "thumbnail": "outfit/interference plating",
+      "mass": 50,
+      "outfit space": -50.0,
+      "cloak": 0.005,
+      "cloaking energy": 9,
+      "cloaking heat": 9,
+      "description": "When the prototype cloaking system is not available, the basic one, will do the job.",
+      "name": "Arion B.C.S"
+    },
+    {
+      "category": "Systems",
+      "licenses": [
+        "Arion"
+      ],
+      "cost": 750000,
+      "thumbnail": "outfit/tiny systems core",
+      "mass": 10,
+      "outfit space": -10.0,
+      "energy capacity": 1000,
+      "shield generation": 0.45,
+      "shield energy": 0.45,
+      "hull repair rate": 0.25,
+      "hull energy": 0.25,
+      "hull heat": 0.25,
+      "description": "The Basic Repair System 10x is a useful combined shield generation and repair system that can help protect any ships using it.",
+      "name": "Arion BRS-10x"
+    },
+    {
+      "category": "Systems",
+      "licenses": [
+        "Arion"
+      ],
+      "cost": 1875000,
+      "thumbnail": "outfit/small systems core",
+      "mass": 25,
+      "outfit space": -25.0,
+      "energy capacity": 2500,
+      "shield generation": 1.125,
+      "shield energy": 1.125,
+      "hull repair rate": 0.625,
+      "hull energy": 0.625,
+      "hull heat": 0.625,
+      "description": "The Basic Repair System 25x is a useful combined shield generation and repair system that can help protect any ships using it.",
+      "name": "Arion BRS-25x"
+    },
+    {
+      "category": "Systems",
+      "licenses": [
+        "Arion"
+      ],
+      "cost": 3750000,
+      "thumbnail": "outfit/medium systems core",
+      "mass": 50,
+      "outfit space": -50.0,
+      "energy capacity": 5000,
+      "shield generation": 2.25,
+      "shield energy": 2.25,
+      "hull repair rate": 1.25,
+      "hull energy": 1.25,
+      "hull heat": 1.25,
+      "description": "The Basic Repair System 50x is a useful combined shield generation and repair system that can help protect any ships using it.",
+      "name": "Arion BRS-50x"
+    },
+    {
+      "category": "Systems",
+      "licenses": [
+        "Arion"
+      ],
+      "cost": 7500000,
+      "thumbnail": "outfit/large systems core",
+      "mass": 100,
+      "outfit space": -100.0,
+      "energy capacity": 10000,
+      "shield generation": 4.5,
+      "shield energy": 4.5,
+      "hull repair rate": 2.5,
+      "hull energy": 2.5,
+      "hull heat": 2.5,
+      "description": "The Basic Repair System 100x is a useful combined shield generation and repair system that can help protect any ships using it.",
+      "name": "Arion BRS-100x"
+    },
+    {
+      "category": "Systems",
+      "licenses": [
+        "Arion"
+      ],
+      "cost": 5000000,
+      "thumbnail": "outfit/tiny systems core",
+      "mass": 10,
+      "outfit space": -10.0,
+      "energy capacity": 3125,
+      "shield generation": 0.7,
+      "shield energy": 0.7,
+      "hull repair rate": 0.4,
+      "hull energy": 0.4,
+      "hull heat": 0.2,
+      "disruption protection": 0.5,
+      "description": "The Advanced Repair System 10x is a useful tool for any small spacecraft. With added disruption protection, any Captain using this should be safe from most threats.",
+      "name": "Arion ARS-10x"
+    },
+    {
+      "category": "Systems",
+      "licenses": [
+        "Arion"
+      ],
+      "cost": 12500000,
+      "thumbnail": "outfit/small systems core",
+      "mass": 25,
+      "outfit space": -25.0,
+      "energy capacity": 6250,
+      "shield generation": 1.75,
+      "shield energy": 1.75,
+      "hull repair rate": 1,
+      "hull energy": 1,
+      "hull heat": 1,
+      "disruption protection": 1.25,
+      "description": "The Advanced Repair System 25x is a useful tool for any Captain that requires advanced shield and repair systems in one package. With added disruption protection, any Captain using this should be safe from most threats.",
+      "name": "Arion ARS-25x"
+    },
+    {
+      "category": "Systems",
+      "licenses": [
+        "Arion"
+      ],
+      "cost": 25000000,
+      "thumbnail": "outfit/medium systems core",
+      "mass": 50,
+      "outfit space": -50.0,
+      "energy capacity": 12500,
+      "shield generation": 3.5,
+      "shield energy": 3.5,
+      "hull repair rate": 2,
+      "hull energy": 2,
+      "hull heat": 2,
+      "disruption protection": 2.5,
+      "description": "The Advanced Repair System 50x is a useful tool for any Captain that requires advanced shield and repair systems in one package. With added disruption protection, any Captain using this should be safe from most threats.",
+      "name": "Arion ARS-50x"
+    },
+    {
+      "category": "Systems",
+      "licenses": [
+        "Arion"
+      ],
+      "cost": 50000000,
+      "thumbnail": "outfit/large systems core",
+      "mass": 100,
+      "outfit space": -100.0,
+      "energy capacity": 25000,
+      "shield generation": 7,
+      "shield energy": 7,
+      "hull repair rate": 4,
+      "hull energy": 4,
+      "hull heat": 4,
+      "disruption protection": 5,
+      "description": "The Advanced Repair System 100x is the largest and best repair system that is made by Arion that is available to you. With our advanced fabricator technology and shield generators, this repair system should be able to keep any ship using it in the fight longer. The bonus protection against disruption also helps.",
+      "name": "Arion ARS-100x"
+    },
+    {
+      "category": "Systems",
+      "licenses": [
+        "Arion"
+      ],
+      "cost": 125000,
+      "thumbnail": "outfit/small repair module",
+      "mass": 5,
+      "outfit space": -5.0,
+      "hull repair rate": 0.2,
+      "hull energy": 0.2,
+      "hull heat": 0.3,
+      "description": "An emergency repair system.",
+      "name": "Arion ERS-5x"
+    },
+    {
+      "category": "Systems",
+      "licenses": [
+        "Arion"
+      ],
+      "cost": 200000,
+      "thumbnail": "outfit/small heat shunt",
+      "mass": 5,
+      "outfit space": -5.0,
+      "energy capacity": 250,
+      "cooling": 12.5,
+      "description": "The Arion Small Cooling Device is a small cooling device used for mostly fighter sized spacecraft. It also has some extra battery space.",
+      "name": "Arion S.C.D"
+    },
+    {
+      "category": "Systems",
+      "licenses": [
+        "Arion"
+      ],
+      "cost": 800000,
+      "thumbnail": "outfit/large heat shunt",
+      "mass": 20,
+      "outfit space": -20.0,
+      "energy capacity": 1000,
+      "cooling": 50,
+      "description": "The Arion Large Cooling Device is a large cooling device to make sure large spaceships dont get overheated. It also has some extra battery space.",
+      "name": "Arion L.C.D"
+    },
+    {
+      "category": "Systems",
+      "licenses": [
+        "Arion"
+      ],
+      "cost": 250000,
+      "thumbnail": "outfit/cooling module",
+      "mass": 4,
+      "outfit space": -4.0,
+      "active cooling": 18,
+      "cooling energy": 1.25,
+      "energy capacity": 100,
+      "description": "The Emergency Cooling Device is used to prevent ships from overheating quickly. Due to its emergency nature however, it will only be triggered on the most desperate moments.",
+      "name": "Arion E.C.D"
+    },
+    {
+      "category": "Systems",
+      "licenses": [
+        "Arion"
+      ],
+      "cost": 500000,
+      "thumbnail": "outfit/tiny systems core",
+      "mass": 1,
+      "outfit space": -1.0,
+      "required crew": -1.0,
+      "energy consumption": 0.1,
+      "heat generation": 0.1,
+      "description": "To help reduce crew costs for your non Arion Ships, we have made an automation system to automate some processes.",
+      "name": "Arion Automation Upgrade"
+    },
+    {
+      "category": "Systems",
+      "licenses": [
+        "Arion"
+      ],
+      "cost": 2750000,
+      "thumbnail": "outfit/small systems core",
+      "mass": 4,
+      "outfit space": -4.0,
+      "required crew": -5.0,
+      "energy consumption": 0.4,
+      "heat generation": 0.55,
+      "description": "To help reduce crew costs for your non Arion Ships, we have made an automation system to automate some processes. This one is a larger variant which automates more of the ship for less outfit space but produces more heat and is more expensive.",
+      "name": "Arion Automation Upgrade Mk1"
+    },
+    {
+      "category": "Systems",
+      "licenses": [
+        "Arion"
+      ],
+      "cost": 6000000,
+      "thumbnail": "outfit/small systems core",
+      "mass": 8,
+      "outfit space": -8.0,
+      "required crew": -10.0,
+      "energy consumption": 0.8,
+      "heat generation": 1.2,
+      "description": "To help reduce crew costs for your non Arion Ships, we have made an automation system to automate some processes. This one is an even larger variant which automates more of the ship for less outfit space but produces more heat and is more expensive.",
+      "name": "Arion Automation Upgrade Mk2"
+    },
+    {
+      "category": "Systems",
+      "licenses": [
+        "Arion"
+      ],
+      "cost": 350000,
+      "thumbnail": "outfit/korath fuel processor",
+      "mass": 10,
+      "outfit space": -10.0,
+      "fuel capacity": 100,
+      "ramscoop": 4,
+      "leak resistance": 1,
+      "description": "Ram scoop similar to the Korath fuel processor.",
+      "name": "Arion Small Multirole Fuel System"
+    },
+    {
+      "category": "Systems",
+      "licenses": [
+        "Arion"
+      ],
+      "cost": 500000,
+      "thumbnail": "outfit/korath fuel processor",
+      "mass": 15,
+      "outfit space": -15.0,
+      "fuel capacity": 200,
+      "ramscoop": 3,
+      "leak resistance": 1,
+      "description": "Ram scoop similar to the Korath fuel processor.",
+      "name": "Arion Multirole Fuel System"
+    },
+    {
+      "category": "Systems",
+      "licenses": [
+        "Arion"
+      ],
+      "cost": 500000,
+      "thumbnail": "outfit/fuel module",
+      "mass": 25,
+      "outfit space": -25.0,
+      "fuel capacity": 200,
+      "fuel generation": 0.2,
+      "energy consumption": 1,
+      "heat generation": 1,
+      "leak resistance": 1,
+      "description": "Fuel generation device.",
+      "name": "Arion Fuel Generator"
+    },
+    {
+      "category": "Systems",
+      "licenses": [
+        "Arion"
+      ],
+      "cost": 100000,
+      "thumbnail": "outfit/fuel pod",
+      "mass": 8,
+      "external rack": -1.0,
+      "medium rack": -1.0,
+      "heavy rack": -1.0,
+      "fuel capacity": 100,
+      "description": "Specialized external fuel tank.",
+      "name": "Arion External Fuel Pod"
+    },
+    {
+      "category": "Systems",
+      "licenses": [
+        "Arion"
+      ],
+      "cost": 40000,
+      "thumbnail": "outfit/fuel pod",
+      "mass": 4,
+      "gun ports": -1.0,
+      "external rack": -1.0,
+      "f104 wingtip": -1.0,
+      "fuel capacity": 50,
+      "description": "Specialized external fuel tank.",
+      "name": "Arion F104 Wingtip Fuel Tank"
+    },
+    {
+      "category": "Systems",
+      "cost": 100000,
+      "thumbnail": "outfit/small bunk room",
+      "mass": 1,
+      "outfit space": -1.0,
+      "hull repair rate": 0.1,
+      "hull energy": 0.75,
+      "hull heat": 0.25,
+      "disruption resistance": 0.0025,
+      "ion resistance": 0.005,
+      "slowing resistance": 0.005,
+      "discharge resistance": 0.0025,
+      "corrosion resistance": 0.01,
+      "leak resistance": 0.01,
+      "burn resistance": 0.01,
+      "required crew": 4,
+      "operating costs": 200,
+      "description": "Damage control party that can help repair damages done to the ship.",
+      "name": "Arion Damage Control Party"
+    },
+    {
+      "category": "Systems",
+      "cost": 1000000,
+      "thumbnail": "outfit/cargo expansion",
+      "mass": 5,
+      "outfit space": -10.0,
+      "hull repair rate": 0.25,
+      "hull energy": 0.25,
+      "hull heat": 0.125,
+      "disruption resistance": 0.1,
+      "ion resistance": 0.1,
+      "slowing resistance": 0.1,
+      "discharge resistance": 0.1,
+      "corrosion resistance": 0.1,
+      "leak resistance": 0.1,
+      "burn resistance": 0.1,
+      "required crew": 2,
+      "operating costs": 250,
+      "description": "Damage control unit. Requires specialized personnel to operate. Increases resistance against special damage types and assists with fixing the ship.",
+      "name": "Arion Damage Control Unit"
+    },
+    {
+      "category": "Systems",
+      "licenses": [
+        "Arion"
+      ],
+      "cost": 100000,
+      "thumbnail": "outfit/cargo expansion",
+      "mass": 5,
+      "bunks": 4,
+      "cargo space": 15,
+      "weapon capacity": -10.0,
+      "outfit space": -25.0,
+      "s3 viking": -1.0,
+      "gun ports": -1.0,
+      "turret mounts": -1.0,
+      "unplunderable": 1,
+      "description": "Conversion for the S3 Viking to turn it into a utility plane.",
+      "name": "Arion S3 Viking Utility conversion"
+    },
+    {
+      "category": "Systems",
       "cost": 50000,
       "thumbnail": "outfit/small repair module",
       "mass": 5,
@@ -45161,6 +46031,32 @@
     {
       "category": "Systems",
       "cost": 12000000,
+      "thumbnail": "outfit/unknown",
+      "mass": 46,
+      "outfit space": -46.0,
+      "shield generation": 188.9,
+      "shield energy": 188.9,
+      "shield energy multiplier": 1.5,
+      "disruption resistance": 30,
+      "disruption resistance energy": -30.0,
+      "disruption resistance heat": 50,
+      "name": "La2-a Shield Generator"
+    },
+    {
+      "category": "Systems",
+      "cost": 13000000,
+      "thumbnail": "outfit/unknown",
+      "mass": 54,
+      "outfit space": -54.0,
+      "hull repair rate": 220,
+      "hull energy": 220,
+      "corrosion resistance": 10,
+      "corrosion resistance energy": 20,
+      "name": "Ukl2-a Hull Regenerator"
+    },
+    {
+      "category": "Systems",
+      "cost": 12000000,
       "thumbnail": "outfit/ultaka shield",
       "mass": 210,
       "outfit space": -210.0,
@@ -45860,6 +46756,201 @@
       "neuron matrix capacity": 250,
       "description": "The penultimate AI Mainframe. Capable of controlling almost any ship on its own via a network of connections, replacing up to 250 crew members. That was said that an alien race was the one which granted self awakening to its predecessor before a dangerous turn of events. (Min 1 is needed)",
       "name": "HAL 9000"
+    },
+    {
+      "category": "Systems",
+      "cost": 150000000,
+      "thumbnail": "outfit/econtrol",
+      "mass": 267,
+      "outfit space": -267.0,
+      "shield generation": 1200.3,
+      "shield energy": 20.3,
+      "hull repair rate": 400.8,
+      "hull energy": 10.8,
+      "hull heat": 1.2,
+      "energy generation": 800,
+      "energy capacity": 60000,
+      "ramscoop": 100,
+      "radar jamming": 50,
+      "outfit scan power": 160,
+      "outfit scan speed": 20,
+      "cargo scan power": 40,
+      "cargo scan speed": 20,
+      "atmosphere scan": 1000,
+      "cooling": 100,
+      "heat dissipation": 1.5,
+      "asteroid scan power": 400,
+      "tactical scan power": 320,
+      "capture defense": 100,
+      "unplunderable": 1,
+      "shields": 1000000,
+      "hull": 1000000,
+      "name": "Zyrc Control Center"
+    },
+    {
+      "category": "Systems",
+      "thumbnail": "outfit/massreducer",
+      "cost": 420000,
+      "mass": -1430.0,
+      "drag": -1.0,
+      "outfit space": -22.0,
+      "name": "Zyrc Mass Reducer"
+    },
+    {
+      "category": "Systems",
+      "thumbnail": "outfit/massreducer",
+      "cost": 38000,
+      "mass": -150.0,
+      "drag": -0.09,
+      "outfit space": -2.0,
+      "name": "Zyrc Small Mass Reducer"
+    },
+    {
+      "category": "Systems",
+      "cost": 70000000,
+      "thumbnail": "outfit/econtrol",
+      "mass": 267,
+      "outfit space": -267.0,
+      "unplunderable": 1,
+      "Ixkek Control Center Module": 16,
+      "Ixkek Pressure Module": 1,
+      "name": "Ixkek Modular Control Center"
+    },
+    {
+      "category": "Systems",
+      "cost": 35000000,
+      "thumbnail": "outfit/econtrol",
+      "mass": 130,
+      "outfit space": -130.0,
+      "unplunderable": 1,
+      "Ixkek Control Center Module": 8,
+      "Ixkek Pressure Module": 1,
+      "name": "Ixkek Small Modular Control Center"
+    },
+    {
+      "category": "Systems",
+      "cost": 35000000,
+      "thumbnail": "outfit/econtrol",
+      "mass": 65,
+      "outfit space": -65.0,
+      "unplunderable": 1,
+      "Ixkek Control Center Module": 4,
+      "name": "Ixkek Tiny Modular Control Center"
+    },
+    {
+      "category": "Systems",
+      "shield generation": 600,
+      "shield energy": 10,
+      "shields": 500000,
+      "Ixkek Control Center Module": -1.0,
+      "unplunderable": 1,
+      "cost": 5000000,
+      "name": "Ixkek Shield Generator Module"
+    },
+    {
+      "category": "Systems",
+      "hull repair rate": 600,
+      "hull energy": 10,
+      "hull": 500000,
+      "Ixkek Control Center Module": -1.0,
+      "unplunderable": 1,
+      "cost": 5000000,
+      "name": "Ixkek Nanobot Module"
+    },
+    {
+      "category": "Systems",
+      "energy generation": 400,
+      "Ixkek Control Center Module": -1.0,
+      "unplunderable": 1,
+      "cost": 5000000,
+      "name": "Ixkek Generator Module"
+    },
+    {
+      "category": "Systems",
+      "energy capacity": 30000,
+      "Ixkek Control Center Module": -1.0,
+      "unplunderable": 1,
+      "cost": 5000000,
+      "name": "Ixkek Battery Module"
+    },
+    {
+      "category": "Systems",
+      "ramscoop": 50,
+      "fuel capacity": 200,
+      "Ixkek Control Center Module": -1.0,
+      "unplunderable": 1,
+      "cost": 5000000,
+      "name": "Ixkek Ramscoop Module"
+    },
+    {
+      "category": "Systems",
+      "radar jamming": 25,
+      "outfit scan power": 80,
+      "outfit scan speed": 10,
+      "cargo scan power": 20,
+      "cargo scan speed": 10,
+      "atmosphere scan": 500,
+      "asteroid scan power": 200,
+      "tactical scan power": 160,
+      "Ixkek Control Center Module": -1.0,
+      "unplunderable": 1,
+      "cost": 5000000,
+      "name": "Ixkek Scanning Module"
+    },
+    {
+      "category": "Systems",
+      "cooling": 100,
+      "heat dissipation": 2,
+      "Ixkek Control Center Module": -1.0,
+      "unplunderable": 1,
+      "cost": 5000000,
+      "name": "Ixkek Cooling Module"
+    },
+    {
+      "category": "Systems",
+      "capture defense": 100,
+      "Ixkek Control Center Module": -1.0,
+      "unplunderable": 1,
+      "cost": 5000000,
+      "name": "Ixkek Laser Grid Module"
+    },
+    {
+      "category": "Systems",
+      "gaslining": 1,
+      "shields": 25000,
+      "Ixkek Control Center Module": -1.0,
+      "Ixkek Pressure Module": -1.0,
+      "unplunderable": 1,
+      "cost": 5000000,
+      "name": "Ixkek Pressure Shielding Module"
+    },
+    {
+      "category": "Systems",
+      "cost": 1200000,
+      "mass": 10,
+      "outfit space": -10.0,
+      "cloak": 0.01,
+      "cloaking energy": 1,
+      "cloaking fuel": 0.2,
+      "cloaking visibility": 0.5,
+      "cloaking phasing": true,
+      "cloaked action": 1e-06,
+      "unplunderable": 1,
+      "description": "Youre sure the cloaking device is here somewhere, but you cant see it.",
+      "name": "Ghost Cloak"
+    },
+    {
+      "category": "Systems",
+      "cost": 1200000,
+      "mass": 10,
+      "outfit space": -10.0,
+      "cloak": 0.01,
+      "cloaking energy": 1,
+      "cloaking fuel": 0.2,
+      "unplunderable": 1,
+      "cloaked action": 1e-09,
+      "description": "Youre sure the cloaking device is here somewhere, but you cant see it.",
+      "name": "Tactical Cloaking Device"
     },
     {
       "category": "Systems",
@@ -52819,6 +53910,574 @@
     },
     {
       "category": "Engines",
+      "licenses": [
+        "Arion"
+      ],
+      "cost": 400000,
+      "series": "Engines: Arion",
+      "index": 200,
+      "thumbnail": "outfit/fissiondrive",
+      "mass": 20,
+      "outfit space": -20.0,
+      "engine capacity": -20.0,
+      "thrust": 27,
+      "thrusting energy": 2,
+      "thrusting heat": 4.3,
+      "turn": 566,
+      "turning energy": 1.0,
+      "turning heat": 2.15,
+      "reverse thrust": 24.3,
+      "reverse thrusting energy": 2,
+      "reverse thrusting heat": 4.3,
+      "slowing resistance": 0.4,
+      "slowing protection": 0.2,
+      "flare sprite effect/fissionflare": {
+        "frame rate": 30,
+        "rewind": true
+      },
+      "flare sound": "atomic small",
+      "steering flare sprite effect/fissionflare": {
+        "frame rate": 30,
+        "rewind": true
+      },
+      "steering flare sound": "atomic tiny",
+      "reverse flare sprite effect/fissionflare": {
+        "frame rate": 30,
+        "rewind": true
+      },
+      "reverse flare sound": "atomic small",
+      "description": "The Omni Directional Engine-AA-20x is made for attacker aircraft of Arion.",
+      "name": "Arion ODE-AA-20x"
+    },
+    {
+      "category": "Engines",
+      "licenses": [
+        "Arion"
+      ],
+      "cost": 500000,
+      "series": "Engines: Arion",
+      "index": 300,
+      "thumbnail": "outfit/fissiondrive",
+      "mass": 25,
+      "outfit space": -25.0,
+      "engine capacity": -25.0,
+      "thrust": 31,
+      "thrusting energy": 2.5,
+      "thrusting heat": 5.4,
+      "turn": 762,
+      "turning energy": 1.25,
+      "turning heat": 2.7,
+      "reverse thrust": 28,
+      "reverse thrusting energy": 2.5,
+      "reverse thrusting heat": 5.4,
+      "slowing resistance": 0.5,
+      "slowing protection": 0.25,
+      "flare sprite effect/fissionflare": {
+        "frame rate": 30,
+        "rewind": true
+      },
+      "flare sound": "atomic small",
+      "steering flare sprite effect/fissionflare": {
+        "frame rate": 30,
+        "rewind": true
+      },
+      "steering flare sound": "atomic tiny",
+      "reverse flare sprite effect/fissionflare": {
+        "frame rate": 30,
+        "rewind": true
+      },
+      "reverse flare sound": "atomic small",
+      "description": "The Omni Directional Engine-FA-25x is made for fighter aircraft of Arion.",
+      "name": "Arion ODE-FA-25x"
+    },
+    {
+      "category": "Engines",
+      "licenses": [
+        "Arion"
+      ],
+      "cost": 500000,
+      "series": "Engines: Arion",
+      "index": 400,
+      "thumbnail": "outfit/fissiondrive",
+      "mass": 25,
+      "outfit space": -25.0,
+      "engine capacity": -25.0,
+      "thrust": 36.5,
+      "thrusting energy": 2.5,
+      "thrusting heat": 6.5,
+      "turn": 650,
+      "turning energy": 1.25,
+      "turning heat": 2.4,
+      "reverse thrust": 32,
+      "reverse thrusting energy": 2.5,
+      "reverse thrusting heat": 6.5,
+      "slowing resistance": 0.5,
+      "slowing protection": 0.25,
+      "flare sprite effect/fissionflare": {
+        "frame rate": 30,
+        "rewind": true
+      },
+      "flare sound": "atomic small",
+      "steering flare sprite effect/fissionflare": {
+        "frame rate": 30,
+        "rewind": true
+      },
+      "steering flare sound": "atomic tiny",
+      "description": "The Omni Directional Engine-IA-25x is made for interceptor aircraft of Arion.",
+      "name": "Arion ODE-IA-25x"
+    },
+    {
+      "category": "Engines",
+      "licenses": [
+        "Arion"
+      ],
+      "cost": 600000,
+      "series": "Engines: Arion",
+      "index": 500,
+      "thumbnail": "outfit/fissiondrive",
+      "mass": 30,
+      "outfit space": -30.0,
+      "engine capacity": -30.0,
+      "thrust": 40.5,
+      "thrusting energy": 3,
+      "thrusting heat": 6.5,
+      "turn": 848,
+      "turning energy": 1.5,
+      "turning heat": 3.25,
+      "reverse thrust": 36.5,
+      "reverse thrusting energy": 3,
+      "reverse thrusting heat": 6.5,
+      "slowing resistance": 0.6,
+      "slowing protection": 0.3,
+      "flare sprite effect/fissionflare": {
+        "frame rate": 30,
+        "rewind": true
+      },
+      "flare sound": "atomic small",
+      "steering flare sprite effect/fissionflare": {
+        "frame rate": 30,
+        "rewind": true
+      },
+      "steering flare sound": "atomic tiny",
+      "reverse flare sprite effect/fissionflare": {
+        "frame rate": 30,
+        "rewind": true
+      },
+      "reverse flare sound": "atomic small",
+      "description": "The Omni Directional Engine-LBA-30x is made for strike aircraft of Arion.",
+      "name": "Arion ODE-LBA-30x"
+    },
+    {
+      "category": "Engines",
+      "licenses": [
+        "Arion"
+      ],
+      "cost": 1000000,
+      "series": "Engines: Arion",
+      "index": 600,
+      "thumbnail": "outfit/fissiondrive",
+      "mass": 50,
+      "outfit space": -50.0,
+      "engine capacity": -50.0,
+      "thrust": 71,
+      "thrusting energy": 5,
+      "thrusting heat": 10.8,
+      "turn": 1488,
+      "turning energy": 2.5,
+      "turning heat": 5.4,
+      "reverse thrust": 62.5,
+      "reverse thrusting energy": 5,
+      "reverse thrusting heat": 10.8,
+      "slowing resistance": 1,
+      "slowing protection": 0.5,
+      "flare sprite effect/fissionflare": {
+        "frame rate": 30,
+        "rewind": true
+      },
+      "flare sound": "atomic small",
+      "steering flare sprite effect/fissionflare": {
+        "frame rate": 30,
+        "rewind": true
+      },
+      "steering flare sound": "atomic tiny",
+      "reverse flare sprite effect/fissionflare": {
+        "frame rate": 30,
+        "rewind": true
+      },
+      "reverse flare sound": "atomic small",
+      "description": "The Omni Directional Engine-MBA-50x is made for medium bombers of Arion.",
+      "name": "Arion ODE-MBA-50x"
+    },
+    {
+      "category": "Engines",
+      "licenses": [
+        "Arion"
+      ],
+      "cost": 1200000,
+      "series": "Engines: Arion",
+      "index": 700,
+      "thumbnail": "outfit/fissiondrive",
+      "mass": 60,
+      "outfit space": -60.0,
+      "engine capacity": -60.0,
+      "thrust": 86,
+      "thrusting energy": 6,
+      "thrusting heat": 13,
+      "turn": 1802,
+      "turning energy": 3,
+      "turning heat": 6.5,
+      "reverse thrust": 75.7,
+      "reverse thrusting energy": 6,
+      "reverse thrusting heat": 13,
+      "slowing resistance": 1.2,
+      "slowing protection": 0.6,
+      "flare sprite effect/fissionflare": {
+        "frame rate": 30,
+        "rewind": true
+      },
+      "flare sound": "atomic small",
+      "steering flare sprite effect/fissionflare": {
+        "frame rate": 30,
+        "rewind": true
+      },
+      "steering flare sound": "atomic tiny",
+      "reverse flare sprite effect/fissionflare": {
+        "frame rate": 30,
+        "rewind": true
+      },
+      "reverse flare sound": "atomic small",
+      "description": "The Omni Directional Engine-HBA-60x is made for heavy bombers of Arion.",
+      "name": "Arion ODE-HBA-60x"
+    },
+    {
+      "category": "Engines",
+      "licenses": [
+        "Arion"
+      ],
+      "cost": 1600000,
+      "series": "Engines: Arion",
+      "index": 800,
+      "thumbnail": "outfit/fissiondrive",
+      "mass": 80,
+      "outfit space": -80.0,
+      "engine capacity": -80.0,
+      "turn": 2452,
+      "turning energy": 4.1,
+      "turning heat": 8.9,
+      "thrust": 117,
+      "thrusting energy": 8.2,
+      "thrusting heat": 17.8,
+      "reverse thrust": 99.5,
+      "reverse thrusting energy": 8.2,
+      "reverse thrusting heat": 17.8,
+      "slowing resistance": 1.6,
+      "slowing protection": 0.8,
+      "flare sprite effect/fissionflare": {
+        "frame rate": 30,
+        "rewind": true
+      },
+      "flare sound": "atomic small",
+      "steering flare sprite effect/fissionflare": {
+        "frame rate": 30,
+        "rewind": true
+      },
+      "steering flare sound": "atomic tiny",
+      "reverse flare sprite effect/fissionflare": {
+        "frame rate": 30,
+        "rewind": true
+      },
+      "reverse flare sound": "atomic small",
+      "description": "The Omni Directional Engine-MLW-80x is made for the smaller ships of Arion.",
+      "name": "Arion ODE-MLW-80x"
+    },
+    {
+      "category": "Engines",
+      "licenses": [
+        "Arion"
+      ],
+      "cost": 2000000,
+      "series": "Engines: Arion",
+      "index": 900,
+      "thumbnail": "outfit/fissiondrive",
+      "mass": 100,
+      "outfit space": -100.0,
+      "engine capacity": -100.0,
+      "turn": 3098,
+      "turning energy": 5.15,
+      "turning heat": 11.2,
+      "thrust": 148,
+      "thrusting energy": 10.3,
+      "thrusting heat": 22.4,
+      "reverse thrust": 125.8,
+      "reverse thrusting energy": 10.3,
+      "reverse thrusting heat": 22.4,
+      "slowing resistance": 2,
+      "slowing protection": 1,
+      "flare sprite effect/fissionflare": {
+        "frame rate": 30,
+        "rewind": true
+      },
+      "flare sound": "atomic small",
+      "steering flare sprite effect/fissionflare": {
+        "frame rate": 30,
+        "rewind": true
+      },
+      "steering flare sound": "atomic tiny",
+      "reverse flare sprite effect/fissionflare": {
+        "frame rate": 30,
+        "rewind": true
+      },
+      "reverse flare sound": "atomic small",
+      "description": "The Omni Directional Engine-LLW-100x is made for the smaller ships of Arion.",
+      "name": "Arion ODE-LLW-100x"
+    },
+    {
+      "category": "Engines",
+      "licenses": [
+        "Arion"
+      ],
+      "cost": 3000000,
+      "series": "Engines: Arion",
+      "index": 1000,
+      "thumbnail": "outfit/fusiondrive",
+      "mass": 150,
+      "outfit space": -150.0,
+      "engine capacity": -150.0,
+      "turn": 4890,
+      "turning energy": 7.9,
+      "turning heat": 17.15,
+      "thrust": 232.8,
+      "thrusting energy": 15.8,
+      "thrusting heat": 34.8,
+      "reverse thrust": 186.2,
+      "reverse thrusting energy": 15.8,
+      "reverse thrusting heat": 34.8,
+      "slowing resistance": 3,
+      "slowing protection": 1.5,
+      "flare sprite effect/fusionflare": {
+        "frame rate": 30,
+        "rewind": true
+      },
+      "flare sound": "atomic huge",
+      "steering flare sprite effect/fusionflare": {
+        "frame rate": 30,
+        "rewind": true
+      },
+      "steering flare sound": "atomic medium",
+      "reverse flare sprite effect/fusionflare": {
+        "frame rate": 30,
+        "rewind": true
+      },
+      "reverse flare sound": "atomic large",
+      "description": "The Omni Directional Engine-SHW-150x is made for the larger ships of Arion.",
+      "name": "Arion ODE-SHW-150x"
+    },
+    {
+      "category": "Engines",
+      "licenses": [
+        "Arion"
+      ],
+      "cost": 3600000,
+      "series": "Engines: Arion",
+      "index": 1100,
+      "thumbnail": "outfit/fusiondrive",
+      "mass": 180,
+      "outfit space": -180.0,
+      "engine capacity": -180.0,
+      "turn": 5928,
+      "turning energy": 9.5,
+      "turning heat": 20.6,
+      "thrust": 282.2,
+      "thrusting energy": 19,
+      "thrusting heat": 41.2,
+      "reverse thrust": 225.76,
+      "reverse thrusting energy": 19,
+      "reverse thrusting heat": 41.2,
+      "slowing resistance": 3.6,
+      "slowing protection": 1.8,
+      "flare sprite effect/fusionflare": {
+        "frame rate": 30,
+        "rewind": true
+      },
+      "flare sound": "atomic huge",
+      "steering flare sprite effect/fusionflare": {
+        "frame rate": 30,
+        "rewind": true
+      },
+      "steering flare sound": "atomic medium",
+      "reverse flare sprite effect/fusionflare": {
+        "frame rate": 30,
+        "rewind": true
+      },
+      "reverse flare sound": "atomic large",
+      "description": "The Omni Directional Engine MHW 180x is the engine most commonly found on our heavy ships. All Arion engines dont actually have a reverse thruster, instead they redirect the direction of their thrust or use a system similar to a reverse thruster on some commercial planes. Similarly, some of the steering on the engines come from redirected engine thrust.",
+      "name": "Arion ODE-MHW-180x"
+    },
+    {
+      "category": "Engines",
+      "licenses": [
+        "Arion"
+      ],
+      "cost": 4200000,
+      "series": "Engines: Arion",
+      "index": 1200,
+      "thumbnail": "outfit/fusiondrive",
+      "mass": 210,
+      "outfit space": -210.0,
+      "engine capacity": -210.0,
+      "turn": 6986,
+      "turning energy": 11.15,
+      "turning heat": 24.15,
+      "thrust": 332.6,
+      "thrusting energy": 22.3,
+      "thrusting heat": 48.4,
+      "reverse thrust": 266,
+      "reverse thrusting energy": 22.3,
+      "reverse thrusting heat": 48.4,
+      "slowing resistance": 4.2,
+      "slowing protection": 2.1,
+      "flare sprite effect/fusionflare": {
+        "frame rate": 30,
+        "rewind": true
+      },
+      "flare sound": "atomic huge",
+      "steering flare sprite effect/fusionflare": {
+        "frame rate": 30,
+        "rewind": true
+      },
+      "steering flare sound": "atomic medium",
+      "reverse flare sprite effect/fusionflare": {
+        "frame rate": 30,
+        "rewind": true
+      },
+      "reverse flare sound": "atomic large",
+      "description": "The Omni Directional Engine-LHW-210x is made for some of the largest ships of Arion.",
+      "name": "Arion ODE-LHW-210x"
+    },
+    {
+      "display name": "Arion ODE-SSH-250x",
+      "category": "Engines",
+      "licenses": [
+        "Arion"
+      ],
+      "cost": 5000000,
+      "series": "Engines: Arion",
+      "index": 1300,
+      "thumbnail": "outfit/fusiondrive",
+      "mass": 250,
+      "outfit space": -250.0,
+      "engine capacity": -250.0,
+      "turn": 8400,
+      "turning energy": 13.25,
+      "turning heat": 28.75,
+      "thrust": 400,
+      "thrusting energy": 26.5,
+      "thrusting heat": 57.5,
+      "reverse thrust": 320,
+      "reverse thrusting energy": 26.5,
+      "reverse thrusting heat": 57.5,
+      "slowing resistance": 5,
+      "slowing protection": 2.5,
+      "flare sprite effect/fusionflare": {
+        "frame rate": 30,
+        "rewind": true
+      },
+      "flare sound": "atomic huge",
+      "steering flare sprite effect/fusionflare": {
+        "frame rate": 30,
+        "rewind": true
+      },
+      "steering flare sound": "atomic medium",
+      "reverse flare sprite effect/fusionflare": {
+        "frame rate": 30,
+        "rewind": true
+      },
+      "reverse flare sound": "atomic large",
+      "description": "The Omni Directional Engine-SSH-250x is used by superheavy ships.",
+      "name": "Arion ODE-HHW-250x"
+    },
+    {
+      "category": "Engines",
+      "licenses": [
+        "Arion"
+      ],
+      "cost": 500000,
+      "series": "Engines: Arion",
+      "index": 25,
+      "thumbnail": "outfit/afterburner",
+      "mass": 10,
+      "outfit space": -10.0,
+      "engine capacity": -10.0,
+      "afterburner thrust": 120,
+      "afterburner fuel": 0.5,
+      "afterburner energy": 10,
+      "afterburner heat": 7.5,
+      "afterburner effect": "ionic afterburner",
+      "description": "An emergency afterburner that can be used to escape confrontations.",
+      "name": "Arion Light Afterburner"
+    },
+    {
+      "category": "Engines",
+      "licenses": [
+        "Arion"
+      ],
+      "cost": 1000000,
+      "series": "Engines: Arion",
+      "index": 50,
+      "thumbnail": "outfit/caldera afterburner",
+      "mass": 20,
+      "outfit space": -20.0,
+      "engine capacity": -20.0,
+      "afterburner thrust": 250,
+      "afterburner fuel": 1.0,
+      "afterburner energy": 20,
+      "afterburner heat": 15,
+      "afterburner effect": "ionic afterburner",
+      "description": "An emergency afterburner that can be used to escape confrontations.",
+      "name": "Arion Medium Afterburner"
+    },
+    {
+      "category": "Engines",
+      "licenses": [
+        "Arion"
+      ],
+      "cost": 1500000,
+      "series": "Engines: Arion",
+      "index": 75,
+      "thumbnail": "outfit/ionic afterburner",
+      "mass": 30,
+      "outfit space": -30.0,
+      "engine capacity": -30.0,
+      "afterburner thrust": 400,
+      "afterburner fuel": 1.5,
+      "afterburner energy": 30,
+      "afterburner heat": 22.5,
+      "afterburner effect": "ionic afterburner",
+      "description": "An emergency afterburner that can be used to escape confrontations.",
+      "name": "Arion Heavy Afterburner"
+    },
+    {
+      "category": "Engines",
+      "licenses": [
+        "Arion"
+      ],
+      "cost": 2500000,
+      "series": "Engines: Arion",
+      "index": 90,
+      "thumbnail": "outfit/ionic afterburner",
+      "mass": 50,
+      "outfit space": -50.0,
+      "engine capacity": -50.0,
+      "afterburner thrust": 700,
+      "afterburner fuel": 2.5,
+      "afterburner energy": 50,
+      "afterburner heat": 37.5,
+      "afterburner effect": "ionic afterburner",
+      "description": "An emergency afterburner that can be used to escape confrontations.",
+      "name": "Arion Huge Afterburner"
+    },
+    {
+      "category": "Engines",
       "cost": 100000,
       "series": "Engines: NCD",
       "index": 100,
@@ -55721,6 +57380,72 @@
       "name": "Kenlark-c2 Atomic Steering"
     },
     {
+      "plural": "Urvulre Engines",
+      "category": "Engines",
+      "cost": 65000000,
+      "thumbnail": "outfit/unknown",
+      "mass": 45,
+      "outfit space": -45.0,
+      "engine capacity": -45.0,
+      "thrust": 80,
+      "thrusting energy": 22,
+      "thrusting heat": 30,
+      "turn": 1805,
+      "turning energy": 22,
+      "turning heat": 30,
+      "reverse thrust": 80,
+      "hyperdrive": 1,
+      "jump drive": 1,
+      "jump speed": 10,
+      "jump effect": "ultaka gate drive",
+      "slowing protection": 3,
+      "flare sprite effect/ultaka flare/urvulre huge": {
+        "frame rate": 9
+      },
+      "flare sound": "plasma huge\n\nplasma huge",
+      "steering flare sprite effect/ultaka flare/urvulre huge": {
+        "frame rate": 9
+      },
+      "steering flare sound": "plasma huge",
+      "reverse flare sprite effect/ultaka flare/urvulre huge": {
+        "frame rate": 9
+      },
+      "description": "Ultaka Alrul engine",
+      "name": "Urvulre Engines"
+    },
+    {
+      "plural": "Meulrais-A Engines",
+      "category": "Engines",
+      "cost": 185000000,
+      "thumbnail": "outfit/unknown",
+      "mass": 45,
+      "outfit space": -45.0,
+      "engine capacity": -45.0,
+      "thrust": 72,
+      "thrusting energy": 30,
+      "thrusting heat": 30,
+      "turn": 1205,
+      "turning energy": 30,
+      "turning heat": 30,
+      "afterburner thrust": 350,
+      "afterburner energy": 411,
+      "afterburner slowing": 0.5,
+      "hyperdrive": 1,
+      "jump drive": 1,
+      "jump speed": 10,
+      "jump effect": "ultaka gate drive",
+      "flare sprite effect/ultaka flare/meulrais small": {
+        "frame rate": 9
+      },
+      "flare sound": "plasma huge",
+      "steering flare sprite effect/ultaka flare/meulrais small": {
+        "frame rate": 9
+      },
+      "steering flare sound": "plasma huge",
+      "description": "Ultaka Lvoris engine",
+      "name": "Meulrais-A Engines"
+    },
+    {
       "plural": "Kelaku Engines",
       "category": "Engines",
       "cost": 35000000,
@@ -56544,6 +58269,23 @@
       "reverse flare sound": "atomic large",
       "unplunderable": 1,
       "name": "Centrum Potestae"
+    },
+    {
+      "category": "Engines",
+      "cost": 8600000,
+      "thumbnail": "outfit/eengines",
+      "mass": 154,
+      "outfit space": -154.0,
+      "engine capacity": -154.0,
+      "thrust": 200,
+      "thrusting energy": 1,
+      "turn": 1500,
+      "turning energy": 1,
+      "flare sprite effect/exp_engine": {
+        "frame rate": 1.1
+      },
+      "flare sound": "ion small",
+      "name": "Exporiane Engines"
     },
     {
       "category": "Engines",
@@ -65198,6 +66940,143 @@
     },
     {
       "category": "Power",
+      "licenses": [
+        "Arion"
+      ],
+      "cost": 150000000,
+      "series": "Power: Arion",
+      "index": 700,
+      "thumbnail": "outfit/quarg antimatter core",
+      "mass": 100,
+      "outfit space": -100.0,
+      "energy generation": 100,
+      "heat generation": 25,
+      "energy capacity": 50000,
+      "ion resistance": 5,
+      "ion protection": 2.5,
+      "unplunderable": 1,
+      "description": "The Antimatter Reactor 100x is the best power system we have. It can power pretty much all of our power hungry ships, and if 1 isnt enough you can always add more. With added ion resistance and protection, the price is more than worth it.",
+      "name": "Arion AR-100x"
+    },
+    {
+      "category": "Power",
+      "licenses": [
+        "Arion"
+      ],
+      "cost": 22500000,
+      "series": "Power: Arion",
+      "index": 600,
+      "thumbnail": "outfit/quarg antimatter core",
+      "mass": 15,
+      "outfit space": -15.0,
+      "energy generation": 15,
+      "heat generation": 5,
+      "energy capacity": 7500,
+      "ion resistance": 0.75,
+      "ion protection": 0.375,
+      "unplunderable": 1,
+      "description": "The Antimatter Reactor 15x is the best power system we have. It can power pretty much all of our power hungry ships, and if 1 isnt enough you can always add more. With added ion resistance and protection, the price is more than worth it.",
+      "name": "Arion AR-15x"
+    },
+    {
+      "category": "Power",
+      "licenses": [
+        "Arion"
+      ],
+      "cost": 7500000,
+      "series": "Power: Arion",
+      "index": 300,
+      "thumbnail": "outfit/fusion",
+      "mass": 100,
+      "outfit space": -100.0,
+      "energy generation": 25,
+      "heat generation": 50,
+      "energy capacity": 25000,
+      "ion resistance": 3,
+      "ion protection": 1.5,
+      "unplunderable": 1,
+      "description": "The Fusion Reactor-100x is the simplest and cheapest power system we have. When youre trying to save many but still want enough power, this could be for you. The added ion resistance and protection also helps.",
+      "name": "Arion FR-100x"
+    },
+    {
+      "category": "Power",
+      "licenses": [
+        "Arion"
+      ],
+      "cost": 1125000,
+      "series": "Power: Arion",
+      "index": 200,
+      "thumbnail": "outfit/fusion",
+      "mass": 15,
+      "outfit space": -15.0,
+      "energy generation": 3.75,
+      "heat generation": 7.5,
+      "energy capacity": 3750,
+      "ion resistance": 0.45,
+      "ion protection": 0.225,
+      "unplunderable": 1,
+      "description": "The Fusion Reactor-15x is the simplest and cheapest power system we have. When youre trying to save many but still want enough power, this could be for you. The added ion resistance and protection also helps.",
+      "name": "Arion FR-15x"
+    },
+    {
+      "category": "Power",
+      "licenses": [
+        "Arion"
+      ],
+      "cost": 10000000,
+      "series": "Power: Arion",
+      "index": 500,
+      "thumbnail": "outfit/core",
+      "mass": 100,
+      "outfit space": -100.0,
+      "energy generation": 35,
+      "heat generation": 105,
+      "energy capacity": 30000,
+      "ion resistance": 2,
+      "ion protection": 1,
+      "unplunderable": 1,
+      "description": "Due to the power hungry nature of our system, this Overcharged Reactor 100x was created. Beware however, it also runs way hotter and has less ion resistance and protection.",
+      "name": "Arion OCR-100x"
+    },
+    {
+      "category": "Power",
+      "licenses": [
+        "Arion"
+      ],
+      "cost": 2000000,
+      "series": "Power: Arion",
+      "index": 400,
+      "thumbnail": "outfit/core",
+      "mass": 15,
+      "outfit space": -15.0,
+      "energy generation": 5.25,
+      "heat generation": 15.75,
+      "energy capacity": 4500,
+      "ion resistance": 0.3,
+      "ion protection": 0.15,
+      "unplunderable": 1,
+      "description": "Due to the power hungry nature of our system, this Overcharged Reactor 15x was created. Beware however, it also runs way hotter and has less ion resistance and protection.",
+      "name": "Arion OCR-15x"
+    },
+    {
+      "category": "Power",
+      "licenses": [
+        "Arion"
+      ],
+      "cost": 400000,
+      "series": "Power: Arion",
+      "index": 100,
+      "thumbnail": "outfit/hai pebble core",
+      "mass": 20,
+      "outfit space": -20.0,
+      "energy generation": 3,
+      "heat generation": 7.5,
+      "energy capacity": 2500,
+      "description": "An emergency generator used for cheaper fighters or emergency situations which require mass deployments.",
+      "name": "Arion EG-20x"
+    },
+    {
+      "category": "Power",
       "cost": 60000,
       "series": "Power: NCD",
       "index": 100,
@@ -70725,6 +72604,25 @@
     },
     {
       "category": "Ammunition",
+      "cost": 1000,
+      "thumbnail": "outfit/em",
+      "mass": 0.001,
+      "Zyrc Missile capacity": -1.0,
+      "name": "Zyrc Missile"
+    },
+    {
+      "plural": "Exporiane Missile Boxes",
+      "category": "Ammunition",
+      "cost": 90000,
+      "thumbnail": "outfit/emb",
+      "mass": 30,
+      "outfit space": -30.0,
+      "Zyrc Missile capacity": 3000,
+      "ammo": "Zyrc Missile",
+      "name": "Zyrc Missile Box"
+    },
+    {
+      "category": "Ammunition",
       "licenses": "Guz Outfit",
       "cost": 60000,
       "thumbnail": "outfit/guz heavy missile",
@@ -71930,6 +73828,12 @@
       "unplunderable": 1,
       "description": "Placeholder.",
       "name": "Rebel Jibauni Capital License"
+    },
+    {
+      "category": "Licenses",
+      "thumbnail": "outfit/license",
+      "description": "A special license for captains affiliated with Arion.",
+      "name": "Arion License"
     },
     {
       "category": "Licenses",
