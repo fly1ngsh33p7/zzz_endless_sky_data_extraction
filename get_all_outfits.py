@@ -197,6 +197,15 @@ def main():
     # Gather all outfits organized by category
     all_outfits = collect_outfits(args.folders)
     
+    # Merge similarly written categories # THIS COULD BE UNWANTED BEHAVIOUR!!
+    if "Special" in all_outfits and "Specials" in all_outfits:
+        all_outfits["Special"].extend(all_outfits.pop("Specials"))
+    if "Systems" in all_outfits and "Systems" in all_outfits:
+        all_outfits["Systems"].extend(all_outfits.pop("System"))
+    if "Ammunition" in all_outfits and "Ammo" in all_outfits:
+        all_outfits["Ammunition"].extend(all_outfits.pop("Ammo"))
+    
+    
     # Write JSON
     with open(args.output, "w", encoding="utf-8") as f:
         json.dump(all_outfits, f, indent=2, ensure_ascii=False)

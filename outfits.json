@@ -50265,6 +50265,20 @@
       "cooling": 19,
       "description": "Most Wanderer systems are so efficient that ancillary cooling is unnecessary. As a result, their recent attempts to add cooling to their heavy warships are somewhat rudimentary.",
       "name": "Wanderer Heat Sink"
+    },
+    {
+      "category": "System",
+      "thumbnail outfit/unknown": true,
+      "cost": 10530000,
+      "mass": 180,
+      "outfit space": -180.0,
+      "hull repair rate": 18,
+      "hull energy": 18,
+      "hull heat": 18,
+      "unplunderable": 1,
+      "reinstall": -1.0,
+      "description": "You have no idea how this works.",
+      "name": "Quantum Paradox Inversion"
     }
   ],
   "Engines": [
@@ -71790,6 +71804,15 @@
       "ammo": "Thunderhead Missile",
       "description": "The Thunderhead Storage Array is used to store extra ammunition for Thunderhead Launchers.",
       "name": "Thunderhead Storage Array"
+    },
+    {
+      "category": "Ammo",
+      "cost": 25000,
+      "thumbnail": "outfit/wallagi sikarl ammo",
+      "sikarl mine capacity": -1.0,
+      "mass": 0.1,
+      "description": "Ammo for Sikarl Mine launcher",
+      "name": "Sikarl Mine"
     }
   ],
   "Licenses": [
@@ -73023,9 +73046,7 @@
       "unplunderable": 1,
       "description": "Found with widely varying properties in different mechanisms of an Aberration, this mass of glassy, fleshy material is characterized by the very difficulty of classifying its composition. Webs of anomalous material embedded in the mass seem not to be composed of atomic matter as the Avgi know it, but by something entirely different, which resists any attempts to probe its makeup. This is thought to enable many of the Aberrants more baffling abilities, for lack of any other explanation.",
       "name": "Anomalous Mass"
-    }
-  ],
-  "Specials": [
+    },
     {
       "category": "Specials",
       "massive outfit": 500,
@@ -73591,17 +73612,6 @@
       "name": "Uoorn Decomposer"
     }
   ],
-  "Ammo": [
-    {
-      "category": "Ammo",
-      "cost": 25000,
-      "thumbnail": "outfit/wallagi sikarl ammo",
-      "sikarl mine capacity": -1.0,
-      "mass": 0.1,
-      "description": "Ammo for Sikarl Mine launcher",
-      "name": "Sikarl Mine"
-    }
-  ],
   "Minerals": [
     {
       "cost": 50000,
@@ -74104,22 +74114,6 @@
       "unplunderable": 1,
       "description": "Blueprint for standard Tern fighter made to E1 standard.",
       "name": "E1-a Tern Blueprint"
-    }
-  ],
-  "System": [
-    {
-      "category": "System",
-      "thumbnail outfit/unknown": true,
-      "cost": 10530000,
-      "mass": 180,
-      "outfit space": -180.0,
-      "hull repair rate": 18,
-      "hull energy": 18,
-      "hull heat": 18,
-      "unplunderable": 1,
-      "reinstall": -1.0,
-      "description": "You have no idea how this works.",
-      "name": "Quantum Paradox Inversion"
     }
   ],
   "Hidden": [
