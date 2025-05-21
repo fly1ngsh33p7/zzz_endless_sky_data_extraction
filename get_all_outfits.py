@@ -255,9 +255,12 @@ def main():
     # special cleanup
     all_outfits = cleanup_outfits(all_outfits)
     
-    # Write JSON
+    # Write JSON and post-process to remove scientific notation
     with open(args.output, "w", encoding="utf-8") as f:
-        json.dump(all_outfits, f, indent=2, ensure_ascii=False)
+        json_string = json.dumps(all_outfits, indent=2, ensure_ascii=False)
+        # Replace scientific notation with full decimal representation
+        json_string = re.sub(r'[-+]?(?:\d+\.\d*|\.\d+|\d+)(?:[eE][+-]?\d+)?', lambda m: f"{float(m.group(0)):.10f}".rstrip("0").rstrip("."), json_string)
+        f.write(json_string)
     
     total_outfits = sum(len(outfits) for outfits in all_outfits.values())
     print(f"Wrote {args.output} ({len(all_outfits)} categories, {total_outfits} outfits)")
