@@ -202,6 +202,15 @@ def collect_outfits(directories, include_deprecated):
                 continue
     return all_outfits
 
+def cleanup_outfits(outfits_by_category):
+    """Ensure 'licenses' fields are always lists."""
+    for category, outfits in outfits_by_category.items():
+        for outfit in outfits:
+            if "licenses" in outfit:
+                # Convert "license" to a list if it's not already
+                if isinstance(outfit["licenses"], str):
+                    outfit["licenses"] = [outfit["licenses"]]
+    return outfits_by_category
 
 def main():
     parser = argparse.ArgumentParser(
@@ -243,6 +252,8 @@ def main():
     if "Ammunition" in all_outfits and "Ammo" in all_outfits:
         all_outfits["Ammunition"].extend(all_outfits.pop("Ammo"))
     
+    # special cleanup
+    all_outfits = cleanup_outfits(all_outfits)
     
     # Write JSON
     with open(args.output, "w", encoding="utf-8") as f:

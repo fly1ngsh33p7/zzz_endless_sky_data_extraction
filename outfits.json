@@ -2771,7 +2771,9 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses": "Arion",
+      "licenses": [
+        "Arion"
+      ],
       "cost": 75000,
       "series": "Guns: Arion",
       "index": 100,
@@ -2805,7 +2807,9 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses": "Arion",
+      "licenses": [
+        "Arion"
+      ],
       "cost": 150000,
       "series": "Guns: Arion",
       "index": 200,
@@ -2842,7 +2846,9 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses": "Arion",
+      "licenses": [
+        "Arion"
+      ],
       "cost": 100000,
       "series": "Guns: Arion",
       "index": 300,
@@ -2876,7 +2882,9 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses": "Arion",
+      "licenses": [
+        "Arion"
+      ],
       "cost": 200000,
       "series": "Guns: Arion",
       "index": 400,
@@ -2913,7 +2921,9 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses": "Arion",
+      "licenses": [
+        "Arion"
+      ],
       "cost": 125000,
       "series": "Guns: Arion",
       "index": 500,
@@ -2947,7 +2957,9 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses": "Arion",
+      "licenses": [
+        "Arion"
+      ],
       "cost": 250000,
       "series": "Guns: Arion",
       "index": 600,
@@ -2985,7 +2997,9 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses": "Arion",
+      "licenses": [
+        "Arion"
+      ],
       "cost": 4000000,
       "series": "Guns: Arion",
       "index": 1100,
@@ -3020,7 +3034,9 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses": "Arion",
+      "licenses": [
+        "Arion"
+      ],
       "cost": 5000000,
       "series": "Guns: Arion",
       "index": 1200,
@@ -3055,7 +3071,9 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses": "Arion",
+      "licenses": [
+        "Arion"
+      ],
       "cost": 3500000,
       "series": "Guns: Arion",
       "index": 1300,
@@ -3085,7 +3103,9 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses": "Arion",
+      "licenses": [
+        "Arion"
+      ],
       "cost": 30000000,
       "series": "Secondary Weapons: Arion",
       "index": 2100,
@@ -3122,7 +3142,9 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses": "Arion",
+      "licenses": [
+        "Arion"
+      ],
       "cost": 40000000,
       "series": "Secondary Weapons: Arion",
       "index": 2200,
@@ -3162,7 +3184,9 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses": "Arion",
+      "licenses": [
+        "Arion"
+      ],
       "cost": 70000000,
       "series": "Secondary Weapons: Arion",
       "index": 2300,
@@ -3199,7 +3223,9 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses": "Arion",
+      "licenses": [
+        "Arion"
+      ],
       "cost": 85000000,
       "series": "Secondary Weapons: Arion",
       "index": 2400,
@@ -3239,7 +3265,9 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses": "Arion",
+      "licenses": [
+        "Arion"
+      ],
       "cost": 50000000,
       "series": "Secondary Weapons: Arion",
       "index": 2500,
@@ -3282,7 +3310,9 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses": "Arion",
+      "licenses": [
+        "Arion"
+      ],
       "cost": 500000,
       "series": "Secondary Weapons: Arion",
       "index": 100,
@@ -3324,7 +3354,9 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses": "Arion",
+      "licenses": [
+        "Arion"
+      ],
       "cost": 3500000,
       "series": "Secondary Weapons: Arion",
       "index": 200,
@@ -3368,7 +3400,9 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses": "Arion",
+      "licenses": [
+        "Arion"
+      ],
       "cost": 4000000,
       "series": "Secondary Weapons: Arion",
       "index": 300,
@@ -3415,7 +3449,9 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses": "Arion",
+      "licenses": [
+        "Arion"
+      ],
       "cost": 700000,
       "series": "Secondary Weapons: Arion",
       "index": 400,
@@ -3457,7 +3493,9 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses": "Arion",
+      "licenses": [
+        "Arion"
+      ],
       "cost": 750000,
       "series": "Secondary Weapons: Arion",
       "index": 500,
@@ -3498,7 +3536,9 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses": "Arion",
+      "licenses": [
+        "Arion"
+      ],
       "cost": 4000000,
       "series": "Secondary Weapons: Arion",
       "index": 600,
@@ -3541,7 +3581,9 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses": "Arion",
+      "licenses": [
+        "Arion"
+      ],
       "cost": 6000000,
       "series": "Secondary Weapons: Arion",
       "index": 700,
@@ -3587,7 +3629,9 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses": "Arion",
+      "licenses": [
+        "Arion"
+      ],
       "cost": 900000,
       "series": "Secondary Weapons: Arion",
       "index": 800,
@@ -3629,7 +3673,9 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses": "Arion",
+      "licenses": [
+        "Arion"
+      ],
       "cost": 250000,
       "series": "Secondary Weapons: Arion",
       "index": 900,
@@ -3664,7 +3710,9 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses": "Arion",
+      "licenses": [
+        "Arion"
+      ],
       "cost": 1000000,
       "series": "Secondary Weapons: Arion",
       "index": 1000,
@@ -3702,7 +3750,9 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses": "Arion",
+      "licenses": [
+        "Arion"
+      ],
       "cost": 600000,
       "series": "Secondary Weapons: Arion",
       "index": 1100,
@@ -3737,7 +3787,9 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses": "Arion",
+      "licenses": [
+        "Arion"
+      ],
       "cost": 750000,
       "series": "Secondary Weapons: Arion",
       "index": 1200,
@@ -3775,7 +3827,9 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses": "Arion",
+      "licenses": [
+        "Arion"
+      ],
       "cost": 600000,
       "series": "Secondary Weapons: Arion",
       "index": 1300,
@@ -3814,7 +3868,9 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses": "Arion",
+      "licenses": [
+        "Arion"
+      ],
       "cost": 1800000,
       "series": "Secondary Weapons: Arion",
       "index": 1400,
@@ -3855,7 +3911,9 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses": "Arion",
+      "licenses": [
+        "Arion"
+      ],
       "cost": 2000000,
       "series": "Secondary Weapons: Arion",
       "index": 1500,
@@ -3896,7 +3954,9 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses": "Arion",
+      "licenses": [
+        "Arion"
+      ],
       "cost": 1100000,
       "series": "Secondary Weapons: Arion",
       "index": 1600,
@@ -3933,7 +3993,9 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses": "Arion",
+      "licenses": [
+        "Arion"
+      ],
       "cost": 3600000,
       "series": "Secondary Weapons: Arion",
       "index": 1700,
@@ -3972,7 +4034,9 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses": "Arion",
+      "licenses": [
+        "Arion"
+      ],
       "cost": 1500000,
       "series": "Secondary Weapons: Arion",
       "index": 1800,
@@ -4013,7 +4077,9 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses": "Arion",
+      "licenses": [
+        "Arion"
+      ],
       "cost": 5000000,
       "series": "Secondary Weapons: Arion",
       "index": 1900,
@@ -4056,7 +4122,9 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses": "Arion",
+      "licenses": [
+        "Arion"
+      ],
       "cost": 16000000,
       "series": "Secondary Weapons: Arion",
       "index": 2000,
@@ -4147,7 +4215,9 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses": "Arion",
+      "licenses": [
+        "Arion"
+      ],
       "cost": 150000,
       "series": "Specialized Fighter Weapons: Arion",
       "index": 100,
@@ -4185,7 +4255,9 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses": "Arion",
+      "licenses": [
+        "Arion"
+      ],
       "cost": 200000,
       "series": "Specialized Fighter Weapons: Arion",
       "index": 200,
@@ -4223,7 +4295,9 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses": "Arion",
+      "licenses": [
+        "Arion"
+      ],
       "cost": 500000,
       "series": "Specialized Fighter Weapons: Arion",
       "index": 300,
@@ -4264,7 +4338,9 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses": "Arion",
+      "licenses": [
+        "Arion"
+      ],
       "cost": 700000,
       "series": "Specialized Fighter Weapons: Arion",
       "index": 400,
@@ -4306,7 +4382,9 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses": "Arion",
+      "licenses": [
+        "Arion"
+      ],
       "cost": 750000,
       "series": "Specialized Fighter Weapons: Arion",
       "index": 500,
@@ -4347,7 +4425,9 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses": "Arion",
+      "licenses": [
+        "Arion"
+      ],
       "cost": 900000,
       "series": "Specialized Fighter Weapons: Arion",
       "index": 600,
@@ -4390,7 +4470,9 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses": "Arion",
+      "licenses": [
+        "Arion"
+      ],
       "cost": 250000,
       "series": "Specialized Fighter Weapons: Arion",
       "index": 700,
@@ -4424,7 +4506,9 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses": "Arion",
+      "licenses": [
+        "Arion"
+      ],
       "cost": 600000,
       "series": "Specialized Fighter Weapons: Arion",
       "index": 800,
@@ -4458,7 +4542,9 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses": "Arion",
+      "licenses": [
+        "Arion"
+      ],
       "cost": 750000,
       "series": "Specialized Fighter Weapons: Arion",
       "index": 900,
@@ -4496,7 +4582,9 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses": "Arion",
+      "licenses": [
+        "Arion"
+      ],
       "cost": 600000,
       "series": "Specialized Fighter Weapons: Arion",
       "index": 1000,
@@ -4535,7 +4623,9 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses": "Arion",
+      "licenses": [
+        "Arion"
+      ],
       "cost": 1800000,
       "series": "Specialized Fighter Weapons: Arion",
       "index": 1200,
@@ -4575,7 +4665,9 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses": "Arion",
+      "licenses": [
+        "Arion"
+      ],
       "cost": 2000000,
       "series": "Specialized Fighter Weapons: Arion",
       "index": 1300,
@@ -4616,7 +4708,9 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses": "Arion",
+      "licenses": [
+        "Arion"
+      ],
       "cost": 1100000,
       "series": "Specialized Fighter Weapons: Arion",
       "index": 1400,
@@ -4654,7 +4748,9 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses": "Arion",
+      "licenses": [
+        "Arion"
+      ],
       "cost": 1500000,
       "series": "Specialized Fighter Weapons: Arion",
       "index": 1500,
@@ -4696,7 +4792,9 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses": "Arion",
+      "licenses": [
+        "Arion"
+      ],
       "cost": 750000,
       "series": "Specialized Fighter Weapons: Arion",
       "index": 1600,
@@ -4735,7 +4833,9 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses": "Arion",
+      "licenses": [
+        "Arion"
+      ],
       "cost": 100000000,
       "series": "Superweapons: Arion",
       "index": 100,
@@ -4769,7 +4869,9 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses": "Arion",
+      "licenses": [
+        "Arion"
+      ],
       "cost": 150000000,
       "series": "Superweapons: Arion",
       "index": 200,
@@ -4801,7 +4903,9 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses": "Arion",
+      "licenses": [
+        "Arion"
+      ],
       "cost": 150000000,
       "series": "Superweapons: Arion",
       "index": 300,
@@ -4844,7 +4948,9 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses": "Arion",
+      "licenses": [
+        "Arion"
+      ],
       "cost": 210000000,
       "series": "Superweapons: Arion",
       "index": 400,
@@ -4886,7 +4992,9 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses": "Arion",
+      "licenses": [
+        "Arion"
+      ],
       "cost": 800000000,
       "series": "Superweapons: Arion",
       "index": 500,
@@ -4928,7 +5036,9 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses": "Arion",
+      "licenses": [
+        "Arion"
+      ],
       "cost": 6000000,
       "series": "VLS: Arion",
       "index": 200,
@@ -4975,7 +5085,9 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses": "Arion",
+      "licenses": [
+        "Arion"
+      ],
       "cost": 1000000,
       "series": "VLS: Arion",
       "index": 400,
@@ -5025,7 +5137,9 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses": "Arion",
+      "licenses": [
+        "Arion"
+      ],
       "cost": 2000000,
       "series": "VLS: Arion",
       "index": 500,
@@ -5075,7 +5189,9 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses": "Arion",
+      "licenses": [
+        "Arion"
+      ],
       "cost": 10000000,
       "series": "VLS: Arion",
       "index": 600,
@@ -5126,7 +5242,9 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses": "Arion",
+      "licenses": [
+        "Arion"
+      ],
       "cost": 10000000,
       "series": "VLS: Arion",
       "index": 600,
@@ -5177,7 +5295,9 @@
     {
       "display name": "Arion GBU-1x Bomb Bay 50 Mk1",
       "category": "Secondary Weapons",
-      "licenses": "Arion",
+      "licenses": [
+        "Arion"
+      ],
       "cost": 6000000,
       "thumbnail": "outfit/torpedo storage",
       "mass": 50,
@@ -5217,7 +5337,9 @@
     {
       "display name": "Arion GBU-1x Bomb Bay 40 Mk1",
       "category": "Secondary Weapons",
-      "licenses": "Arion",
+      "licenses": [
+        "Arion"
+      ],
       "cost": 4800000,
       "thumbnail": "outfit/torpedo storage",
       "mass": 40,
@@ -5257,7 +5379,9 @@
     {
       "display name": "Arion GBU-1x Bomb Bay 30 Mk1",
       "category": "Secondary Weapons",
-      "licenses": "Arion",
+      "licenses": [
+        "Arion"
+      ],
       "cost": 3500000,
       "thumbnail": "outfit/torpedo storage",
       "mass": 30,
@@ -5297,7 +5421,9 @@
     {
       "display name": "Arion GBU-1x Bomb Bay 20 Mk1",
       "category": "Secondary Weapons",
-      "licenses": "Arion",
+      "licenses": [
+        "Arion"
+      ],
       "cost": 3000000,
       "thumbnail": "outfit/torpedo storage",
       "mass": 20,
@@ -5337,7 +5463,9 @@
     {
       "display name": "Arion GBU-1x Bomb Bay 10 Mk1",
       "category": "Secondary Weapons",
-      "licenses": "Arion",
+      "licenses": [
+        "Arion"
+      ],
       "cost": 1500000,
       "thumbnail": "outfit/torpedo storage",
       "mass": 10,
@@ -5376,7 +5504,9 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses": "Arion",
+      "licenses": [
+        "Arion"
+      ],
       "cost": 15000000,
       "thumbnail": "outfit/torpedo storage",
       "mass": 50,
@@ -5417,7 +5547,9 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses": "Arion",
+      "licenses": [
+        "Arion"
+      ],
       "cost": 11000000,
       "thumbnail": "outfit/torpedo storage",
       "mass": 40,
@@ -5458,7 +5590,9 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses": "Arion",
+      "licenses": [
+        "Arion"
+      ],
       "cost": 9000000,
       "thumbnail": "outfit/torpedo storage",
       "mass": 30,
@@ -5499,7 +5633,9 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses": "Arion",
+      "licenses": [
+        "Arion"
+      ],
       "cost": 6000000,
       "thumbnail": "outfit/torpedo storage",
       "mass": 20,
@@ -5540,7 +5676,9 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses": "Arion",
+      "licenses": [
+        "Arion"
+      ],
       "cost": 3500000,
       "thumbnail": "outfit/torpedo storage",
       "mass": 10,
@@ -5582,7 +5720,9 @@
     {
       "display name": "Tactical Nuke Bomb Bay 50 Mk1",
       "category": "Secondary Weapons",
-      "licenses": "Arion",
+      "licenses": [
+        "Arion"
+      ],
       "cost": 1000000,
       "thumbnail": "outfit/torpedo storage",
       "mass": 10,
@@ -5622,7 +5762,9 @@
     {
       "display name": "Tactical Nuke Bomb Bay 40 Mk1",
       "category": "Secondary Weapons",
-      "licenses": "Arion",
+      "licenses": [
+        "Arion"
+      ],
       "cost": 800000,
       "thumbnail": "outfit/torpedo storage",
       "mass": 10,
@@ -5662,7 +5804,9 @@
     {
       "display name": "Tactical Nuke Bomb Bay 30 Mk1",
       "category": "Secondary Weapons",
-      "licenses": "Arion",
+      "licenses": [
+        "Arion"
+      ],
       "cost": 600000,
       "thumbnail": "outfit/torpedo storage",
       "mass": 5,
@@ -5702,7 +5846,9 @@
     {
       "display name": "Tactical Nuke Bomb Bay 10 Mk1",
       "category": "Secondary Weapons",
-      "licenses": "Arion",
+      "licenses": [
+        "Arion"
+      ],
       "cost": 200000,
       "thumbnail": "outfit/torpedo storage",
       "mass": 4,
@@ -5741,7 +5887,9 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses": "Arion",
+      "licenses": [
+        "Arion"
+      ],
       "cost": 4000000,
       "thumbnail": "outfit/torpedo storage",
       "mass": 10,
@@ -5788,7 +5936,9 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses": "Arion",
+      "licenses": [
+        "Arion"
+      ],
       "cost": 4800000,
       "thumbnail": "outfit/meteor launcher",
       "mass": 40,
@@ -5830,7 +5980,9 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses": "Arion",
+      "licenses": [
+        "Arion"
+      ],
       "cost": 3000000,
       "thumbnail": "outfit/torpedo storage",
       "mass": 20,
@@ -5867,7 +6019,9 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses": "Arion",
+      "licenses": [
+        "Arion"
+      ],
       "cost": 6000000,
       "thumbnail": "outfit/torpedo storage",
       "mass": 20,
@@ -5906,7 +6060,9 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses": "Arion",
+      "licenses": [
+        "Arion"
+      ],
       "cost": 500000,
       "thumbnail": "outfit/torpedo storage",
       "mass": 5,
@@ -5943,7 +6099,9 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses": "Arion",
+      "licenses": [
+        "Arion"
+      ],
       "cost": 1600000,
       "thumbnail": "outfit/torpedo storage",
       "mass": 4,
@@ -5989,7 +6147,9 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses": "Arion",
+      "licenses": [
+        "Arion"
+      ],
       "cost": 4000000,
       "thumbnail outfit/railgun": true,
       "mass": 10,
@@ -6025,7 +6185,9 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses": "Arion",
+      "licenses": [
+        "Arion"
+      ],
       "cost": 4000000,
       "thumbnail": "outfit/plasma cannon",
       "mass": 10,
@@ -6055,7 +6217,9 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses": "Arion",
+      "licenses": [
+        "Arion"
+      ],
       "cost": 4000000,
       "thumbnail": "outfit/bombardment cannon",
       "mass": 10,
@@ -6085,7 +6249,9 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses": "Arion",
+      "licenses": [
+        "Arion"
+      ],
       "cost": 8000000,
       "thumbnail outfit/railgun": true,
       "mass": 25,
@@ -6120,7 +6286,9 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses": "Arion",
+      "licenses": [
+        "Arion"
+      ],
       "cost": 4000000,
       "thumbnail outfit/railgun": true,
       "mass": 15,
@@ -6155,7 +6323,9 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses": "Arion",
+      "licenses": [
+        "Arion"
+      ],
       "cost": 8000000,
       "thumbnail": "outfit/bombardment cannon",
       "mass": 25,
@@ -6184,7 +6354,9 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses": "Arion",
+      "licenses": [
+        "Arion"
+      ],
       "cost": 10000000,
       "thumbnail": "outfit/rocket pod",
       "mass": 30,
@@ -8913,7 +9085,9 @@
       "category": "Secondary Weapons",
       "cost": 480000,
       "thumbnail": "outfit/guz artillery turret",
-      "licenses": "Guz Outfit",
+      "licenses": [
+        "Guz Outfit"
+      ],
       "mass": 50,
       "outfit space": -40.0,
       "weapon capacity": -40.0,
@@ -8955,7 +9129,9 @@
     {
       "category": "Secondary Weapons",
       "cost": 20000,
-      "licenses": "Guz Outfit",
+      "licenses": [
+        "Guz Outfit"
+      ],
       "thumbnail": "outfit/guz gatling",
       "mass": 2,
       "outfit space": -8.0,
@@ -8988,7 +9164,9 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses": "Empire Contributor",
+      "licenses": [
+        "Empire Contributor"
+      ],
       "cost": 20000,
       "thumbnail": "outfit/antimatter railgun",
       "mass": 1,
@@ -9023,7 +9201,9 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses": "Empire Contributor",
+      "licenses": [
+        "Empire Contributor"
+      ],
       "cost": 937000,
       "thumbnail": "outfit/empire torpedo bank",
       "mass": 22,
@@ -9066,7 +9246,9 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses": "Empire Contributor",
+      "licenses": [
+        "Empire Contributor"
+      ],
       "cost": 657000,
       "thumbnail": "outfit/empire typhoon bank",
       "mass": 22,
@@ -9117,7 +9299,9 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses": "Empire Navy",
+      "licenses": [
+        "Empire Navy"
+      ],
       "cost": 2000000,
       "thumbnail": "outfit/empire nuke",
       "mass": 15,
@@ -9167,7 +9351,9 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses": "Empire Contributor",
+      "licenses": [
+        "Empire Contributor"
+      ],
       "cost": 1073000,
       "thumbnail": "outfit/phasic minelayer",
       "mass": 36,
@@ -9256,7 +9442,9 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses": "Empire Navy",
+      "licenses": [
+        "Empire Navy"
+      ],
       "cost": 2000000,
       "thumbnail": "outfit/empire nuke fabricator",
       "mass": 15,
@@ -9725,7 +9913,9 @@
       "category": "Secondary Weapons",
       "cost": 593000,
       "thumbnail": "outfit/lumba piercer pod",
-      "licenses": "Lumbarian",
+      "licenses": [
+        "Lumbarian"
+      ],
       "mass": 18,
       "outfit space": -27.0,
       "weapon capacity": -27.0,
@@ -9771,7 +9961,9 @@
       "category": "Secondary Weapons",
       "cost": 363000,
       "thumbnail": "outfit/ion missile pod",
-      "licenses": "Lumbarian Knight",
+      "licenses": [
+        "Lumbarian Knight"
+      ],
       "mass": 5,
       "outfit space": -21.0,
       "weapon capacity": -21.0,
@@ -9814,7 +10006,9 @@
       "cost": 75000,
       "category": "Secondary Weapons",
       "thumbnail": "outfit/draining rocket pod",
-      "licenses": "Lumbarian King",
+      "licenses": [
+        "Lumbarian King"
+      ],
       "mass": 55,
       "outfit space": -45.0,
       "weapon capacity": -65.0,
@@ -33359,7 +33553,9 @@
       "category": "Turrets",
       "cost": 943000,
       "thumbnail": "outfit/guz tractor",
-      "licenses": "Guz Outfit",
+      "licenses": [
+        "Guz Outfit"
+      ],
       "mass": 19,
       "outfit space": -10.0,
       "weapon capacity": -25.0,
@@ -54906,7 +55102,9 @@
     {
       "cost": 35000,
       "category": "Engines",
-      "licenses": "Guz Outfit",
+      "licenses": [
+        "Guz Outfit"
+      ],
       "thumbnail": "outfit/tier 1 thruster guz",
       "mass": 22,
       "outfit space": -22.0,
@@ -54930,7 +55128,9 @@
     {
       "cost": 65300,
       "category": "Engines",
-      "licenses": "Guz Outfit",
+      "licenses": [
+        "Guz Outfit"
+      ],
       "thumbnail": "outfit/tier 2 thruster guz",
       "mass": 35,
       "outfit space": -35.0,
@@ -54954,7 +55154,9 @@
     {
       "cost": 83450,
       "category": "Engines",
-      "licenses": "Guz Outfit",
+      "licenses": [
+        "Guz Outfit"
+      ],
       "thumbnail": "outfit/tier 3 thruster guz",
       "mass": 43,
       "outfit space": -43.0,
@@ -54978,7 +55180,9 @@
     {
       "cost": 125400,
       "category": "Engines",
-      "licenses": "Guz Outfit",
+      "licenses": [
+        "Guz Outfit"
+      ],
       "thumbnail": "outfit/tier 4 thruster guz",
       "mass": 56,
       "outfit space": -56.0,
@@ -55002,7 +55206,9 @@
     {
       "cost": 142530,
       "category": "Engines",
-      "licenses": "Guz Outfit",
+      "licenses": [
+        "Guz Outfit"
+      ],
       "thumbnail": "outfit/tier 5 thruster guz",
       "mass": 68,
       "outfit space": -68.0,
@@ -55026,7 +55232,9 @@
     {
       "cost": 35000,
       "category": "Engines",
-      "licenses": "Guz Outfit",
+      "licenses": [
+        "Guz Outfit"
+      ],
       "thumbnail": "outfit/tier 1 steering guz",
       "mass": 22,
       "outfit space": -22.0,
@@ -55046,7 +55254,9 @@
     {
       "cost": 65300,
       "category": "Engines",
-      "licenses": "Guz Outfit",
+      "licenses": [
+        "Guz Outfit"
+      ],
       "thumbnail": "outfit/tier 2 steering guz",
       "mass": 35,
       "outfit space": -35.0,
@@ -55066,7 +55276,9 @@
     {
       "cost": 83450,
       "category": "Engines",
-      "licenses": "Guz Outfit",
+      "licenses": [
+        "Guz Outfit"
+      ],
       "thumbnail": "outfit/tier 3 steering guz",
       "mass": 43,
       "outfit space": -43.0,
@@ -55086,7 +55298,9 @@
     {
       "cost": 96000,
       "category": "Engines",
-      "licenses": "Guz Outfit",
+      "licenses": [
+        "Guz Outfit"
+      ],
       "thumbnail": "outfit/tier 4 steering guz",
       "mass": 52,
       "outfit space": -52.0,
@@ -55106,7 +55320,9 @@
     {
       "cost": 125000,
       "category": "Engines",
-      "licenses": "Guz Outfit",
+      "licenses": [
+        "Guz Outfit"
+      ],
       "thumbnail": "outfit/tier 5 steering guz",
       "mass": 62,
       "outfit space": -62.0,
@@ -61266,7 +61482,9 @@
     },
     {
       "category": "Hand to Hand",
-      "licenses": "Heliarch",
+      "licenses": [
+        "Heliarch"
+      ],
       "cost": 709000,
       "thumbnail": "outfit/enforcer confrontation gear",
       "capture attack": 6.2,
@@ -61982,7 +62200,9 @@
     {
       "category": "Hand to Hand",
       "thumbnail": "outfit/railgun h2h",
-      "licenses": "High Houses",
+      "licenses": [
+        "High Houses"
+      ],
       "cost": 72000,
       "capture attack": 1.9,
       "capture defense": 3.2,
@@ -68669,7 +68889,9 @@
     },
     {
       "category": "Ammunition",
-      "licenses": "Guz Outfit",
+      "licenses": [
+        "Guz Outfit"
+      ],
       "cost": 60000,
       "thumbnail": "outfit/guz heavy missile",
       "mass": 11,
@@ -68679,7 +68901,9 @@
     },
     {
       "plural": "Gatlin Guz Ammo",
-      "licenses": "Guz Outfit",
+      "licenses": [
+        "Guz Outfit"
+      ],
       "category": "Ammunition",
       "cost": 4,
       "thumbnail": "outfit/guz bullet",
@@ -68691,7 +68915,9 @@
     {
       "plural": "Guz Bullet Boxes",
       "category": "Ammunition",
-      "licenses": "Guz Outfit",
+      "licenses": [
+        "Guz Outfit"
+      ],
       "cost": 3000,
       "thumbnail": "outfit/guz bullet storage",
       "mass": 2,
@@ -68760,7 +68986,9 @@
       "category": "Ammunition",
       "cost": 3500,
       "thumbnail": "outfit/lumba piercer",
-      "licenses": "Lumbarian",
+      "licenses": [
+        "Lumbarian"
+      ],
       "mass": 0.3,
       "piercer capacity": -1.0,
       "description": "This missile is fired from a Lumba Piercer Pod.",
@@ -68770,7 +68998,9 @@
       "category": "Ammunition",
       "cost": 56000,
       "thumbnail": "outfit/lumba piercer array",
-      "licenses": "Lumbarian",
+      "licenses": [
+        "Lumbarian"
+      ],
       "mass": 2.2,
       "outfit space": -7.0,
       "piercer capacity": 16,
@@ -68782,7 +69012,9 @@
       "category": "Ammunition",
       "cost": 24000,
       "thumbnail": "outfit/ion missile storage",
-      "licenses": "Lumbarian",
+      "licenses": [
+        "Lumbarian"
+      ],
       "mass": 2,
       "outfit space": -10.0,
       "swarm capacity": 200,
@@ -68794,7 +69026,9 @@
       "category": "Ammunition",
       "cost": 250,
       "thumbnail": "outfit/ion missile",
-      "licenses": "Lumbarian",
+      "licenses": [
+        "Lumbarian"
+      ],
       "mass": 0.04,
       "swarm capacity": -1.0,
       "description": "Ion Missile missiles are small, fast moving munitions for the Ion Missile Pod.",
