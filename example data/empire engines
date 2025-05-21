@@ -31,3 +31,23 @@ outfit `RC-145 Atomic Steering`
 		"frame rate" 14
 	"steering flare sound" "impulse engine"
 	description "Hai atomic engines are too expensive to buy for most humans. All but the smallest of the engines are worth more than many of the most common ships flown in human space."
+
+outfit "Arion Countermeasures Mk1"
+	category Turrets
+	licenses Arion
+	cost 100000
+	series "Specialized Fighter Countermeasures: Arion"
+	index 100
+	"turret mounts" -1
+	"flares" -1
+	weapon
+		sound javelin
+		"anti-missile" 30
+		"velocity" 400
+		lifetime 1
+		"reload" 30
+		"burst reload" 5
+		"burst count" 12
+		"firing energy" 2
+		"firing heat" 4
+	description "Countermeasures to evade enemy missiles."
