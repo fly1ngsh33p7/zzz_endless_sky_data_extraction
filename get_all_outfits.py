@@ -15,8 +15,8 @@ from pathlib import Path
 #     """,
 #     re.VERBOSE
 # )
-key_pattern = r"\s*[\w]+|\s*\"[^\"]+\"|\s*\`[^\`]+\`"
-value_pattern = r"[-+]?(?:\d+\.\d*|\.\d+|\d+)(?:[eE][+-]?\d+)?|\"[^\"]+\"|\`[^\`]+\`" 
+key_pattern = r"\s*\w+|\s*\"[^\"]+\"|\s*\`[^\`]+\`"
+value_pattern = r"[-+]?(?:\d+\.\d*|\.\d+|\d+)(?:[eE][+-]?\d+)?|\"[^\"]+\"|\`[^\`]+\`|\w+" 
 # does NOT properly match 
 #thumbnail outfit/license
 # it's parsed to JSON as "thumbnail outfit/license": true 

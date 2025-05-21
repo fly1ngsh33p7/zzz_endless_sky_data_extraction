@@ -698,7 +698,7 @@
         "velocity": 15,
         "lifetime": 1,
         "reload": 160,
-        "sound plasma": true,
+        "sound": "plasma",
         "submunition Shift1 30": true,
         "die effect": "drak bolt impact"
       },
@@ -2771,7 +2771,7 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses Arion": true,
+      "licenses": "Arion",
       "cost": 75000,
       "series": "Guns: Arion",
       "index": 100,
@@ -2785,9 +2785,9 @@
         "frame rate": 0,
         "delay": 5,
         "random start frame": true,
-        "sound gatling": true,
+        "sound": "gatling",
         "icon icon/gat": true,
-        "fire effect gunfire": true,
+        "fire effect": "gunfire",
         "hit effect": "bullet impact",
         "inaccuracy": 0.4,
         "velocity": 105,
@@ -2805,7 +2805,7 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses Arion": true,
+      "licenses": "Arion",
       "cost": 150000,
       "series": "Guns: Arion",
       "index": 200,
@@ -2819,9 +2819,9 @@
         "frame rate": 0,
         "delay": 5,
         "random start frame": true,
-        "sound gatling": true,
+        "sound": "gatling",
         "icon icon/gat": true,
-        "fire effect gunfire": true,
+        "fire effect": "gunfire",
         "hit effect": "bullet impact",
         "cluster": true,
         "inaccuracy": 1.6,
@@ -2842,7 +2842,7 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses Arion": true,
+      "licenses": "Arion",
       "cost": 100000,
       "series": "Guns: Arion",
       "index": 300,
@@ -2856,9 +2856,9 @@
         "frame rate": 0,
         "delay": 5,
         "random start frame": true,
-        "sound gatling": true,
+        "sound": "gatling",
         "icon icon/gat": true,
-        "fire effect gunfire": true,
+        "fire effect": "gunfire",
         "hit effect": "bullet impact",
         "inaccuracy": 0.45,
         "velocity": 104,
@@ -2876,7 +2876,7 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses Arion": true,
+      "licenses": "Arion",
       "cost": 200000,
       "series": "Guns: Arion",
       "index": 400,
@@ -2890,9 +2890,9 @@
         "frame rate": 0,
         "delay": 5,
         "random start frame": true,
-        "sound gatling": true,
+        "sound": "gatling",
         "icon icon/gat": true,
-        "fire effect gunfire": true,
+        "fire effect": "gunfire",
         "hit effect": "bullet impact",
         "cluster": true,
         "inaccuracy": 1.35,
@@ -2913,7 +2913,7 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses Arion": true,
+      "licenses": "Arion",
       "cost": 125000,
       "series": "Guns: Arion",
       "index": 500,
@@ -2927,9 +2927,9 @@
         "frame rate": 0,
         "delay": 5,
         "random start frame": true,
-        "sound gatling": true,
+        "sound": "gatling",
         "icon icon/gat": true,
-        "fire effect gunfire": true,
+        "fire effect": "gunfire",
         "hit effect": "bullet impact",
         "inaccuracy": 0.5,
         "velocity": 101,
@@ -2947,7 +2947,7 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses Arion": true,
+      "licenses": "Arion",
       "cost": 250000,
       "series": "Guns: Arion",
       "index": 600,
@@ -2961,9 +2961,9 @@
         "frame rate": 0,
         "delay": 5,
         "random start frame": true,
-        "sound gatling": true,
+        "sound": "gatling",
         "icon icon/gat": true,
-        "fire effect gunfire": true,
+        "fire effect": "gunfire",
         "hit effect": "bullet impact",
         "cluster": true,
         "inaccuracy": 2.5,
@@ -2985,7 +2985,7 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses Arion": true,
+      "licenses": "Arion",
       "cost": 4000000,
       "series": "Guns: Arion",
       "index": 1100,
@@ -2999,7 +2999,7 @@
           "name": "projectile/rail slug",
           "frame rate": 30
         },
-        "sound ion": true,
+        "sound": "ion",
         "icon": "icon/rail gun",
         "fire effect": "rail sparks",
         "hit effect": "bullet impact",
@@ -3020,7 +3020,7 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses Arion": true,
+      "licenses": "Arion",
       "cost": 5000000,
       "series": "Guns: Arion",
       "index": 1200,
@@ -3034,7 +3034,7 @@
           "name": "projectile/rail slug",
           "frame rate": 30
         },
-        "sound ion": true,
+        "sound": "ion",
         "icon": "icon/rail gun",
         "fire effect": "rail sparks",
         "hit effect": "bullet impact",
@@ -3055,7 +3055,7 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses Arion": true,
+      "licenses": "Arion",
       "cost": 3500000,
       "series": "Guns: Arion",
       "index": 1300,
@@ -3067,7 +3067,7 @@
       "weapon": {
         "sprite projectile/plasma": true,
         "frame rate": 3,
-        "sound plasma": true,
+        "sound": "plasma",
         "hit effect": "plasma explosion",
         "inaccuracy": 1,
         "velocity": 50,
@@ -3085,7 +3085,7 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses Arion": true,
+      "licenses": "Arion",
       "cost": 30000000,
       "series": "Secondary Weapons: Arion",
       "index": 2100,
@@ -3097,7 +3097,7 @@
       "weapon": {
         "sprite projectile/arionemlslugmedium": true,
         "frame rate": 30,
-        "sound dragonflame": true,
+        "sound": "dragonflame",
         "icon icon/dragonflame": true,
         "fire effect": "rail sparks big",
         "hit effect": "bright hit",
@@ -3122,7 +3122,7 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses Arion": true,
+      "licenses": "Arion",
       "cost": 40000000,
       "series": "Secondary Weapons: Arion",
       "index": 2200,
@@ -3136,7 +3136,7 @@
         "frame rate": 30,
         "hardpoint sprite hardpoint/pwavehp": true,
         "hardpoint offset": 11,
-        "sound dragonflame": true,
+        "sound": "dragonflame",
         "icon icon/dragonflame": true,
         "fire effect": "rail sparks big",
         "hit effect": "bright hit",
@@ -3162,7 +3162,7 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses Arion": true,
+      "licenses": "Arion",
       "cost": 70000000,
       "series": "Secondary Weapons: Arion",
       "index": 2300,
@@ -3174,7 +3174,7 @@
       "weapon": {
         "sprite projectile/arionemlslugmedium": true,
         "frame rate": 30,
-        "sound dragonflame": true,
+        "sound": "dragonflame",
         "icon icon/dragonflame": true,
         "fire effect": "rail sparks big",
         "hit effect": "bright hit",
@@ -3199,7 +3199,7 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses Arion": true,
+      "licenses": "Arion",
       "cost": 85000000,
       "series": "Secondary Weapons: Arion",
       "index": 2400,
@@ -3213,7 +3213,7 @@
         "frame rate": 30,
         "hardpoint sprite hardpoint/pwavehp": true,
         "hardpoint offset": 11,
-        "sound dragonflame": true,
+        "sound": "dragonflame",
         "icon icon/dragonflame": true,
         "fire effect": "rail sparks big",
         "hit effect": "bright hit",
@@ -3239,7 +3239,7 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses Arion": true,
+      "licenses": "Arion",
       "cost": 50000000,
       "series": "Secondary Weapons: Arion",
       "index": 2500,
@@ -3253,7 +3253,7 @@
         "frame rate": 30,
         "hardpoint sprite hardpoint/pwavehp": true,
         "hardpoint offset": 11,
-        "sound dragonflame": true,
+        "sound": "dragonflame",
         "icon icon/dragonflame": true,
         "fire effect": "rail sparks big",
         "hit effect": "nuke explosion",
@@ -3282,7 +3282,7 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses Arion": true,
+      "licenses": "Arion",
       "cost": 500000,
       "series": "Secondary Weapons: Arion",
       "index": 100,
@@ -3293,7 +3293,7 @@
       "gun ports": -1.0,
       "weapon": {
         "sprite projectile/arionsidewinder": true,
-        "sound sidewinder": true,
+        "sound": "sidewinder",
         "icon icon/arionsidewindericon": true,
         "fire effect": "sidewinder fire",
         "hit effect": "missile hit",
@@ -3324,7 +3324,7 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses Arion": true,
+      "licenses": "Arion",
       "cost": 3500000,
       "series": "Secondary Weapons: Arion",
       "index": 200,
@@ -3335,7 +3335,7 @@
       "gun ports": -1.0,
       "weapon": {
         "sprite projectile/arionsidewinder": true,
-        "sound sidewinder": true,
+        "sound": "sidewinder",
         "icon icon/arionsidewindericon": true,
         "fire effect": "sidewinder fire",
         "hit effect": "missile hit",
@@ -3368,7 +3368,7 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses Arion": true,
+      "licenses": "Arion",
       "cost": 4000000,
       "series": "Secondary Weapons: Arion",
       "index": 300,
@@ -3381,7 +3381,7 @@
         "sprite projectile/arionsidewinder": true,
         "hardpoint sprite hardpoint/sheragiam": true,
         "hardpoint offset": 1.5,
-        "sound sidewinder": true,
+        "sound": "sidewinder",
         "icon icon/arionsidewindericon": true,
         "fire effect": "sidewinder fire",
         "hit effect": "missile hit",
@@ -3415,7 +3415,7 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses Arion": true,
+      "licenses": "Arion",
       "cost": 700000,
       "series": "Secondary Weapons: Arion",
       "index": 400,
@@ -3426,7 +3426,7 @@
       "gun ports": -1.0,
       "weapon": {
         "sprite projectile/arionsparrow": true,
-        "sound meteor": true,
+        "sound": "meteor",
         "icon icon/arionsparrowicon": true,
         "fire effect": "meteor fire",
         "hit effect": "missile hit",
@@ -3457,7 +3457,7 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses Arion": true,
+      "licenses": "Arion",
       "cost": 750000,
       "series": "Secondary Weapons: Arion",
       "index": 500,
@@ -3468,7 +3468,7 @@
       "gun ports": -1.0,
       "weapon": {
         "sprite projectile/arionamraam": true,
-        "sound meteor": true,
+        "sound": "meteor",
         "icon icon/arionamraamicon": true,
         "fire effect": "meteor fire",
         "hit effect": "missile hit",
@@ -3498,7 +3498,7 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses Arion": true,
+      "licenses": "Arion",
       "cost": 4000000,
       "series": "Secondary Weapons: Arion",
       "index": 600,
@@ -3509,7 +3509,7 @@
       "gun ports": -1.0,
       "weapon": {
         "sprite projectile/arionamraam": true,
-        "sound meteor": true,
+        "sound": "meteor",
         "icon icon/arionamraamicon": true,
         "fire effect": "meteor fire",
         "hit effect": "missile hit",
@@ -3541,7 +3541,7 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses Arion": true,
+      "licenses": "Arion",
       "cost": 6000000,
       "series": "Secondary Weapons: Arion",
       "index": 700,
@@ -3554,7 +3554,7 @@
         "sprite projectile/arionamraam": true,
         "hardpoint sprite hardpoint/sheragiam": true,
         "hardpoint offset": 1.5,
-        "sound meteor": true,
+        "sound": "meteor",
         "icon icon/arionamraamicon": true,
         "fire effect": "meteor fire",
         "hit effect": "missile hit",
@@ -3587,7 +3587,7 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses Arion": true,
+      "licenses": "Arion",
       "cost": 900000,
       "series": "Secondary Weapons: Arion",
       "index": 800,
@@ -3598,7 +3598,7 @@
       "gun ports": -1.0,
       "weapon": {
         "sprite projectile/arionphoenix": true,
-        "sound meteor": true,
+        "sound": "meteor",
         "icon icon/arionphoenixicon": true,
         "fire effect": "meteor fire",
         "hit effect": "missile hit",
@@ -3629,7 +3629,7 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses Arion": true,
+      "licenses": "Arion",
       "cost": 250000,
       "series": "Secondary Weapons: Arion",
       "index": 900,
@@ -3640,7 +3640,7 @@
       "gun ports": -1.0,
       "weapon": {
         "sprite projectile/javelin": true,
-        "sound javelin": true,
+        "sound": "javelin",
         "icon icon/javelin": true,
         "hit effect": "tiny explosion",
         "inaccuracy": 3,
@@ -3664,7 +3664,7 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses Arion": true,
+      "licenses": "Arion",
       "cost": 1000000,
       "series": "Secondary Weapons: Arion",
       "index": 1000,
@@ -3677,7 +3677,7 @@
         "sprite projectile/javelin": true,
         "hardpoint sprite hardpoint/sheragiam": true,
         "hardpoint offset": 1.5,
-        "sound javelin": true,
+        "sound": "javelin",
         "icon icon/javelin": true,
         "hit effect": "tiny explosion",
         "inaccuracy": 3,
@@ -3702,7 +3702,7 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses Arion": true,
+      "licenses": "Arion",
       "cost": 600000,
       "series": "Secondary Weapons: Arion",
       "index": 1100,
@@ -3713,8 +3713,8 @@
       "gun ports": -1.0,
       "weapon": {
         "sprite projectile/arionnapalm": true,
-        "sound typhoon": true,
-        "icon icon": true,
+        "sound": "typhoon",
+        "icon": "icon",
         "fire effect": "typhoon fire",
         "hit effect": "torpedo hit",
         "die effect": "tiny explosion",
@@ -3737,7 +3737,7 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses Arion": true,
+      "licenses": "Arion",
       "cost": 750000,
       "series": "Secondary Weapons: Arion",
       "index": 1200,
@@ -3748,7 +3748,7 @@
       "gun ports": -1.0,
       "weapon": {
         "sprite projectile/ariongpb": true,
-        "sound typhoon": true,
+        "sound": "typhoon",
         "icon icon/ariongpbicon": true,
         "fire effect": "typhoon fire",
         "hit effect": "torpedo hit",
@@ -3775,7 +3775,7 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses Arion": true,
+      "licenses": "Arion",
       "cost": 600000,
       "series": "Secondary Weapons: Arion",
       "index": 1300,
@@ -3785,7 +3785,7 @@
       "gun ports": -1.0,
       "weapon": {
         "sprite projectile/arionmaverick": true,
-        "sound sidewinder": true,
+        "sound": "sidewinder",
         "icon icon/arionmaverickicon": true,
         "fire effect": "sidewinder fire",
         "hit effect": "missile hit",
@@ -3814,7 +3814,7 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses Arion": true,
+      "licenses": "Arion",
       "cost": 1800000,
       "series": "Secondary Weapons: Arion",
       "index": 1400,
@@ -3825,7 +3825,7 @@
       "gun ports": -1.0,
       "weapon": {
         "sprite projectile/arionjsow": true,
-        "sound torpedo": true,
+        "sound": "torpedo",
         "icon icon/arionjsowicon": true,
         "fire effect": "torpedo fire",
         "hit effect": "torpedo hit",
@@ -3855,7 +3855,7 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses Arion": true,
+      "licenses": "Arion",
       "cost": 2000000,
       "series": "Secondary Weapons: Arion",
       "index": 1500,
@@ -3866,7 +3866,7 @@
       "gun ports": -1.0,
       "weapon": {
         "sprite projectile/arionlrasm": true,
-        "sound torpedo": true,
+        "sound": "torpedo",
         "icon icon/arionlrasmicon": true,
         "fire effect": "torpedo fire",
         "hit effect": "torpedo hit",
@@ -3896,7 +3896,7 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses Arion": true,
+      "licenses": "Arion",
       "cost": 1100000,
       "series": "Secondary Weapons: Arion",
       "index": 1600,
@@ -3907,7 +3907,7 @@
       "gun ports": -1.0,
       "weapon": {
         "sprite projectile/ariontorpedo": true,
-        "sound typhoon": true,
+        "sound": "typhoon",
         "icon icon/ariontorpedoicon": true,
         "fire effect": "typhoon fire",
         "hit effect": "torpedo hit",
@@ -3933,7 +3933,7 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses Arion": true,
+      "licenses": "Arion",
       "cost": 3600000,
       "series": "Secondary Weapons: Arion",
       "index": 1700,
@@ -3944,7 +3944,7 @@
       "gun ports": -1.0,
       "weapon": {
         "sprite projectile/ariontorpedo": true,
-        "sound typhoon": true,
+        "sound": "typhoon",
         "icon icon/ariontorpedoicon": true,
         "fire effect": "typhoon fire",
         "hit effect": "torpedo hit",
@@ -3972,7 +3972,7 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses Arion": true,
+      "licenses": "Arion",
       "cost": 1500000,
       "series": "Secondary Weapons: Arion",
       "index": 1800,
@@ -3983,7 +3983,7 @@
       "gun ports": -1.0,
       "weapon": {
         "sprite projectile/ariontorpedo": true,
-        "sound typhoon": true,
+        "sound": "typhoon",
         "icon icon/ariontorpedoicon": true,
         "fire effect": "typhoon fire",
         "hit effect": "torpedo hit",
@@ -4013,7 +4013,7 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses Arion": true,
+      "licenses": "Arion",
       "cost": 5000000,
       "series": "Secondary Weapons: Arion",
       "index": 1900,
@@ -4024,7 +4024,7 @@
       "gun ports": -1.0,
       "weapon": {
         "sprite projectile/ariontorpedo": true,
-        "sound typhoon": true,
+        "sound": "typhoon",
         "icon icon/ariontorpedoicon": true,
         "fire effect": "typhoon fire",
         "hit effect": "torpedo hit",
@@ -4056,7 +4056,7 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses Arion": true,
+      "licenses": "Arion",
       "cost": 16000000,
       "series": "Secondary Weapons: Arion",
       "index": 2000,
@@ -4070,7 +4070,7 @@
         "frame rate": 0.1,
         "no repeat": true,
         "hardpoint sprite": "hardpoint/firestorm battery",
-        "sound thunderhead": true,
+        "sound": "thunderhead",
         "icon icon/thunderhead": true,
         "fire effect": "meteor fire",
         "hit effect": "medium explosion",
@@ -4147,7 +4147,7 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses Arion": true,
+      "licenses": "Arion",
       "cost": 150000,
       "series": "Specialized Fighter Weapons: Arion",
       "index": 100,
@@ -4162,9 +4162,9 @@
         "frame rate": 0,
         "delay": 5,
         "random start frame": true,
-        "sound gatling": true,
+        "sound": "gatling",
         "icon icon/gat": true,
-        "fire effect gunfire": true,
+        "fire effect": "gunfire",
         "hit effect": "bullet impact",
         "cluster": true,
         "inaccuracy": 1.6,
@@ -4185,7 +4185,7 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses Arion": true,
+      "licenses": "Arion",
       "cost": 200000,
       "series": "Specialized Fighter Weapons: Arion",
       "index": 200,
@@ -4200,9 +4200,9 @@
         "frame rate": 0,
         "delay": 5,
         "random start frame": true,
-        "sound gatling": true,
+        "sound": "gatling",
         "icon icon/gat": true,
-        "fire effect gunfire": true,
+        "fire effect": "gunfire",
         "hit effect": "bullet impact",
         "cluster": true,
         "inaccuracy": 1.35,
@@ -4223,7 +4223,7 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses Arion": true,
+      "licenses": "Arion",
       "cost": 500000,
       "series": "Specialized Fighter Weapons: Arion",
       "index": 300,
@@ -4233,7 +4233,7 @@
       "external rack": -1.0,
       "weapon": {
         "sprite projectile/arionsidewinder": true,
-        "sound sidewinder": true,
+        "sound": "sidewinder",
         "icon icon/arionsidewindericon": true,
         "fire effect": "sidewinder fire",
         "hit effect": "missile hit",
@@ -4264,7 +4264,7 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses Arion": true,
+      "licenses": "Arion",
       "cost": 700000,
       "series": "Specialized Fighter Weapons: Arion",
       "index": 400,
@@ -4275,7 +4275,7 @@
       "medium rack": -1.0,
       "weapon": {
         "sprite projectile/arionsparrow": true,
-        "sound meteor": true,
+        "sound": "meteor",
         "icon icon/arionsparrowicon": true,
         "fire effect": "meteor fire",
         "hit effect": "missile hit",
@@ -4306,7 +4306,7 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses Arion": true,
+      "licenses": "Arion",
       "cost": 750000,
       "series": "Specialized Fighter Weapons: Arion",
       "index": 500,
@@ -4317,7 +4317,7 @@
       "medium rack": -1.0,
       "weapon": {
         "sprite projectile/arionamraam": true,
-        "sound meteor": true,
+        "sound": "meteor",
         "icon icon/arionamraamicon": true,
         "fire effect": "meteor fire",
         "hit effect": "missile hit",
@@ -4347,7 +4347,7 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses Arion": true,
+      "licenses": "Arion",
       "cost": 900000,
       "series": "Specialized Fighter Weapons: Arion",
       "index": 600,
@@ -4359,7 +4359,7 @@
       "medium rack": -1.0,
       "weapon": {
         "sprite projectile/arionphoenix": true,
-        "sound meteor": true,
+        "sound": "meteor",
         "icon icon/arionphoenixicon": true,
         "fire effect": "meteor fire",
         "hit effect": "missile hit",
@@ -4390,7 +4390,7 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses Arion": true,
+      "licenses": "Arion",
       "cost": 250000,
       "series": "Specialized Fighter Weapons: Arion",
       "index": 700,
@@ -4400,7 +4400,7 @@
       "external rack": -1.0,
       "weapon": {
         "sprite projectile/javelin": true,
-        "sound javelin": true,
+        "sound": "javelin",
         "icon icon/javelin": true,
         "hit effect": "tiny explosion",
         "inaccuracy": 3,
@@ -4424,7 +4424,7 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses Arion": true,
+      "licenses": "Arion",
       "cost": 600000,
       "series": "Specialized Fighter Weapons: Arion",
       "index": 800,
@@ -4434,8 +4434,8 @@
       "external rack": -1.0,
       "weapon": {
         "sprite projectile/arionnapalm": true,
-        "sound typhoon": true,
-        "icon icon": true,
+        "sound": "typhoon",
+        "icon": "icon",
         "fire effect": "typhoon fire",
         "hit effect": "torpedo hit",
         "die effect": "tiny explosion",
@@ -4458,7 +4458,7 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses Arion": true,
+      "licenses": "Arion",
       "cost": 750000,
       "series": "Specialized Fighter Weapons: Arion",
       "index": 900,
@@ -4469,7 +4469,7 @@
       "medium rack": -1.0,
       "weapon": {
         "sprite projectile/ariongpb": true,
-        "sound typhoon": true,
+        "sound": "typhoon",
         "icon icon/ariongpbicon": true,
         "fire effect": "typhoon fire",
         "hit effect": "torpedo hit",
@@ -4496,7 +4496,7 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses Arion": true,
+      "licenses": "Arion",
       "cost": 600000,
       "series": "Specialized Fighter Weapons: Arion",
       "index": 1000,
@@ -4506,7 +4506,7 @@
       "external rack": -1.0,
       "weapon": {
         "sprite projectile/arionmaverick": true,
-        "sound sidewinder": true,
+        "sound": "sidewinder",
         "icon icon/arionmaverickicon": true,
         "fire effect": "sidewinder fire",
         "hit effect": "missile hit",
@@ -4535,7 +4535,7 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses Arion": true,
+      "licenses": "Arion",
       "cost": 1800000,
       "series": "Specialized Fighter Weapons: Arion",
       "index": 1200,
@@ -4546,7 +4546,7 @@
       "medium rack": -1.0,
       "weapon": {
         "sprite projectile/arionjsow": true,
-        "sound torpedo": true,
+        "sound": "torpedo",
         "icon icon/arionjsowicon": true,
         "fire effect": "torpedo fire",
         "hit effect": "torpedo hit",
@@ -4575,7 +4575,7 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses Arion": true,
+      "licenses": "Arion",
       "cost": 2000000,
       "series": "Specialized Fighter Weapons: Arion",
       "index": 1300,
@@ -4587,7 +4587,7 @@
       "medium rack": -1.0,
       "weapon": {
         "sprite projectile/arionlrasm": true,
-        "sound torpedo": true,
+        "sound": "torpedo",
         "icon icon/arionlrasmicon": true,
         "fire effect": "torpedo fire",
         "hit effect": "torpedo hit",
@@ -4616,7 +4616,7 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses Arion": true,
+      "licenses": "Arion",
       "cost": 1100000,
       "series": "Specialized Fighter Weapons: Arion",
       "index": 1400,
@@ -4628,7 +4628,7 @@
       "medium rack": -1.0,
       "weapon": {
         "sprite projectile/ariontorpedo": true,
-        "sound typhoon": true,
+        "sound": "typhoon",
         "icon icon/ariontorpedoicon": true,
         "fire effect": "typhoon fire",
         "hit effect": "torpedo hit",
@@ -4654,7 +4654,7 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses Arion": true,
+      "licenses": "Arion",
       "cost": 1500000,
       "series": "Specialized Fighter Weapons: Arion",
       "index": 1500,
@@ -4666,7 +4666,7 @@
       "medium rack": -1.0,
       "weapon": {
         "sprite projectile/ariontorpedo": true,
-        "sound typhoon": true,
+        "sound": "typhoon",
         "icon icon/ariontorpedoicon": true,
         "fire effect": "typhoon fire",
         "hit effect": "torpedo hit",
@@ -4696,7 +4696,7 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses Arion": true,
+      "licenses": "Arion",
       "cost": 750000,
       "series": "Specialized Fighter Weapons: Arion",
       "index": 1600,
@@ -4708,7 +4708,7 @@
       "tac nuke bomb": 3,
       "weapon": {
         "sprite projectile/ariontacticalnuclearbomb": true,
-        "sound torpedo": true,
+        "sound": "torpedo",
         "icon icon/nuke": true,
         "hit effect": "nuke explosion",
         "hit effect nuke residue fast 10": true,
@@ -4735,7 +4735,7 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses Arion": true,
+      "licenses": "Arion",
       "cost": 100000000,
       "series": "Superweapons: Arion",
       "index": 100,
@@ -4748,7 +4748,7 @@
       "weapon": {
         "sprite projectile/arionlonglaser": true,
         "frame rate": 1,
-        "sound skylance": true,
+        "sound": "skylance",
         "icon icon/dragonflame": true,
         "hit effect": "beam laser impact",
         "cluster": true,
@@ -4769,7 +4769,7 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses Arion": true,
+      "licenses": "Arion",
       "cost": 150000000,
       "series": "Superweapons: Arion",
       "index": 200,
@@ -4781,7 +4781,7 @@
       "spinal mount": -1.0,
       "weapon": {
         "sprite": "projectile/particle beam",
-        "sound particle": true,
+        "sound": "particle",
         "icon icon/dragonflame": true,
         "hit effect": "particle impact",
         "inaccuracy": 1,
@@ -4801,7 +4801,7 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses Arion": true,
+      "licenses": "Arion",
       "cost": 150000000,
       "series": "Superweapons: Arion",
       "index": 300,
@@ -4814,7 +4814,7 @@
       "weapon": {
         "sprite projectile/arionemlsluglarge": true,
         "frame rate": 30,
-        "sound dragonflame": true,
+        "sound": "dragonflame",
         "icon icon/dragonflame": true,
         "fire effect": "rail sparks big",
         "hit effect": "bright hit",
@@ -4844,7 +4844,7 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses Arion": true,
+      "licenses": "Arion",
       "cost": 210000000,
       "series": "Superweapons: Arion",
       "index": 400,
@@ -4857,7 +4857,7 @@
       "weapon": {
         "sprite projectile/arionemlsluglarge": true,
         "frame rate": 30,
-        "sound dragonflame": true,
+        "sound": "dragonflame",
         "icon icon/dragonflame": true,
         "fire effect": "rail sparks huge",
         "hit effect": "bright hit",
@@ -4886,7 +4886,7 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses Arion": true,
+      "licenses": "Arion",
       "cost": 800000000,
       "series": "Superweapons: Arion",
       "index": 500,
@@ -4899,7 +4899,7 @@
       "weapon": {
         "sprite projectile/arionemlsluglarge": true,
         "frame rate": 30,
-        "sound dragonflame": true,
+        "sound": "dragonflame",
         "icon icon/dragonflame": true,
         "fire effect": "rail sparks huge",
         "hit effect": "bright hit",
@@ -4928,7 +4928,7 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses Arion": true,
+      "licenses": "Arion",
       "cost": 6000000,
       "series": "VLS: Arion",
       "index": 200,
@@ -4940,7 +4940,7 @@
       "vertical launching support": -1.0,
       "weapon": {
         "sprite projectile/arioneram": true,
-        "sound meteor": true,
+        "sound": "meteor",
         "icon icon/arioneramicon": true,
         "fire effect": "meteor fire",
         "hit effect": "missile hit",
@@ -4975,7 +4975,7 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses Arion": true,
+      "licenses": "Arion",
       "cost": 1000000,
       "series": "VLS: Arion",
       "index": 400,
@@ -4988,7 +4988,7 @@
       "vertical launching support": -1.0,
       "weapon": {
         "sprite projectile/ariontomahawk": true,
-        "sound torpedo": true,
+        "sound": "torpedo",
         "icon icon/nuke": true,
         "hit effect": "nuke explosion",
         "hit effect nuke residue fast 10": true,
@@ -5025,7 +5025,7 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses Arion": true,
+      "licenses": "Arion",
       "cost": 2000000,
       "series": "VLS: Arion",
       "index": 500,
@@ -5038,7 +5038,7 @@
       "vertical launching support": -1.0,
       "weapon": {
         "sprite projectile/arionlrasm": true,
-        "sound torpedo": true,
+        "sound": "torpedo",
         "icon icon/nuke": true,
         "hit effect": "nuke explosion",
         "hit effect nuke residue fast 10": true,
@@ -5075,7 +5075,7 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses Arion": true,
+      "licenses": "Arion",
       "cost": 10000000,
       "series": "VLS: Arion",
       "index": 600,
@@ -5088,7 +5088,7 @@
       "vertical launching support": -1.0,
       "weapon": {
         "sprite projectile/arionsprintabm": true,
-        "sound torpedo": true,
+        "sound": "torpedo",
         "icon icon/nuke": true,
         "hit effect": "nuke explosion",
         "hit effect nuke residue fast 10": true,
@@ -5126,7 +5126,7 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses Arion": true,
+      "licenses": "Arion",
       "cost": 10000000,
       "series": "VLS: Arion",
       "index": 600,
@@ -5139,7 +5139,7 @@
       "vertical launching support": -1.0,
       "weapon": {
         "sprite projectile/ariontrident": true,
-        "sound torpedo": true,
+        "sound": "torpedo",
         "icon icon/nuke": true,
         "hit effect": "large nuke explosion",
         "hit effect nuke residue fast 10": true,
@@ -5177,7 +5177,7 @@
     {
       "display name": "Arion GBU-1x Bomb Bay 50 Mk1",
       "category": "Secondary Weapons",
-      "licenses Arion": true,
+      "licenses": "Arion",
       "cost": 6000000,
       "thumbnail": "outfit/torpedo storage",
       "mass": 50,
@@ -5187,7 +5187,7 @@
       "bomb bay": -1.0,
       "weapon": {
         "sprite projectile/ariongpb": true,
-        "sound typhoon": true,
+        "sound": "typhoon",
         "icon icon/ariongpbicon": true,
         "fire effect": "typhoon fire",
         "hit effect": "torpedo hit",
@@ -5217,7 +5217,7 @@
     {
       "display name": "Arion GBU-1x Bomb Bay 40 Mk1",
       "category": "Secondary Weapons",
-      "licenses Arion": true,
+      "licenses": "Arion",
       "cost": 4800000,
       "thumbnail": "outfit/torpedo storage",
       "mass": 40,
@@ -5227,7 +5227,7 @@
       "bomb bay": -1.0,
       "weapon": {
         "sprite projectile/ariongpb": true,
-        "sound typhoon": true,
+        "sound": "typhoon",
         "icon icon/ariongpbicon": true,
         "fire effect": "typhoon fire",
         "hit effect": "torpedo hit",
@@ -5257,7 +5257,7 @@
     {
       "display name": "Arion GBU-1x Bomb Bay 30 Mk1",
       "category": "Secondary Weapons",
-      "licenses Arion": true,
+      "licenses": "Arion",
       "cost": 3500000,
       "thumbnail": "outfit/torpedo storage",
       "mass": 30,
@@ -5267,7 +5267,7 @@
       "bomb bay": -1.0,
       "weapon": {
         "sprite projectile/ariongpb": true,
-        "sound typhoon": true,
+        "sound": "typhoon",
         "icon icon/ariongpbicon": true,
         "fire effect": "typhoon fire",
         "hit effect": "torpedo hit",
@@ -5297,7 +5297,7 @@
     {
       "display name": "Arion GBU-1x Bomb Bay 20 Mk1",
       "category": "Secondary Weapons",
-      "licenses Arion": true,
+      "licenses": "Arion",
       "cost": 3000000,
       "thumbnail": "outfit/torpedo storage",
       "mass": 20,
@@ -5307,7 +5307,7 @@
       "bomb bay": -1.0,
       "weapon": {
         "sprite projectile/ariongpb": true,
-        "sound typhoon": true,
+        "sound": "typhoon",
         "icon icon/ariongpbicon": true,
         "fire effect": "typhoon fire",
         "hit effect": "torpedo hit",
@@ -5337,7 +5337,7 @@
     {
       "display name": "Arion GBU-1x Bomb Bay 10 Mk1",
       "category": "Secondary Weapons",
-      "licenses Arion": true,
+      "licenses": "Arion",
       "cost": 1500000,
       "thumbnail": "outfit/torpedo storage",
       "mass": 10,
@@ -5347,7 +5347,7 @@
       "bomb bay": -1.0,
       "weapon": {
         "sprite projectile/ariongpb": true,
-        "sound typhoon": true,
+        "sound": "typhoon",
         "icon icon/ariongpbicon": true,
         "fire effect": "typhoon fire",
         "hit effect": "torpedo hit",
@@ -5376,7 +5376,7 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses Arion": true,
+      "licenses": "Arion",
       "cost": 15000000,
       "thumbnail": "outfit/torpedo storage",
       "mass": 50,
@@ -5386,7 +5386,7 @@
       "bomb bay": -1.0,
       "weapon": {
         "sprite projectile/arionjsow": true,
-        "sound torpedo": true,
+        "sound": "torpedo",
         "icon icon/arionjsowicon": true,
         "fire effect": "torpedo fire",
         "hit effect": "torpedo hit",
@@ -5417,7 +5417,7 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses Arion": true,
+      "licenses": "Arion",
       "cost": 11000000,
       "thumbnail": "outfit/torpedo storage",
       "mass": 40,
@@ -5427,7 +5427,7 @@
       "bomb bay": -1.0,
       "weapon": {
         "sprite projectile/arionjsow": true,
-        "sound torpedo": true,
+        "sound": "torpedo",
         "icon icon/arionjsowicon": true,
         "fire effect": "torpedo fire",
         "hit effect": "torpedo hit",
@@ -5458,7 +5458,7 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses Arion": true,
+      "licenses": "Arion",
       "cost": 9000000,
       "thumbnail": "outfit/torpedo storage",
       "mass": 30,
@@ -5468,7 +5468,7 @@
       "bomb bay": -1.0,
       "weapon": {
         "sprite projectile/arionjsow": true,
-        "sound torpedo": true,
+        "sound": "torpedo",
         "icon icon/arionjsowicon": true,
         "fire effect": "torpedo fire",
         "hit effect": "torpedo hit",
@@ -5499,7 +5499,7 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses Arion": true,
+      "licenses": "Arion",
       "cost": 6000000,
       "thumbnail": "outfit/torpedo storage",
       "mass": 20,
@@ -5509,7 +5509,7 @@
       "bomb bay": -1.0,
       "weapon": {
         "sprite projectile/arionjsow": true,
-        "sound torpedo": true,
+        "sound": "torpedo",
         "icon icon/arionjsowicon": true,
         "fire effect": "torpedo fire",
         "hit effect": "torpedo hit",
@@ -5540,7 +5540,7 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses Arion": true,
+      "licenses": "Arion",
       "cost": 3500000,
       "thumbnail": "outfit/torpedo storage",
       "mass": 10,
@@ -5550,7 +5550,7 @@
       "bomb bay": -1.0,
       "weapon": {
         "sprite projectile/arionjsow": true,
-        "sound torpedo": true,
+        "sound": "torpedo",
         "icon icon/arionjsowicon": true,
         "fire effect": "torpedo fire",
         "hit effect": "torpedo hit",
@@ -5582,7 +5582,7 @@
     {
       "display name": "Tactical Nuke Bomb Bay 50 Mk1",
       "category": "Secondary Weapons",
-      "licenses Arion": true,
+      "licenses": "Arion",
       "cost": 1000000,
       "thumbnail": "outfit/torpedo storage",
       "mass": 10,
@@ -5594,7 +5594,7 @@
       "tac nuke bomb": 24,
       "weapon": {
         "sprite projectile/ariontacticalnuclearbomb": true,
-        "sound torpedo": true,
+        "sound": "torpedo",
         "icon icon/nuke": true,
         "hit effect": "nuke explosion",
         "hit effect nuke residue fast 10": true,
@@ -5622,7 +5622,7 @@
     {
       "display name": "Tactical Nuke Bomb Bay 40 Mk1",
       "category": "Secondary Weapons",
-      "licenses Arion": true,
+      "licenses": "Arion",
       "cost": 800000,
       "thumbnail": "outfit/torpedo storage",
       "mass": 10,
@@ -5634,7 +5634,7 @@
       "tac nuke bomb": 16,
       "weapon": {
         "sprite projectile/ariontacticalnuclearbomb": true,
-        "sound torpedo": true,
+        "sound": "torpedo",
         "icon icon/nuke": true,
         "hit effect": "nuke explosion",
         "hit effect nuke residue fast 10": true,
@@ -5662,7 +5662,7 @@
     {
       "display name": "Tactical Nuke Bomb Bay 30 Mk1",
       "category": "Secondary Weapons",
-      "licenses Arion": true,
+      "licenses": "Arion",
       "cost": 600000,
       "thumbnail": "outfit/torpedo storage",
       "mass": 5,
@@ -5674,7 +5674,7 @@
       "tac nuke bomb": 12,
       "weapon": {
         "sprite projectile/ariontacticalnuclearbomb": true,
-        "sound torpedo": true,
+        "sound": "torpedo",
         "icon icon/nuke": true,
         "hit effect": "nuke explosion",
         "hit effect nuke residue fast 10": true,
@@ -5702,7 +5702,7 @@
     {
       "display name": "Tactical Nuke Bomb Bay 10 Mk1",
       "category": "Secondary Weapons",
-      "licenses Arion": true,
+      "licenses": "Arion",
       "cost": 200000,
       "thumbnail": "outfit/torpedo storage",
       "mass": 4,
@@ -5714,7 +5714,7 @@
       "tac nuke bomb": 3,
       "weapon": {
         "sprite projectile/ariontacticalnuclearbomb": true,
-        "sound torpedo": true,
+        "sound": "torpedo",
         "icon icon/nuke": true,
         "hit effect": "nuke explosion",
         "hit effect nuke residue fast 10": true,
@@ -5741,7 +5741,7 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses Arion": true,
+      "licenses": "Arion",
       "cost": 4000000,
       "thumbnail": "outfit/torpedo storage",
       "mass": 10,
@@ -5753,7 +5753,7 @@
       "nuke": -1.0,
       "weapon": {
         "sprite projectile/arionlrasm": true,
-        "sound torpedo": true,
+        "sound": "torpedo",
         "icon icon/nuke": true,
         "hit effect": "nuke explosion",
         "hit effect nuke residue fast 10": true,
@@ -5788,7 +5788,7 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses Arion": true,
+      "licenses": "Arion",
       "cost": 4800000,
       "thumbnail": "outfit/meteor launcher",
       "mass": 40,
@@ -5798,7 +5798,7 @@
       "b1 bay": -1.0,
       "weapon": {
         "sprite projectile/arionamraam": true,
-        "sound meteor": true,
+        "sound": "meteor",
         "icon icon/arionamraamicon": true,
         "fire effect": "meteor fire",
         "hit effect": "missile hit",
@@ -5830,7 +5830,7 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses Arion": true,
+      "licenses": "Arion",
       "cost": 3000000,
       "thumbnail": "outfit/torpedo storage",
       "mass": 20,
@@ -5838,7 +5838,7 @@
       "b52 external hardpoint": -1.0,
       "weapon": {
         "sprite projectile/ariongpb": true,
-        "sound typhoon": true,
+        "sound": "typhoon",
         "icon icon/ariongpbicon": true,
         "fire effect": "typhoon fire",
         "hit effect": "torpedo hit",
@@ -5867,7 +5867,7 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses Arion": true,
+      "licenses": "Arion",
       "cost": 6000000,
       "thumbnail": "outfit/torpedo storage",
       "mass": 20,
@@ -5875,7 +5875,7 @@
       "b52 external hardpoint": -1.0,
       "weapon": {
         "sprite projectile/arionjsow": true,
-        "sound torpedo": true,
+        "sound": "torpedo",
         "icon icon/arionjsowicon": true,
         "fire effect": "torpedo fire",
         "hit effect": "torpedo hit",
@@ -5906,7 +5906,7 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses Arion": true,
+      "licenses": "Arion",
       "cost": 500000,
       "thumbnail": "outfit/torpedo storage",
       "mass": 5,
@@ -5916,7 +5916,7 @@
       "tac nuke bomb": 6,
       "weapon": {
         "sprite projectile/ariontacticalnuclearbomb": true,
-        "sound torpedo": true,
+        "sound": "torpedo",
         "icon icon/nuke": true,
         "hit effect": "nuke explosion",
         "hit effect nuke residue fast 10": true,
@@ -5943,7 +5943,7 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses Arion": true,
+      "licenses": "Arion",
       "cost": 1600000,
       "thumbnail": "outfit/torpedo storage",
       "mass": 4,
@@ -5953,7 +5953,7 @@
       "nuke": -1.0,
       "weapon": {
         "sprite projectile/arionlrasm": true,
-        "sound torpedo": true,
+        "sound": "torpedo",
         "icon icon/nuke": true,
         "hit effect": "nuke explosion",
         "hit effect nuke residue fast 10": true,
@@ -5989,7 +5989,7 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses Arion": true,
+      "licenses": "Arion",
       "cost": 4000000,
       "thumbnail outfit/railgun": true,
       "mass": 10,
@@ -6001,7 +6001,7 @@
       "weapon": {
         "sprite projectile/arionemlslugmedium": true,
         "frame rate": 30,
-        "sound dragonflame": true,
+        "sound": "dragonflame",
         "icon icon/dragonflame": true,
         "fire effect": "rail sparks",
         "hit effect": "bright hit",
@@ -6025,7 +6025,7 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses Arion": true,
+      "licenses": "Arion",
       "cost": 4000000,
       "thumbnail": "outfit/plasma cannon",
       "mass": 10,
@@ -6037,7 +6037,7 @@
       "weapon": {
         "sprite projectile/plasma": true,
         "frame rate": 3,
-        "sound plasma": true,
+        "sound": "plasma",
         "hit effect": "plasma explosion",
         "inaccuracy": 1,
         "velocity": 50,
@@ -6055,7 +6055,7 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses Arion": true,
+      "licenses": "Arion",
       "cost": 4000000,
       "thumbnail": "outfit/bombardment cannon",
       "mass": 10,
@@ -6067,7 +6067,7 @@
       "weapon": {
         "sprite projectile/ariontlslaser": true,
         "frame rate": 1,
-        "sound skylance": true,
+        "sound": "skylance",
         "icon icon/dragonflame": true,
         "hit effect": "beam laser impact",
         "cluster": true,
@@ -6085,7 +6085,7 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses Arion": true,
+      "licenses": "Arion",
       "cost": 8000000,
       "thumbnail outfit/railgun": true,
       "mass": 25,
@@ -6097,7 +6097,7 @@
       "weapon": {
         "sprite projectile/arionemlslugmedium": true,
         "frame rate": 30,
-        "sound dragonflame": true,
+        "sound": "dragonflame",
         "icon icon/dragonflame": true,
         "fire effect": "rail sparks",
         "hit effect": "bright hit",
@@ -6120,7 +6120,7 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses Arion": true,
+      "licenses": "Arion",
       "cost": 4000000,
       "thumbnail outfit/railgun": true,
       "mass": 15,
@@ -6131,7 +6131,7 @@
       "weapon": {
         "sprite projectile/arionemlslugmedium": true,
         "frame rate": 30,
-        "sound dragonflame": true,
+        "sound": "dragonflame",
         "icon icon/dragonflame": true,
         "fire effect": "rail sparks",
         "hit effect": "bright hit",
@@ -6155,7 +6155,7 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses Arion": true,
+      "licenses": "Arion",
       "cost": 8000000,
       "thumbnail": "outfit/bombardment cannon",
       "mass": 25,
@@ -6166,7 +6166,7 @@
       "weapon": {
         "sprite projectile/ariontlslaser": true,
         "frame rate": 1,
-        "sound skylance": true,
+        "sound": "skylance",
         "icon icon/dragonflame": true,
         "hit effect": "beam laser impact",
         "cluster": true,
@@ -6184,7 +6184,7 @@
     },
     {
       "category": "Secondary Weapons",
-      "licenses Arion": true,
+      "licenses": "Arion",
       "cost": 10000000,
       "thumbnail": "outfit/rocket pod",
       "mass": 30,
@@ -6196,7 +6196,7 @@
         "sprite projectile/missile": true,
         "frame rate": 0.25,
         "no repeat": true,
-        "sound nuke": true,
+        "sound": "nuke",
         "icon icon/nuke": true,
         "hit effect": "nuke explosion",
         "hit effect nuke residue fast 10": true,
@@ -9037,7 +9037,7 @@
           "name": "projectile/empire torpedo",
           "scale": 1.1
         },
-        "sound firelight": true,
+        "sound": "firelight",
         "icon": "icon/empire torpedo",
         "hit effect empire huge explosion 20": true,
         "submunition Empire Torpedo Activated 3": true,
@@ -9080,7 +9080,7 @@
           "name": "projectile/empire torpedo",
           "scale": 1.1
         },
-        "sound firelight": true,
+        "sound": "firelight",
         "icon": "icon/empire typhoon",
         "hit effect empire torpedo ring 4": true,
         "die effect empire torpedo ring 4": true,
@@ -9131,7 +9131,7 @@
           "no repeat": true
         },
         "hardpoint sprite": "hardpoint/empire nuke",
-        "sound nuke": true,
+        "sound": "nuke",
         "icon": "icon/empire nuke",
         "hit effect": "empire nuke explosion",
         "hit effect empire nuke residue fast 10": true,
@@ -9182,7 +9182,7 @@
           "frame rate": 0.6,
           "no repeat": true
         },
-        "sound minelayer": true,
+        "sound": "minelayer",
         "icon": "icon/phasic mine",
         "fire effect": "phasic minelayer fire",
         "hit effect": "empire huge explosion",
@@ -9271,7 +9271,7 @@
           "no repeat": true
         },
         "hardpoint sprite": "hardpoint/empire nuke fabricator",
-        "sound nuke": true,
+        "sound": "nuke",
         "icon": "icon/empire nuke",
         "hit effect": "empire nuke explosion",
         "hit effect empire nuke residue fast 10": true,
@@ -9725,7 +9725,7 @@
       "category": "Secondary Weapons",
       "cost": 593000,
       "thumbnail": "outfit/lumba piercer pod",
-      "licenses Lumbarian": true,
+      "licenses": "Lumbarian",
       "mass": 18,
       "outfit space": -27.0,
       "weapon capacity": -27.0,
@@ -61266,7 +61266,7 @@
     },
     {
       "category": "Hand to Hand",
-      "licenses Heliarch": true,
+      "licenses": "Heliarch",
       "cost": 709000,
       "thumbnail": "outfit/enforcer confrontation gear",
       "capture attack": 6.2,
@@ -68760,7 +68760,7 @@
       "category": "Ammunition",
       "cost": 3500,
       "thumbnail": "outfit/lumba piercer",
-      "licenses Lumbarian": true,
+      "licenses": "Lumbarian",
       "mass": 0.3,
       "piercer capacity": -1.0,
       "description": "This missile is fired from a Lumba Piercer Pod.",
@@ -68770,7 +68770,7 @@
       "category": "Ammunition",
       "cost": 56000,
       "thumbnail": "outfit/lumba piercer array",
-      "licenses Lumbarian": true,
+      "licenses": "Lumbarian",
       "mass": 2.2,
       "outfit space": -7.0,
       "piercer capacity": 16,
@@ -68782,7 +68782,7 @@
       "category": "Ammunition",
       "cost": 24000,
       "thumbnail": "outfit/ion missile storage",
-      "licenses Lumbarian": true,
+      "licenses": "Lumbarian",
       "mass": 2,
       "outfit space": -10.0,
       "swarm capacity": 200,
@@ -68794,7 +68794,7 @@
       "category": "Ammunition",
       "cost": 250,
       "thumbnail": "outfit/ion missile",
-      "licenses Lumbarian": true,
+      "licenses": "Lumbarian",
       "mass": 0.04,
       "swarm capacity": -1.0,
       "description": "Ion Missile missiles are small, fast moving munitions for the Ion Missile Pod.",
