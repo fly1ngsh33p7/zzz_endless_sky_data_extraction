@@ -5,24 +5,16 @@ import re
 import json
 from pathlib import Path
 
-# key_pattern = re.compile(
-#     r"""
-#     [\s\w]+
-#     |
-#     \s*\"[^\"]+\"
-#     |
-#     \s*\`[^\`]+\`
-#     """,
-#     re.VERBOSE
-# )
+
+# FIXME: support: (currently: duplicate key -> ignore; incorporate into array-structure)
+#           "die effect laser ejecta 4": true,
+#           "die effect green laser reflection 30": true,
+#           "die effect": "green laser scattering", 
 key_pattern = r"\s*\w+|\s*\"[^\"]+\"|\s*\`[^\`]+\`"
 value_pattern = r"[-+]?(?:\d+\.\d*|\.\d+|\d+)(?:[eE][+-]?\d+)?|\"[^\"]+\"|\`[^\`]+\`|\w+" 
-# does NOT properly match 
-#thumbnail outfit/license
-# it's parsed to JSON as "thumbnail outfit/license": true 
 
 regex = re.compile(
-    rf"^({key_pattern})\s+({value_pattern})$"
+    rf"^({key_pattern})\s+({value_pattern})(\s+[0-9]+)?$"
 )
 
 def remove_comments_from_lines(lines):
@@ -72,9 +64,16 @@ def parse_key_value(line):  # Key-Value-Paar extrahieren
         return None  # kein Key-Value  
     key = match.group(1).strip().replace('"', '').replace('`', '').replace('\'', '')  # Key säubern  
     raw = match.group(2).strip().replace('"', '').replace('`', '').replace('\'', '')  # rohen Wert säubern  
+    
+    # support ternary value like '"submunition" "Bimodal Switch" 3'
+    if match.lastindex and match.lastindex >= 3 and match.group(3):  
+        raw = (raw, match.group(3).strip().replace('"', '').replace('`', '').replace('\'', ''))  
+    
     return key, raw  # Tuple zurückgeben  
 
 def convert_value(raw):  # Wert in int/float oder Bool konvertieren  
+    if isinstance(raw, tuple):  
+        return tuple(convert_value(item) for item in raw)  # recursively convert tuple elements
     if raw is None:  
         return True  # nur Key → True  
     if raw.isdigit():  
@@ -135,7 +134,7 @@ def parse_outfit_fields(block_lines):
                 fields[key] += "\n\n" + str(value)  # String-Duplikat zusammenführen  
             elif key in fields:  
                 if value == fields[key]:
-                    print(f"Info: duplicate key '{key}' with identical not-string Values ({value})!")
+                    print(f"Info: Ignored duplicate key '{key}' with identical not-string Values ({value})!")
                 else:
                     print(f"\nWarning: Duplicate key '{key}' with different not-string Values ({value} vs {fields[key]}), keeping {value}!\nDetails: {fields}\n")
                     # raise ValueError(f"Duplicate key '{key}' with different not-string Values!\nParsed until error: {fields}\n")  # FIXME: is this a Fatal Error?  
